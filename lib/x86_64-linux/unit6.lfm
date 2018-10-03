@@ -65,7 +65,7 @@ object Form5: TForm5
     ParentFont = False
   end
   object Button2: TButton
-    Left = 477
+    Left = 480
     Height = 37
     Top = 680
     Width = 147

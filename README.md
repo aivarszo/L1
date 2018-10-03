@@ -1,4 +1,4 @@
 # L1
 Rogaining organizer
 
-Coming soon...
+First commit is done!

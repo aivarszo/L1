@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE CourseData SYSTEM "IOFdata_OCAD.dtd">
+<CourseData>
+
+  <IOFVersion version="2.0.3" />
+
+<ModifyDate>
+  <Date>2018-09-14</Date>
+  <Clock>4:43:55 PM</Clock>
+</ModifyDate>
+
+  <Map>
+    <Scale> 15000 </Scale>
+    <MapPosition x="-193.0" y="361.3" />
+  </Map>
+
+  <StartPoint>
+    <StartPointCode> S1 </StartPointCode>
+    <MapPosition x="53.1" y="200.8"/>
+  </StartPoint>
+  <Control>
+    <ControlCode> 21 </ControlCode>
+    <MapPosition x="23.5" y="199.8"/>
+  </Control>
+  <Control>
+    <ControlCode> 22 </ControlCode>
+    <MapPosition x="89.0" y="249.2"/>
+  </Control>
+  <Control>
+    <ControlCode> 31 </ControlCode>
+    <MapPosition x="82.8" y="33.7"/>
+  </Control>
+  <Control>
+    <ControlCode> 32 </ControlCode>
+    <MapPosition x="56.6" y="167.5"/>
+  </Control>
+  <Control>
+    <ControlCode> 33 </ControlCode>
+    <MapPosition x="153.1" y="80.6"/>
+  </Control>
+  <Control>
+    <ControlCode> 34 </ControlCode>
+    <MapPosition x="-17.3" y="311.5"/>
+  </Control>
+  <Control>
+    <ControlCode> 35 </ControlCode>
+    <MapPosition x="178.4" y="141.4"/>
+  </Control>
+  <Control>
+    <ControlCode> 36 </ControlCode>
+    <MapPosition x="105.6" y="187.9"/>
+  </Control>
+  <Control>
+    <ControlCode> 41 </ControlCode>
+    <MapPosition x="124.9" y="223.1"/>
+  </Control>
+  <Control>
+    <ControlCode> 42 </ControlCode>
+    <MapPosition x="113.2" y="279.4"/>
+  </Control>
+  <Control>
+    <ControlCode> 43 </ControlCode>
+    <MapPosition x="6.8" y="235.7"/>
+  </Control>
+  <Control>
+    <ControlCode> 44 </ControlCode>
+    <MapPosition x="24.7" y="284.9"/>
+  </Control>
+  <Control>
+    <ControlCode> 51 </ControlCode>
+    <MapPosition x="62.7" y="245.0"/>
+  </Control>
+  <Control>
+    <ControlCode> 52 </ControlCode>
+    <MapPosition x="-3.3" y="350.2"/>
+  </Control>
+  <Control>
+    <ControlCode> 53 </ControlCode>
+    <MapPosition x="21.7" y="153.1"/>
+  </Control>
+  <Control>
+    <ControlCode> 54 </ControlCode>
+    <MapPosition x="84.1" y="344.8"/>
+  </Control>
+  <Control>
+    <ControlCode> 55 </ControlCode>
+    <MapPosition x="194.3" y="207.4"/>
+  </Control>
+  <Control>
+    <ControlCode> 61 </ControlCode>
+    <MapPosition x="166.9" y="42.9"/>
+  </Control>
+  <Control>
+    <ControlCode> 62 </ControlCode>
+    <MapPosition x="211.4" y="260.8"/>
+  </Control>
+  <Control>
+    <ControlCode> 63 </ControlCode>
+    <MapPosition x="-6.3" y="206.9"/>
+  </Control>
+  <Control>
+    <ControlCode> 64 </ControlCode>
+    <MapPosition x="159.8" y="327.7"/>
+  </Control>
+  <Control>
+    <ControlCode> 65 </ControlCode>
+    <MapPosition x="79.3" y="288.1"/>
+  </Control>
+  <Control>
+    <ControlCode> 71 </ControlCode>
+    <MapPosition x="79.7" y="106.7"/>
+  </Control>
+  <Control>
+    <ControlCode> 72 </ControlCode>
+    <MapPosition x="23.1" y="51.5"/>
+  </Control>
+
+
+</CourseData>
+

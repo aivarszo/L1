@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event_data>
+  <eventID>lapsa2015_12</eventID>
+  <eventname>Lapsu rogainings 2015 12h</eventname>
+  <eventplace>Ungurmalas</eventplace>
+  <eventlogo>/home/skola/Dokumenti/eclipse/OrSiPy2/src/data/events/lapsa2015_6/lr2015_logo.jpg</eventlogo>
+  <eventtype>rogain</eventtype>
+  <starttime>2015-11-07 10:00:00</starttime>
+  <finishtime>2015-11-07 22:00:00</finishtime>
+  <latetime>2015-11-07 22:30:00</latetime>
+  <sunsettime>2015-11-07 16:20:00</sunsettime>
+  <sunrisetime>2015-11-08 08:00:00</sunrisetime>
+  <timelimit>60</timelimit>
+  <timepenalty>1</timepenalty>
+  <printer>Samsung-M2020-Series</printer>
+  <siport>//dev/ttyUSB0</siport>
+  <starttype>starttime</starttype>
+</event_data>

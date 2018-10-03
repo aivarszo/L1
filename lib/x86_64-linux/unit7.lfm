@@ -1,0 +1,84 @@
+object Form6: TForm6
+  Left = 753
+  Height = 928
+  Top = 124
+  Width = 1128
+  Caption = 'Form6'
+  ClientHeight = 928
+  ClientWidth = 1128
+  LCLVersion = '1.8.2.0'
+  object StringGrid7: TStringGrid
+    Left = 0
+    Height = 894
+    Top = 0
+    Width = 840
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ColCount = 9
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        Width = 64
+      end    
+      item
+        Title.Caption = 'Team'
+        Width = 268
+      end    
+      item
+        Title.Caption = 'Time'
+        Width = 91
+      end    
+      item
+        Title.Caption = 'Points'
+        Width = 64
+      end    
+      item
+        Title.Caption = 'Penalty'
+        Width = 64
+      end    
+      item
+        Title.Caption = 'Result'
+        Width = 64
+      end    
+      item
+        MaxSize = 0
+        Title.Caption = 'Place(s)'
+        Width = 213
+      end    
+      item
+        Title.Caption = 'Sort'
+        Width = 0
+        Visible = False
+      end    
+      item
+        Title.Caption = 'HTML'
+        Visible = False
+      end>
+    FixedCols = 0
+    MouseWheelOption = mwGrid
+    RowCount = 1
+    TabOrder = 0
+    ColWidths = (
+      64
+      268
+      91
+      64
+      64
+      64
+      213
+      0
+      0
+    )
+    Cells = (
+      1
+      0
+      0
+      'ID'
+    )
+  end
+  object Timer1: TTimer
+    Interval = 0
+    OnTimer = Timer1Timer
+    left = 1023
+    top = 846
+  end
+end

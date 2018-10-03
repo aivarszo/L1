@@ -1,0 +1,15 @@
+{"version":1,"strings":[
+{"hash":5073154,"name":"tform2.caption","sourcebytes":[70,111,114,109,50],"value":"Form2"},
+{"hash":5671618,"name":"tform2.stringgrid1.columns[0].title.caption","sourcebytes":[79,114,100,101,114],"value":"Order"},
+{"hash":174438684,"name":"tform2.stringgrid1.columns[1].title.caption","sourcebytes":[67,111,110,116,114,111,108],"value":"Control"},
+{"hash":91620787,"name":"tform2.stringgrid1.columns[2].title.caption","sourcebytes":[80,111,105,110,116,115],"value":"Points"},
+{"hash":176882163,"name":"tform2.stringgrid1.columns[3].title.caption","sourcebytes":[83,116,97,116,105,111,110,115],"value":"Stations"},
+{"hash":342104,"name":"tform2.stringgrid1.columns[4].title.caption","sourcebytes":[77,97,112,88],"value":"MapX"},
+{"hash":342105,"name":"tform2.stringgrid1.columns[5].title.caption","sourcebytes":[77,97,112,89],"value":"MapY"},
+{"hash":366789,"name":"tform2.button1.caption","sourcebytes":[83,97,118,101],"value":"Save"},
+{"hash":102988732,"name":"tform2.button2.caption","sourcebytes":[82,101,109,111,118,101,32,99,111,110,116,114,111,108],"value":"Remove control"},
+{"hash":77089212,"name":"tform2.button3.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"},
+{"hash":258841283,"name":"tform2.button4.caption","sourcebytes":[83,101,116,32,115,116,97,116,105,111,110,115,32,102,114,111,109,32,99,111,110,116,114,111,108,115],"value":"Set stations from controls"},
+{"hash":39044922,"name":"tform2.label1.caption","sourcebytes":[69,110,116,101,114,32,100,105,115,116,97,110,99,101,32,40,109,101,116,101,114,115,41,32,98,101,116,119,101,101,110,32,116,119,111,32,112,111,105,110,116,115,32,97,110,100,32,99,108,105,99,107,32,116,104,101,115,101,32,112,111,105,110,116,115,32,111,110,32,109,97,112,58],"value":"Enter distance (meters) between two points and click these points on map:"},
+{"hash":31377107,"name":"tform2.edit1.text","sourcebytes":[69,110,116,101,114,32,100,105,115,116,97,110,99,101,32,105,110,32,109,101,116,101,114,115],"value":"Enter distance in meters"}
+]}

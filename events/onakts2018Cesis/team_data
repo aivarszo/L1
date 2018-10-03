@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<teams>
+  <team_data>
+    <bib>3002</bib>
+    <team>Kaupietis fon der Kvadrantā</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>1</runner>
+      <card>1</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3004</bib>
+    <team>Aigas laiks</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>25</runner>
+      <card>25</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3006</bib>
+    <team>Divi vienā!</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>12</runner>
+      <card>12</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3007</bib>
+    <team>Emīla Dārziņa ielas republika</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>26</runner>
+      <card>26</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3008</bib>
+    <team>Pilmēnes ĒRGĻI</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>20</runner>
+      <card>20</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3009</bib>
+    <team>zane un draugs</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>21</runner>
+      <card>21</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3010</bib>
+    <team>Džimmas</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>10</runner>
+      <card>10</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3011</bib>
+    <team>Proti un Dari</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>22</runner>
+      <card>22</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3012</bib>
+    <team>OK_Meridians_BB</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>2</runner>
+      <card>2</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3013</bib>
+    <team>Mazie ūdeņi</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>23</runner>
+      <card>23</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3014</bib>
+    <team>wAlts</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>17</runner>
+      <card>17</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3015</bib>
+    <team>Rausīši</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>3</runner>
+      <card>3</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3016</bib>
+    <team>Vestienas trio</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>11</runner>
+      <card>11</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3017</bib>
+    <team>Banzai</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>7</runner>
+      <card>7</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3018</bib>
+    <team>Piena ceļš</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>19</runner>
+      <card>19</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3019</bib>
+    <team>Amatieri</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>8</runner>
+      <card>8</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3020</bib>
+    <team>Ausekļa ielas komanda</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>13</runner>
+      <card>13</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3021</bib>
+    <team>Lauku sēta 3</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>9</runner>
+      <card>9</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3022</bib>
+    <team>Motoreļļa</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>14</runner>
+      <card>14</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3023</bib>
+    <team>Gliemeža pēdējais izrāviens</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>4</runner>
+      <card>4</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3024</bib>
+    <team>Naži</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>15</runner>
+      <card>15</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3025</bib>
+    <team>Magones</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>5</runner>
+      <card>5</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3026</bib>
+    <team>Zibenszeļļi</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>16</runner>
+      <card>16</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3027</bib>
+    <team>Balodīši</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>6</runner>
+      <card>6</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3028</bib>
+    <team>Jasmīni</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>18</runner>
+      <card>18</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3029</bib>
+    <team>Pelēči</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>34</runner>
+      <card>34</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3101</bib>
+    <team>Fantastiskais trijnieks</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>40</runner>
+      <card>40</card>
+      <course></course>
+    </member>
+    <group>WO3</group>
+  </team_data>
+  <team_data>
+    <bib>3102</bib>
+    <team>Trīs priedes un vējš</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>29</runner>
+      <card>29</card>
+      <course></course>
+    </member>
+    <group>WO3</group>
+  </team_data>
+  <team_data>
+    <bib>3103</bib>
+    <team>Mamminas</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>39</runner>
+      <card>39</card>
+      <course></course>
+    </member>
+    <group>WO3</group>
+  </team_data>
+  <team_data>
+    <bib>3104</bib>
+    <team>SIRSNIŅAS</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>28</runner>
+      <card>28</card>
+      <course></course>
+    </member>
+    <group>WO3</group>
+  </team_data>
+  <team_data>
+    <bib>3105</bib>
+    <team>Mammas brīvsolī</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>37</runner>
+      <card>37</card>
+      <course></course>
+    </member>
+    <group>WO3</group>
+  </team_data>
+  <team_data>
+    <bib>3201</bib>
+    <team>S2</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>35</runner>
+      <card>35</card>
+      <course></course>
+    </member>
+    <group>VETERAN3</group>
+  </team_data>
+  <team_data>
+    <bib>3202</bib>
+    <team>2A</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>27</runner>
+      <card>27</card>
+      <course></course>
+    </member>
+    <group>VETERAN3</group>
+  </team_data>
+  <team_data>
+    <bib>3203</bib>
+    <team>Divi viri laiva</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>32</runner>
+      <card>32</card>
+      <course></course>
+    </member>
+    <group>VETERAN3</group>
+  </team_data>
+  <team_data>
+    <bib>3204</bib>
+    <team>Amatciems</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>31</runner>
+      <card>31</card>
+      <course></course>
+    </member>
+    <group>VETERAN3</group>
+  </team_data>
+  <team_data>
+    <bib>3301</bib>
+    <team>NoskrienZiemu.lv</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>33</runner>
+      <card>33</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3302</bib>
+    <team>F I N Ī SH I...</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>38</runner>
+      <card>38</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3304</bib>
+    <team>MLM</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>30</runner>
+      <card>30</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3305</bib>
+    <team>Nakts Lāči</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>36</runner>
+      <card>36</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3306</bib>
+    <team>Malēji</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>42</runner>
+      <card>42</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3308</bib>
+    <team>ARMLED</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>DNF</status>
+    <member>
+      <runner>46</runner>
+      <card>46</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3309</bib>
+    <team>Purs</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>49</runner>
+      <card>49</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3310</bib>
+    <team>Lāči</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>43</runner>
+      <card>43</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3311</bib>
+    <team>Kāpēc ne!</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>48</runner>
+      <card>48</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3312</bib>
+    <team>Apmaldīsimies kopā</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>45</runner>
+      <card>45</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3313</bib>
+    <team>Lāčplēsis</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>50</runner>
+      <card>50</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3314</bib>
+    <team>Vellēni</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>47</runner>
+      <card>47</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3315</bib>
+    <team>Dzērves</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>44</runner>
+      <card>44</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3316</bib>
+    <team>Agrīši</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>41</runner>
+      <card>41</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3317</bib>
+    <team>Jānelsiņu ğimene</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>52</runner>
+      <card>52</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3318</bib>
+    <team>Lizums_BB Team</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>53</runner>
+      <card>53</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3319</bib>
+    <team>Zibenīgie Borodači</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>51</runner>
+      <card>51</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3320</bib>
+    <team>Gaismas maģija</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>55</runner>
+      <card>55</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3321</bib>
+    <team>Beciņas</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>54</runner>
+      <card>54</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3322</bib>
+    <team>Pēteris un Vilnis</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>58</runner>
+      <card>58</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3323</bib>
+    <team>Morīši</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>56</runner>
+      <card>56</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3324</bib>
+    <team>Family</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>57</runner>
+      <card>57</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3325</bib>
+    <team>Optimisti</team>
+    <start>2018-09-28 20:00:00</start>
+    <status>OK</status>
+    <member>
+      <runner>24</runner>
+      <card>24</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3031</bib>
+    <team>ML</team>
+    <start></start>
+    <status>OK</status>
+    <member>
+      <runner>59</runner>
+      <card>59</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3032</bib>
+    <team>OV</team>
+    <start></start>
+    <status>OK</status>
+    <member>
+      <runner>60</runner>
+      <card>60</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3033</bib>
+    <team>Bren</team>
+    <start></start>
+    <status>OK</status>
+    <member>
+      <runner>61</runner>
+      <card>61</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3034</bib>
+    <team>Kr100</team>
+    <start></start>
+    <status>OK</status>
+    <member>
+      <runner>62</runner>
+      <card>62</card>
+      <course></course>
+    </member>
+    <group>OPEN3</group>
+  </team_data>
+  <team_data>
+    <bib>3326</bib>
+    <team>Kir</team>
+    <start></start>
+    <status>OK</status>
+    <member>
+      <runner>63</runner>
+      <card>63</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+  <team_data>
+    <bib>3327</bib>
+    <team>LiKri</team>
+    <start></start>
+    <status>OK</status>
+    <member>
+      <runner>64</runner>
+      <card>64</card>
+      <course></course>
+    </member>
+    <group>Family3</group>
+  </team_data>
+</teams>

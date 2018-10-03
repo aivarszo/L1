@@ -1,0 +1,71 @@
+318;MO;1;Jānis Krūmiņš;Piedzīvojumu meklētāji
+318;MO;1;Kristaps Epners;Piedzīvojumu meklētāji
+304;MO;2;Uldis Žimants;ISOSTAR
+304;MO;2;Alberts Jasāns;ISOSTAR
+802;XV;1;Aigars Actiņš;Serious_Intent
+802;XV;1;Ilze Lapiņa;Serious_Intent
+802;XO;1;Aigars Actiņš;Serious_Intent
+802;XO;1;Ilze Lapiņa;Serious_Intent
+809;XV;2;Andris  Mireckis;PALEJU BUKI
+809;XV;2;Alvita Mirecka;PALEJU BUKI
+809;XO;2;Andris  Mireckis;PALEJU BUKI
+809;XO;2;Alvita Mirecka;PALEJU BUKI
+606;MO;3;Gints Pētersons;Green Power Shoes
+606;MO;3;Raitis Muižnieks;Green Power Shoes
+606;MO;3;Raimonds Lapiņš;Green Power Shoes
+606;MV;1;Gints Pētersons;Green Power Shoes
+606;MV;1;Raitis Muižnieks;Green Power Shoes
+606;MV;1;Raimonds Lapiņš;Green Power Shoes
+510;XO;3;Fadejs Precinieks;Liedagi-35
+510;XO;3;Zelma Preciniece;Liedagi-35
+603;MV;2;Armo Hiie;Carpe Diem! PRO
+603;MV;2;Reigo Lehtla;Carpe Diem! PRO
+804;XV;3;Baiba Ozola;Mona V
+804;XV;3;Jānis Nāgelis;Mona V
+902;MSV;1;Sulev Kuiv;Festina Lente
+902;MSV;1;Peep Eomois;Festina Lente
+902;MV;3;Sulev Kuiv;Festina Lente
+902;MV;3;Peep Eomois;Festina Lente
+1101;XSV;1;Rolands Laveiķis;KĀPA  LR
+1101;XSV;1;Ligita Grunde;KĀPA  LR
+401;WO;1;Aiva Jakovela;Ozona Unda
+401;WO;1;Alda Bražūne;Ozona Unda
+903;MSV;2;Ilmārs  Kaulakans;Asie pipari
+903;MSV;2;Harijs  Lācars;Asie pipari
+904;MSV;3;Jānis Busenbergs;LatLat 3
+904;MSV;3;Varis Peisenieks;LatLat 3
+201;XJ;1;Ieva Ivbule; Piektais Virziens
+201;XJ;1;Aivars Lucijanovs; Piektais Virziens
+102;WO;2;Beāta Zaļaiskalna;Zaļās Māsas
+102;WO;2;Annija Anna Zaļaiskalna;Zaļās Māsas
+102;WJ;1;Beāta Zaļaiskalna;Zaļās Māsas
+102;WJ;1;Annija Anna Zaļaiskalna;Zaļās Māsas
+708;WO;3;Kadi Kuusk;Millimallikas
+708;WO;3;Anne-Ly Lään;Millimallikas
+708;WV;1;Kadi Kuusk;Millimallikas
+708;WV;1;Anne-Ly Lään;Millimallikas
+1103;XSV;2;Uldis Pekuss;Malači
+1103;XSV;2;Velga Buša;Malači
+706;WV;2;Inta Poriķe;Pozitīvie Skorpioni
+706;WV;2;Liene Buša;Pozitīvie Skorpioni
+704;WV;3;Iveta Zāģere;Crazy Sisters
+704;WV;3;Gunta Lebedoka;Crazy Sisters
+203;XJ;2;Līga Linuža;SK Dzērvene
+203;XJ;2;Ivans Oļeičenko;SK Dzērvene
+203;XJ;2;Edgars Bobrovs;SK Dzērvene
+1001;WSV;1;DACE SAULĪTE;KĀ2
+1001;WSV;1;SARMĪTE VLODARE;KĀ2
+1102;XSV;3;Gundega Jurāne;Sēlijas mežs
+1102;XSV;3;Aivars Druvenieks;Sēlijas mežs
+101;WJ;2;Agnese Geduševa;DUBULTS NEPLĪST
+101;WJ;2;Anete Geduševa;DUBULTS NEPLĪST
+1301;WUV;1;Māra Bolšteina;MARVELA
+1301;WUV;1;Velta Zjatkova;MARVELA
+1301;WSV;2;Māra Bolšteina;MARVELA
+1301;WSV;2;Velta Zjatkova;MARVELA
+1201;MUV;1;Arnolds Kučinskis;TAKA 2015
+1201;MUV;1;Andris  Tauvens;TAKA 2015
+1401;XUV;1;Volli Kukk;KĀPA VR
+1401;XUV;1;Ruta Kukka;KĀPA VR
+205;XJ;3;Pēteris Liepa;Avantūristi
+205;XJ;3;Marta Tamane;Avantūristi

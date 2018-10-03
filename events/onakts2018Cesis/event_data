@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event_data>
+  <eventID>onakts2018Cesis</eventID>
+  <eventname>ONakts</eventname>
+  <eventplace>Cēsis</eventplace>
+  <eventlogo>o_nakts_events.jpg</eventlogo>
+  <eventtype>rogain</eventtype>
+  <starttime>2018-09-28 20:00:00</starttime>
+  <finishtime>2018-09-28 23:00:00</finishtime>
+  <latetime>2018-09-28 23:30:00</latetime>
+  <sunsettime>2018-09-28 20:00:00</sunsettime>
+  <sunrisetime>2018-09-28 07:00:00</sunrisetime>
+  <timelimit>60</timelimit>
+  <timepenalty>1</timepenalty>
+  <printer></printer>
+  <siport></siport>
+  <starttype>starttime</starttype>
+  <penaltytype>full minute</penaltytype>
+  <routetype>jpg</routetype>
+</event_data>

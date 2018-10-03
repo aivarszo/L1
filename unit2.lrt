@@ -1,0 +1,7 @@
+TFORM2.CAPTION=Form2
+TFORM2.BUTTON1.CAPTION=Save
+TFORM2.BUTTON2.CAPTION=Remove control
+TFORM2.BUTTON3.CAPTION=Cancel
+TFORM2.BUTTON4.CAPTION=Set stations from controls
+TFORM2.LABEL1.CAPTION=Enter distance (meters) between to points and click these points on map:
+TFORM2.EDIT1.TEXT=Enter distance in meters

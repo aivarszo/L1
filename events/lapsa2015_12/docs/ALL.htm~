@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Rezultāti - ALL</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<style>
+#container {
+    position:relative;
+    height:4000px;
+ }
+#container h2 {
+    padding:50px 0;
+    text-align:center;
+ }
+#container h2:last-of-type {
+    position:absolute;
+    bottom:0;
+    width:100%;
+ } 
+</style>
+
+<script>
+(function() {
+   'use strict';
+
+   var dbh,sto,num=2,temp=0,scrolldelay=50;
+
+function init(){ 
+    dbh=document.body.offsetHeight;
+    pageScroll();
+ }
+
+function pageScroll() {
+    window.scrollBy(0,num);
+    temp+=num;
+if((temp>=dbh)||(temp<-200)){
+    num=-num;
+ }
+   sto=setTimeout(function(){pageScroll();},scrolldelay);
+ }
+   window.addEventListener?
+   window.addEventListener('load',init,false):
+   window.attachEvent('onload',init);
+})();
+</script>
+
+</head>
+<body>
+<div id="container">
+<img src="/home/skola/Dokumenti/eclipse/OrSiPy2/src/data/events/lapsa2015_6/lr2015_logo.jpg">
+<div class="header">Lapsu rogainings 2015 12h</div>
+<div class="info"><b>2015-11-07</b><br />
+<b>Ungurmalas</b></div><hr />
+<table class="info">
+<tr><td><i>Starts:</i></td><td><b>2015-11-07 10:00:00</b></td></tr>
+<tr><td><i>Saulriets:</i></td><td><b>2015-11-07 16:20:00</b></td></tr>
+<tr><td><i>Saullēkts:</i></td><td><b>2015-11-08 08:00:00</b></td></tr>
+<tr><td><i>Finišs:</i></td><td><b>2015-11-07 22:00:00</b></td></tr>
+<tr><td><i>Ieskaites laika beigas:</i></td><td><b>2015-11-07 22:30:00</b></td></tr>
+</table>
+<span class="classheader">ALL</span><br />
+<table class="" border="0">
+<tr class="resultheader"><th>KN</th><th>Komanda</th><th>Laiks<br />Punkti<br />Soda punkti</th><th>Rezultāts</th><th>Vieta grupā(s)</th></tr>
+<tr class="team1"><td>318</td><td><a href="../teamresults/318.htm">Piedzīvojumu meklētāji</a><br /><div class="css_members"><li>Jānis Krūmiņš M 36<br /><li>Kristaps Epners M 39<br /></div></td><td>11:48:57<br />169<br />0</td><td class="css_result">169</td><td class="place">1<br /><span class=wingold>MO:1</span> </td></tr>
+<tr class="team1"><td>304</td><td><a href="../teamresults/304.htm">ISOSTAR</a><br /><div class="css_members"><li>Uldis Žimants M 34<br /><li>Alberts Jasāns M 32<br /></div></td><td>11:56:40<br />169<br />0</td><td class="css_result">169</td><td class="place">2<br /><span class=winsilver>MO:2</span> </td></tr>
+<tr class="team1"><td>802</td><td><a href="../teamresults/802.htm">Serious_Intent</a><br /><div class="css_members"><li>Aigars Actiņš M 45<br /><li>Ilze Lapiņa W 47<br /></div></td><td>11:49:01<br />158<br />0</td><td class="css_result">158</td><td class="place">3<br /><span class=wingold>XO:1</span> <span class=wingold>XV:1</span> </td></tr>
+<tr class="team1"><td>809</td><td><a href="../teamresults/809.htm">PALEJU BUKI</a><br /><div class="css_members"><li>Andris  Mireckis M 42<br /><li>Alvita Mirecka W 44<br /></div></td><td>11:49:41<br />156<br />0</td><td class="css_result">156</td><td class="place">4<br /><span class=winsilver>XO:2</span> <span class=winsilver>XV:2</span> </td></tr>
+<tr class="team1"><td>606</td><td><a href="../teamresults/606.htm">Green Power Shoes</a><br /><div class="css_members"><li>Gints Pētersons M 43<br /><li>Raitis Muižnieks M 47<br /><li>Raimonds Lapiņš M 46<br /></div></td><td>11:54:04<br />156<br />0</td><td class="css_result">156</td><td class="place">5<br /><span class=winbronz>MO:3</span> <span class=wingold>MV:1</span> </td></tr>
+<tr class="team1"><td>510</td><td><a href="../teamresults/510.htm">Liedagi-35</a><br /><div class="css_members"><li>Fadejs Precinieks M 37<br /><li>Zelma Preciniece W 33<br /></div></td><td>11:50:26<br />154<br />0</td><td class="css_result">154</td><td class="place">6<br /><span class=winbronz>XO:3</span> </td></tr>
+<tr class="team1"><td>603</td><td><a href="../teamresults/603.htm">Carpe Diem! PRO</a><br /><div class="css_members"><li>Armo Hiie M 47<br /><li>Reigo Lehtla M 45<br /></div></td><td>12:15:09<br />169<br />16</td><td class="css_result">153</td><td class="place">7<br /><span class=nowin>MO:4</span> <span class=winsilver>MV:2</span> </td></tr>
+<tr class="team1"><td>303</td><td><a href="../teamresults/303.htm">Slapjie pumpuri</a><br /><div class="css_members"><li>Aigars Čeksters M 34<br /><li>Vilnis Frišfelds M 41<br /></div></td><td>11:46:24<br />149<br />0</td><td class="css_result">149</td><td class="place">8<br /><span class=nowin>MO:5</span> </td></tr>
+<tr class="team1"><td>306</td><td><a href="../teamresults/306.htm">Vulpes venatores</a><br /><div class="css_members"><li>Zigmunds Bībers M 33<br /><li>Raimonds Ozoliņš M 32<br /></div></td><td>10:51:21<br />148<br />0</td><td class="css_result">148</td><td class="place">9<br /><span class=nowin>MO:6</span> </td></tr>
+<tr class="team1"><td>301</td><td><a href="../teamresults/301.htm">Kurmis</a><br /><div class="css_members"><li>Emīls Endele M 29<br /><li>Matīss Vīksne M 29<br /></div></td><td>11:58:35<br />148<br />0</td><td class="css_result">148</td><td class="place">10<br /><span class=nowin>MO:7</span> </td></tr>
+<tr class="team1"><td>804</td><td><a href="../teamresults/804.htm">Mona V</a><br /><div class="css_members"><li>Baiba Ozola W 51<br /><li>Jānis Nāgelis M 54<br /></div></td><td>12:00:06<br />149<br />1</td><td class="css_result">148</td><td class="place">11<br /><span class=nowin>XO:4</span> <span class=winbronz>XV:3</span> </td></tr>
+<tr class="team1"><td>308</td><td><a href="../teamresults/308.htm">Taku Skrējējs</a><br /><div class="css_members"><li>Juris Dzenis M 34<br /><li>Jānis  Viškers M 39<br /></div></td><td>11:44:12<br />147<br />0</td><td class="css_result">147</td><td class="place">12<br /><span class=nowin>MO:8</span> </td></tr>
+<tr class="team1"><td>307</td><td><a href="../teamresults/307.htm">Alnis bez stresa</a><br /><div class="css_members"><li>Zintis Brasavs-Muižnieks M 45<br /><li>Viesturs Šlosbergs M 38<br /></div></td><td>11:41:55<br />136<br />0</td><td class="css_result">136</td><td class="place">13<br /><span class=nowin>MO:9</span> </td></tr>
+<tr class="team1"><td>309</td><td><a href="../teamresults/309.htm">Apakšgrāvja adipināts</a><br /><div class="css_members"><li>Mārtiņš Krūze M 28<br /><li>Edgars Jurjāns M 28<br /></div></td><td>11:49:19<br />135<br />0</td><td class="css_result">135</td><td class="place">14<br /><span class=nowin>MO:10</span> </td></tr>
+<tr class="team1"><td>315</td><td><a href="../teamresults/315.htm">Ķikuti 99</a><br /><div class="css_members"><li>Jurģis Eberhards M 44<br /><li>Renārs Eberhards M 13<br /><li>Rūdolfs Eberhards M 13<br /></div></td><td>11:22:01<br />133<br />0</td><td class="css_result">133</td><td class="place">15<br /><span class=nowin>MO:11</span> </td></tr>
+<tr class="team1"><td>902</td><td><a href="../teamresults/902.htm">Festina Lente</a><br /><div class="css_members"><li>Sulev Kuiv M 59<br /><li>Peep Eomois M 59<br /></div></td><td>12:00:00<br />133<br />0</td><td class="css_result">133</td><td class="place">16<br /><span class=nowin>MO:12</span> <span class=winbronz>MV:3</span> <span class=wingold>MSV:1</span> </td></tr>
+<tr class="team1"><td>508</td><td><a href="../teamresults/508.htm">22 minūtes</a><br /><div class="css_members"><li>Linda Beldava W 35<br /><li>Mareks Tumašs M 39<br /></div></td><td>11:49:07<br />131<br />0</td><td class="css_result">131</td><td class="place">17<br /><span class=nowin>XO:5</span> </td></tr>
+<tr class="team1"><td>504</td><td><a href="../teamresults/504.htm">SuperKleperīgs meža skuvums</a><br /><div class="css_members"><li>Uldis Klepers M 35<br /><li>Aiva  Klepere W 35<br /></div></td><td>12:01:23<br />133<br />2</td><td class="css_result">131</td><td class="place">18<br /><span class=nowin>XO:6</span> </td></tr>
+<tr class="team1"><td>321</td><td><a href="../teamresults/321.htm">Meridians </a><br /><div class="css_members"><li>Kristaps Magone M 23<br /><li>Nauris  Spalviņš M 26<br /></div></td><td>12:13:56<br />144<br />14</td><td class="css_result">130</td><td class="place">19<br /><span class=nowin>MO:13</span> </td></tr>
+<tr class="team1"><td>1101</td><td><a href="../teamresults/1101.htm">KĀPA  LR</a><br /><div class="css_members"><li>Rolands Laveiķis M 59<br /><li>Ligita Grunde W 61<br /></div></td><td>11:53:09<br />128<br />0</td><td class="css_result">128</td><td class="place">20<br /><span class=nowin>XO:7</span> <span class=nowin>XV:4</span> <span class=wingold>XSV:1</span> </td></tr>
+<tr class="team1"><td>601</td><td><a href="../teamresults/601.htm">GuN</a><br /><div class="css_members"><li>Nikolajs Lucāns M 50<br /><li>Guntis Pikurs M 42<br /></div></td><td>11:49:06<br />127<br />0</td><td class="css_result">127</td><td class="place">21<br /><span class=nowin>MO:14</span> <span class=nowin>MV:4</span> </td></tr>
+<tr class="team1"><td>401</td><td><a href="../teamresults/401.htm">Ozona Unda</a><br /><div class="css_members"><li>Aiva Jakovela W 38<br /><li>Alda Bražūne W 33<br /></div></td><td>11:58:50<br />125<br />0</td><td class="css_result">125</td><td class="place">22<br /><span class=wingold>WO:1</span> </td></tr>
+<tr class="team1"><td>801</td><td><a href="../teamresults/801.htm">Turbo Gliemeži</a><br /><div class="css_members"><li>Jurijs Narels M 47<br /><li>Ruta  Šķipare W 44<br /><li>Pēteris Krastiņš M 44<br /></div></td><td>11:46:36<br />123<br />0</td><td class="css_result">123</td><td class="place">23<br /><span class=nowin>XO:8</span> <span class=nowin>XV:5</span> </td></tr>
+<tr class="team1"><td>604</td><td><a href="../teamresults/604.htm">Alnis brīvsolī</a><br /><div class="css_members"><li>Ilmārs Dukulis M 50<br /><li>Arne Lūsis M 49<br /><li>Ainārs Šiliņš M 47<br /></div></td><td>11:41:38<br />122<br />0</td><td class="css_result">122</td><td class="place">24<br /><span class=nowin>MO:15</span> <span class=nowin>MV:5</span> </td></tr>
+<tr class="team1"><td>903</td><td><a href="../teamresults/903.htm">Asie pipari</a><br /><div class="css_members"><li>Ilmārs  Kaulakans M 60<br /><li>Harijs  Lācars M 56<br /></div></td><td>11:56:25<br />121<br />0</td><td class="css_result">121</td><td class="place">25<br /><span class=nowin>MO:16</span> <span class=nowin>MV:6</span> <span class=winsilver>MSV:2</span> </td></tr>
+<tr class="team1"><td>808</td><td><a href="../teamresults/808.htm">Mona-XA</a><br /><div class="css_members"><li>Pēteris Zariņš M 54<br /><li>Alīda Ābola W 59<br /></div></td><td>11:55:59<br />120<br />0</td><td class="css_result">120</td><td class="place">26<br /><span class=nowin>XO:9</span> <span class=nowin>XV:6</span> </td></tr>
+<tr class="team1"><td>310</td><td><a href="../teamresults/310.htm">Zāģis un Zebiekste</a><br /><div class="css_members"><li>Gints Ģērmanis M 41<br /><li>Uģis Ģērmanis M 29<br /></div></td><td>11:57:18<br />120<br />0</td><td class="css_result">120</td><td class="place">27<br /><span class=nowin>MO:17</span> </td></tr>
+<tr class="team1"><td>904</td><td><a href="../teamresults/904.htm">LatLat 3</a><br /><div class="css_members"><li>Jānis Busenbergs M 56<br /><li>Varis Peisenieks M 58<br /></div></td><td>11:58:27<br />119<br />0</td><td class="css_result">119</td><td class="place">28<br /><span class=nowin>MO:18</span> <span class=nowin>MV:7</span> <span class=winbronz>MSV:3</span> </td></tr>
+<tr class="team1"><td>608</td><td><a href="../teamresults/608.htm">RAID.lv</a><br /><div class="css_members"><li>Normunds Lisovskis M 43<br /><li>Jānis Andersons M 49<br /></div></td><td>12:03:56<br />123<br />4</td><td class="css_result">119</td><td class="place">29<br /><span class=nowin>MO:19</span> <span class=nowin>MV:8</span> </td></tr>
+<tr class="team1"><td>509</td><td><a href="../teamresults/509.htm">Lapsa eža kažokā</a><br /><div class="css_members"><li>Dzintars Rērihs M 31<br /><li>Dace Veipa W 36<br /></div></td><td>11:57:41<br />118<br />0</td><td class="css_result">118</td><td class="place">30<br /><span class=nowin>XO:10</span> </td></tr>
+<tr class="team1"><td>505</td><td><a href="../teamresults/505.htm">Unqualified reference</a><br /><div class="css_members"><li>Jānis Kalniņš M 27<br /><li>Ieva Grauduma W 23<br /></div></td><td>11:55:41<br />117<br />0</td><td class="css_result">117</td><td class="place">31<br /><span class=nowin>XO:11</span> </td></tr>
+<tr class="team1"><td>322</td><td><a href="../teamresults/322.htm">Resnais Susurs</a><br /><div class="css_members"><li>Māris Avotiņš M 43<br /><li>Rinalds Biezais M 39<br /><li>Andris Strazdiņš M 43<br /></div></td><td>11:59:00<br />117<br />0</td><td class="css_result">117</td><td class="place">32<br /><span class=nowin>MO:20</span> </td></tr>
+<tr class="team1"><td>201</td><td><a href="../teamresults/201.htm"> Piektais Virziens</a><br /><div class="css_members"><li>Ieva Ivbule W 17<br /><li>Aivars Lucijanovs M 15<br /></div></td><td>11:18:52<br />115<br />0</td><td class="css_result">115</td><td class="place">33<br /><span class=nowin>XO:12</span> <span class=wingold>XJ:1</span> </td></tr>
+<tr class="team1"><td>501</td><td><a href="../teamresults/501.htm">PIENA ZOBI</a><br /><div class="css_members"><li>Edmunds Fadiņš M 34<br /><li>Katrīna Poliščuka W 35<br /></div></td><td>11:58:01<br />114<br />0</td><td class="css_result">114</td><td class="place">34<br /><span class=nowin>XO:13</span> </td></tr>
+<tr class="team1"><td>805</td><td><a href="../teamresults/805.htm">Romanichi</a><br /><div class="css_members"><li>Ilva Koškina W 41<br /><li>Romāns Koškins M 40<br /></div></td><td>11:59:23<br />112<br />0</td><td class="css_result">112</td><td class="place">35<br /><span class=nowin>XO:14</span> <span class=nowin>XV:7</span> </td></tr>
+<tr class="team1"><td>506</td><td><a href="../teamresults/506.htm">Divplākšņi</a><br /><div class="css_members"><li>Lāsma Āboliņa W 45<br /><li>Uğis Inka M 38<br /></div></td><td>11:15:58<br />110<br />0</td><td class="css_result">110</td><td class="place">36<br /><span class=nowin>XO:15</span> </td></tr>
+<tr class="team1"><td>102</td><td><a href="../teamresults/102.htm">Zaļās Māsas</a><br /><div class="css_members"><li>Beāta Zaļaiskalna W 22<br /><li>Annija Anna Zaļaiskalna W 19<br /></div></td><td>11:14:48<br />109<br />0</td><td class="css_result">109</td><td class="place">37<br /><span class=winsilver>WO:2</span> <span class=wingold>WJ:1</span> </td></tr>
+<tr class="team1"><td>901</td><td><a href="../teamresults/901.htm">Divi veči</a><br /><div class="css_members"><li>Jānis Biezais M 64<br /><li>Uldis Alksnis M 63<br /></div></td><td>11:52:22<br />109<br />0</td><td class="css_result">109</td><td class="place">38<br /><span class=nowin>MO:21</span> <span class=nowin>MV:9</span> <span class=nowin>MSV:4</span> </td></tr>
+<tr class="team1"><td>708</td><td><a href="../teamresults/708.htm">Millimallikas</a><br /><div class="css_members"><li>Kadi Kuusk W 46<br /><li>Anne-Ly Lään W 45<br /></div></td><td>11:56:29<br />109<br />0</td><td class="css_result">109</td><td class="place">39<br /><span class=winbronz>WO:3</span> <span class=wingold>WV:1</span> </td></tr>
+<tr class="team1"><td>1103</td><td><a href="../teamresults/1103.htm">Malači</a><br /><div class="css_members"><li>Uldis Pekuss M 57<br /><li>Velga Buša W 58<br /></div></td><td>12:12:51<br />122<br />13</td><td class="css_result">109</td><td class="place">40<br /><span class=nowin>XO:16</span> <span class=nowin>XV:8</span> <span class=winsilver>XSV:2</span> </td></tr>
+<tr class="team1"><td>405</td><td><a href="../teamresults/405.htm">Mjaumjau</a><br /><div class="css_members"><li>Jolanta Bura W 45<br /><li>Līga Vībure W 36<br /></div></td><td>11:31:56<br />108<br />0</td><td class="css_result">108</td><td class="place">41<br /><span class=nowin>WO:4</span> </td></tr>
+<tr class="team1"><td>706</td><td><a href="../teamresults/706.htm">Pozitīvie Skorpioni</a><br /><div class="css_members"><li>Inta Poriķe W 52<br /><li>Liene Buša W 62<br /></div></td><td>11:46:12<br />107<br />0</td><td class="css_result">107</td><td class="place">42<br /><span class=nowin>WO:5</span> <span class=winsilver>WV:2</span> </td></tr>
+<tr class="team1"><td>514</td><td><a href="../teamresults/514.htm">Ampēriņš</a><br /><div class="css_members"><li>Madara Apsalone W 30<br /><li>Aleksandrs Riguns M 27<br /></div></td><td>11:53:49<br />107<br />0</td><td class="css_result">107</td><td class="place">43<br /><span class=nowin>XO:17</span> </td></tr>
+<tr class="team1"><td>319</td><td><a href="../teamresults/319.htm">Sēlijas mežs 2</a><br /><div class="css_members"><li>Renārs Druvenieks M 29<br /><li>Guntis Jurāns M 27<br /><li>Mārtiņš  Peisenieks M 31<br /></div></td><td>11:34:51<br />106<br />0</td><td class="css_result">106</td><td class="place">44<br /><span class=nowin>MO:22</span> </td></tr>
+<tr class="team1"><td>316</td><td><a href="../teamresults/316.htm">Jo-Jo</a><br /><div class="css_members"><li>Ēvalds Žogla M 52<br /><li>Artūrs Žogla M 34<br /></div></td><td>12:03:19<br />110<br />4</td><td class="css_result">106</td><td class="place">45<br /><span class=nowin>MO:23</span> </td></tr>
+<tr class="team1"><td>314</td><td><a href="../teamresults/314.htm">Hugo_Tox</a><br /><div class="css_members"><li>Uģis Kokenbergs M 47<br /><li>Toms Kokenbergs M 17<br /></div></td><td>11:30:28<br />104<br />0</td><td class="css_result">104</td><td class="place">46<br /><span class=nowin>MO:24</span> </td></tr>
+<tr class="team1"><td>704</td><td><a href="../teamresults/704.htm">Crazy Sisters</a><br /><div class="css_members"><li>Iveta Zāģere W 50<br /><li>Gunta Lebedoka W 61<br /></div></td><td>11:30:25<br />103<br />0</td><td class="css_result">103</td><td class="place">47<br /><span class=nowin>WO:6</span> <span class=winbronz>WV:3</span> </td></tr>
+<tr class="team1"><td>203</td><td><a href="../teamresults/203.htm">SK Dzērvene</a><br /><div class="css_members"><li>Līga Linuža W 22<br /><li>Ivans Oļeičenko M 20<br /><li>Edgars Bobrovs M 21<br /></div></td><td>11:24:03<br />102<br />0</td><td class="css_result">102</td><td class="place">48<br /><span class=nowin>XO:18</span> <span class=winsilver>XJ:2</span> </td></tr>
+<tr class="team1"><td>1001</td><td><a href="../teamresults/1001.htm">KĀ2</a><br /><div class="css_members"><li>DACE SAULĪTE W 56<br /><li>SARMĪTE VLODARE W 57<br /></div></td><td>11:35:59<br />102<br />0</td><td class="css_result">102</td><td class="place">49<br /><span class=nowin>WO:7</span> <span class=nowin>WV:4</span> <span class=wingold>WSV:1</span> </td></tr>
+<tr class="team1"><td>703</td><td><a href="../teamresults/703.htm">ElMa</a><br /><div class="css_members"><li>ELITA STAUNE W 45<br /><li>MĀRA RINĀSA W 49<br /></div></td><td>11:36:03<br />102<br />0</td><td class="css_result">102</td><td class="place">50<br /><span class=nowin>WO:8</span> <span class=nowin>WV:5</span> </td></tr>
+<tr class="team1"><td>1102</td><td><a href="../teamresults/1102.htm">Sēlijas mežs</a><br /><div class="css_members"><li>Gundega Jurāne W 56<br /><li>Aivars Druvenieks M 59<br /></div></td><td>11:45:16<br />102<br />0</td><td class="css_result">102</td><td class="place">51<br /><span class=nowin>XO:19</span> <span class=nowin>XV:9</span> <span class=winbronz>XSV:3</span> </td></tr>
+<tr class="team1"><td>605</td><td><a href="../teamresults/605.htm">ALUSALA</a><br /><div class="css_members"><li>Arvis Zvanitajs M 46<br /><li>Dzintars Lakis M 47<br /></div></td><td>10:08:08<br />101<br />0</td><td class="css_result">101</td><td class="place">52<br /><span class=nowin>MO:25</span> <span class=nowin>MV:10</span> </td></tr>
+<tr class="team1"><td>101</td><td><a href="../teamresults/101.htm">DUBULTS NEPLĪST</a><br /><div class="css_members"><li>Agnese Geduševa W 22<br /><li>Anete Geduševa W 22<br /></div></td><td>11:32:03<br />101<br />0</td><td class="css_result">101</td><td class="place">53<br /><span class=nowin>WO:9</span> <span class=winsilver>WJ:2</span> </td></tr>
+<tr class="team1"><td>513</td><td><a href="../teamresults/513.htm">Čiņčidriļčiks</a><br /><div class="css_members"><li>Juris Pētersons M 36<br /><li>Elina Krēmere W 14<br /><li>Pauls Verners Johansens M 14<br /></div></td><td>11:35:51<br />101<br />0</td><td class="css_result">101</td><td class="place">54<br /><span class=nowin>XO:20</span> </td></tr>
+<tr class="team1"><td>507</td><td><a href="../teamresults/507.htm">Boriņš un egliņš</a><br /><div class="css_members"><li>Jānis  Bormeisters M 30<br /><li>Laura  Egle W 31<br /></div></td><td>11:39:30<br />100<br />0</td><td class="css_result">100</td><td class="place">55<br /><span class=nowin>XO:21</span> </td></tr>
+<tr class="team1"><td>1301</td><td><a href="../teamresults/1301.htm">MARVELA</a><br /><div class="css_members"><li>Māra Bolšteina W 71<br /><li>Velta Zjatkova W 76<br /></div></td><td>11:46:18<br />100<br />0</td><td class="css_result">100</td><td class="place">56<br /><span class=nowin>WO:10</span> <span class=nowin>WV:6</span> <span class=winsilver>WSV:2</span> <span class=wingold>WUV:1</span> </td></tr>
+<tr class="team1"><td>707</td><td><a href="../teamresults/707.htm">Piedzīvojumu meklējot</a><br /><div class="css_members"><li>Vita Žukovska W 45<br /><li>Jana Adata W 43<br /></div></td><td>11:42:49<br />99<br />0</td><td class="css_result">99</td><td class="place">57<br /><span class=nowin>WO:11</span> <span class=nowin>WV:7</span> </td></tr>
+<tr class="team1"><td>402</td><td><a href="../teamresults/402.htm">Rāmi lēnām</a><br /><div class="css_members"><li>Inese Bērziņa W 46<br /><li>Gunda Plūmane W 39<br /></div></td><td>11:49:31<br />97<br />0</td><td class="css_result">97</td><td class="place">58<br /><span class=nowin>WO:12</span> </td></tr>
+<tr class="team1"><td>1201</td><td><a href="../teamresults/1201.htm">TAKA 2015</a><br /><div class="css_members"><li>Arnolds Kučinskis M 66<br /><li>Andris  Tauvens M 65<br /></div></td><td>11:14:21<br />95<br />0</td><td class="css_result">95</td><td class="place">59<br /><span class=nowin>MO:26</span> <span class=nowin>MV:11</span> <span class=nowin>MSV:5</span> <span class=wingold>MUV:1</span> </td></tr>
+<tr class="team1"><td>609</td><td><a href="../teamresults/609.htm">SILVA</a><br /><div class="css_members"><li>Helmuts Lukačovs M 65<br /><li>Roberts Koleda M 42<br /></div></td><td>12:13:33<br />109<br />14</td><td class="css_result">95</td><td class="place">60<br /><span class=nowin>MO:27</span> <span class=nowin>MV:12</span> </td></tr>
+<tr class="team1"><td>1401</td><td><a href="../teamresults/1401.htm">KĀPA VR</a><br /><div class="css_members"><li>Volli Kukk M 66<br /><li>Ruta Kukka W 65<br /></div></td><td>12:22:25<br />118<br />23</td><td class="css_result">95</td><td class="place">61<br /><span class=nowin>XO:22</span> <span class=nowin>XV:10</span> <span class=nowin>XSV:4</span> <span class=wingold>XUV:1</span> </td></tr>
+<tr class="team1"><td>607</td><td><a href="../teamresults/607.htm">AAT</a><br /><div class="css_members"><li>Armands Teteris M 42<br /><li>Arvīds Teteris M 74<br /></div></td><td>09:09:00<br />91<br />0</td><td class="css_result">91</td><td class="place">62<br /><span class=nowin>MO:28</span> <span class=nowin>MV:13</span> </td></tr>
+<tr class="team1"><td>403</td><td><a href="../teamresults/403.htm">Zebiekstes</a><br /><div class="css_members"><li>Maija Rumaka W 42<br /><li>Ilvija Madsena W 38<br /></div></td><td>12:12:20<br />104<br />13</td><td class="css_result">91</td><td class="place">63<br /><span class=nowin>WO:13</span> </td></tr>
+<tr class="team1"><td>702</td><td><a href="../teamresults/702.htm">Daivas</a><br /><div class="css_members"><li>Dace Ikšele W 48<br /><li>Aiva Skopāne W 47<br /></div></td><td>11:42:06<br />90<br />0</td><td class="css_result">90</td><td class="place">64<br /><span class=nowin>WO:14</span> <span class=nowin>WV:8</span> </td></tr>
+<tr class="team1"><td>803</td><td><a href="../teamresults/803.htm">Marmotes</a><br /><div class="css_members"><li>Inese Rudzīte W 42<br /><li>Vitolds Bērziņš M 65<br /><li>Guntars Vība M 47<br /></div></td><td>11:55:20<br />88<br />0</td><td class="css_result">88</td><td class="place">65<br /><span class=nowin>XO:23</span> <span class=nowin>XV:11</span> </td></tr>
+<tr class="team1"><td>320</td><td><a href="../teamresults/320.htm">Vaidava 2000</a><br /><div class="css_members"><li>Aris Peics M 26<br /><li>Davis Salduksnis M 23<br /></div></td><td>11:14:03<br />87<br />0</td><td class="css_result">87</td><td class="place">66<br /><span class=nowin>MO:29</span> </td></tr>
+<tr class="team1"><td>404</td><td><a href="../teamresults/404.htm">ASAP VI</a><br /><div class="css_members"><li>Tatjana Ļebedeva W 23<br /><li>Ilze Buša W 29<br /></div></td><td>11:48:32<br />85<br />0</td><td class="css_result">85</td><td class="place">67<br /><span class=nowin>WO:15</span> </td></tr>
+<tr class="team1"><td>317</td><td><a href="../teamresults/317.htm">Ātrās ļipas</a><br /><div class="css_members"><li>Uldis Pormeisters M 28<br /><li>Kaspars  Adijāns M 28<br /></div></td><td>12:05:58<br />90<br />6</td><td class="css_result">84</td><td class="place">68<br /><span class=nowin>MO:30</span> </td></tr>
+<tr class="team1"><td>202</td><td><a href="../teamresults/202.htm">Stiprās vārnas</a><br /><div class="css_members"><li>Elīza Katlapa W 17<br /><li>Uldis Katlaps M 22<br /><li>Agnese Katlapa W 23<br /></div></td><td>12:02:37<br />86<br />3</td><td class="css_result">83</td><td class="place">69<br /><span class=nowin>XO:24</span> </td></tr>
+<tr class="team1"><td>302</td><td><a href="../teamresults/302.htm">Kaifarix Team</a><br /><div class="css_members"><li>Arvis Medrājs M 23<br /><li>Dāvis Ziediņš M 24<br /></div></td><td>12:08:51<br />91<br />9</td><td class="css_result">82</td><td class="place">70<br /><span class=nowin>MO:31</span> </td></tr>
+<tr class="team1"><td>305</td><td><a href="../teamresults/305.htm">Mieru, tikai mieru!</a><br /><div class="css_members"><li>Jānis Karlsons M 28<br /><li>Juris Karlsons M 27<br /></div></td><td>10:19:08<br />81<br />0</td><td class="css_result">81</td><td class="place">71<br /><span class=nowin>MO:32</span> </td></tr>
+<tr class="team1"><td>511</td><td><a href="../teamresults/511.htm">Dzērves</a><br /><div class="css_members"><li>Gatis Dzērve M 39<br /><li>Agnese Dzērve W 38<br /></div></td><td>08:35:22<br />78<br />0</td><td class="css_result">78</td><td class="place">72<br /><span class=nowin>XO:25</span> </td></tr>
+<tr class="team1"><td>313</td><td><a href="../teamresults/313.htm">STK</a><br /><div class="css_members"><li>Jānis Priedītis M 29<br /><li>Artis Denovs M 30<br /></div></td><td>06:29:40<br />70<br />0</td><td class="css_result">70</td><td class="place">73<br /><span class=nowin>MO:33</span> </td></tr>
+<tr class="team1"><td>205</td><td><a href="../teamresults/205.htm">Avantūristi</a><br /><div class="css_members"><li>Pēteris Liepa M 21<br /><li>Marta Tamane W 21<br /></div></td><td>11:51:09<br />70<br />0</td><td class="css_result">70</td><td class="place">74<br /><span class=nowin>XO:26</span> <span class=winbronz>XJ:3</span> </td></tr>
+<tr class="team1"><td>701</td><td><a href="../teamresults/701.htm">eSKā Vāvers</a><br /><div class="css_members"><li>Inga Ziediņa W 44<br /><li>Ingrīda Greivule W 46<br /></div></td><td>11:55:41<br />69<br />0</td><td class="css_result">69</td><td class="place">75<br /><span class=nowin>WO:16</span> <span class=nowin>WV:9</span> </td></tr>
+<tr class="team1"><td>503</td><td><a href="../teamresults/503.htm">Ņergas/Isostar</a><br /><div class="css_members"><li>Marta Zumberga W 26<br /><li>Mārtiņš Puriņš M 27<br /></div></td><td>04:08:39<br />46<br />0</td><td class="css_result">46</td><td class="place">76<br /><span class=nowin>XO:27</span> </td></tr>
+<tr class="team1"><td>806</td><td><a href="../teamresults/806.htm">BČ</a><br /><div class="css_members"><li>Andris Miglavs M 54<br /><li>Līga Timmermane W 44<br /></div></td><td>11:00:00<br />98<br />0</td><td class="css_result">IZST</td><td class="place">77<br /><span class=nowin>XO:28</span> <span class=nowin>XV:12</span> </td></tr>
+<tr class="team1"><td>602</td><td><a href="../teamresults/602.htm">Concorde</a><br /><div class="css_members"><li>Einārs Masteiko M 43<br /></div></td><td>11:45:29<br />159<br />0</td><td class="css_result">Ā/K</td><td class="place">78<br /><span class=wingold>ind:1</span> </td></tr>
+</div>
+</body></html>

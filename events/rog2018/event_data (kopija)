@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event_data>
+  <eventID>rog2018</eventID>
+  <eventname>Rogainings</eventname>
+  <eventplace>Talsi</eventplace>
+  <eventlogo></eventlogo>
+  <eventtype>rogain</eventtype>
+  <starttime>2017-03-12 22:00:00</starttime>
+  <finishtime>2017-03-13 08:00:00</finishtime>
+  <latetime>2017-03-13 08:30:00</latetime>
+  <sunsettime></sunsettime>
+  <sunrisetime></sunrisetime>
+  <timelimit>60</timelimit>
+  <timepenalty></timepenalty>
+  <printer></printer>
+  <siport>//dev/ttyUSB0</siport>
+  <starttype>starttime</starttype>
+</event_data>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<runners_data>
+  <runner_data>
+    <id>1</id>
+    <name>Armands Broks</name>
+    <sex>V</sex>
+    <birth>1982-11-03</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>2</id>
+    <name>Māris Bērziņš</name>
+    <sex>V</sex>
+    <birth>1980-07-23</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>3</id>
+    <name>Māris Sumčenko</name>
+    <sex>V</sex>
+    <birth>1980-01-11</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>4</id>
+    <name>Mārtiņš Malzubris</name>
+    <sex>V</sex>
+    <birth>1982-01-06</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>5</id>
+    <name>Didzis Šapkus</name>
+    <sex>V</sex>
+    <birth>1984-02-16</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>6</id>
+    <name>Artūrs Vaselis</name>
+    <sex>V</sex>
+    <birth>1984-03-26</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>7</id>
+    <name>Oskars Zīds</name>
+    <sex>V</sex>
+    <birth>1948-07-22</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>8</id>
+    <name>Daina Celma-Zida</name>
+    <sex>S</sex>
+    <birth>1950-08-12</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>9</id>
+    <name>Ildze Straume</name>
+    <sex>S</sex>
+    <birth>1974-12-02</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>10</id>
+    <name>xx yy</name>
+    <sex>S</sex>
+    <birth>1974-01-01</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>11</id>
+    <name>Sarmīte Vlodare</name>
+    <sex>S</sex>
+    <birth>1958-10-06</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>12</id>
+    <name>Dace Saulīte</name>
+    <sex>S</sex>
+    <birth>1959-04-18</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>13</id>
+    <name>Gunta Lebedoka</name>
+    <sex>S</sex>
+    <birth>1954-03-04</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>14</id>
+    <name>Silvija Penkule</name>
+    <sex>S</sex>
+    <birth>1960-11-10</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>15</id>
+    <name>Rolands Laveiķis</name>
+    <sex>V</sex>
+    <birth>1956-03-31</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>16</id>
+    <name>Ligita Grunde</name>
+    <sex>S</sex>
+    <birth>1954-10-04</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>17</id>
+    <name>Merike Mets</name>
+    <sex>S</sex>
+    <birth>1969-08-05</birth>
+    <country>Estonia</country>
+  </runner_data>
+  <runner_data>
+    <id>18</id>
+    <name>Evelyn Himma</name>
+    <sex>S</sex>
+    <birth>1972-06-13</birth>
+    <country>Estonia</country>
+  </runner_data>
+  <runner_data>
+    <id>19</id>
+    <name>Ilze Krēmere</name>
+    <sex>S</sex>
+    <birth>1976-12-20</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>20</id>
+    <name>Ieva Simsone</name>
+    <sex>S</sex>
+    <birth>1975-12-09</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>21</id>
+    <name>Vita Žukovska</name>
+    <sex>S</sex>
+    <birth>1970-03-12</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>22</id>
+    <name>Jana Adata</name>
+    <sex>S</sex>
+    <birth>1972-01-07</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>23</id>
+    <name>Indra Segliņa</name>
+    <sex>S</sex>
+    <birth>1970-05-16</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>24</id>
+    <name>Ieva Vītoliņa</name>
+    <sex>S</sex>
+    <birth>1970-05-22</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>25</id>
+    <name>Santa Blūma</name>
+    <sex>S</sex>
+    <birth>1971-11-07</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>26</id>
+    <name>Lāsma Šlosberga</name>
+    <sex>S</sex>
+    <birth>1971-07-19</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>27</id>
+    <name>Aija Orniņa</name>
+    <sex>S</sex>
+    <birth>1964-05-28</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>28</id>
+    <name>Marita Šalta</name>
+    <sex>S</sex>
+    <birth>1970-05-26</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>29</id>
+    <name>Gunta Nalivaiko</name>
+    <sex>S</sex>
+    <birth>1985-10-07</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>30</id>
+    <name>Pēteris Nalivaiko</name>
+    <sex>V</sex>
+    <birth>1992-11-19</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>31</id>
+    <name>Zigmunds Bībers</name>
+    <sex>V</sex>
+    <birth>1981-12-14</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>32</id>
+    <name>Elīna Masteiko</name>
+    <sex>S</sex>
+    <birth>1984-05-18</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>33</id>
+    <name>Mārtiņš Vimba</name>
+    <sex>V</sex>
+    <birth>1977-08-22</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>34</id>
+    <name>Daiga Jermaka</name>
+    <sex>S</sex>
+    <birth>1984-07-11</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>35</id>
+    <name>Aija Lorence</name>
+    <sex>S</sex>
+    <birth>1986-12-28</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>36</id>
+    <name>Jānis Lorencs</name>
+    <sex>V</sex>
+    <birth>1960-11-27</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>37</id>
+    <name>Māra Pucena</name>
+    <sex>S</sex>
+    <birth>1988-12-23</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>38</id>
+    <name>Klāvs Svilpe</name>
+    <sex>V</sex>
+    <birth>1985-01-10</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>39</id>
+    <name>Kalvis Kulbars</name>
+    <sex>V</sex>
+    <birth>1988-11-01</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>40</id>
+    <name>Edgars Jurjāns</name>
+    <sex>V</sex>
+    <birth>1987-03-11</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>41</id>
+    <name>Alma Vītola</name>
+    <sex>S</sex>
+    <birth>1992-10-26</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>42</id>
+    <name>Ginta Puriņa</name>
+    <sex>S</sex>
+    <birth>1994-08-20</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>43</id>
+    <name>Henriks Puriņš</name>
+    <sex>V</sex>
+    <birth>1992-01-13</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>44</id>
+    <name>Kristīna Ēce</name>
+    <sex>S</sex>
+    <birth>1973-05-11</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>45</id>
+    <name>Zita Grante</name>
+    <sex>S</sex>
+    <birth>1978-06-06</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>46</id>
+    <name>Andris Mireckis</name>
+    <sex>V</sex>
+    <birth>1973-09-29</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>47</id>
+    <name>Alvita Mirecka</name>
+    <sex>S</sex>
+    <birth>1971-07-24</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>48</id>
+    <name>Anita Paidere</name>
+    <sex>S</sex>
+    <birth>1967-08-08</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>49</id>
+    <name>Juris Paiders</name>
+    <sex>V</sex>
+    <birth>1963-08-28</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>50</id>
+    <name>Evija Birzniece</name>
+    <sex>S</sex>
+    <birth>1984-07-06</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>51</id>
+    <name>Jānis Birznieks</name>
+    <sex>V</sex>
+    <birth>1985-04-14</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>52</id>
+    <name>Ilze Birzniece - Stundiņa</name>
+    <sex>S</sex>
+    <birth>1986-06-15</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>53</id>
+    <name>Vilnis Frišfelds</name>
+    <sex>V</sex>
+    <birth>1974-04-15</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>54</id>
+    <name>Uģis Inka</name>
+    <sex>V</sex>
+    <birth>1976-11-27</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>55</id>
+    <name>Gunta Blūzma</name>
+    <sex>S</sex>
+    <birth>1978-12-30</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>56</id>
+    <name>Evija Prauliņa</name>
+    <sex>S</sex>
+    <birth>1974-01-18</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>57</id>
+    <name>Andris Kosmačevs</name>
+    <sex>V</sex>
+    <birth>1955-10-29</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>58</id>
+    <name>Māris Penkulis</name>
+    <sex>V</sex>
+    <birth>1957-03-29</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>59</id>
+    <name>Ilmārs Kaulakans</name>
+    <sex>V</sex>
+    <birth>1955-05-01</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>60</id>
+    <name>Aivars Druvenieks</name>
+    <sex>V</sex>
+    <birth>1956-08-25</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>61</id>
+    <name>Vairis Krauklis</name>
+    <sex>V</sex>
+    <birth>1953-07-22</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>62</id>
+    <name>Sulev Kuiv</name>
+    <sex>V</sex>
+    <birth>1956-09-01</birth>
+    <country>Estonia</country>
+  </runner_data>
+  <runner_data>
+    <id>63</id>
+    <name>Peep Eomois</name>
+    <sex>V</sex>
+    <birth>1955-11-14</birth>
+    <country>Estonia</country>
+  </runner_data>
+  <runner_data>
+    <id>64</id>
+    <name>Kaspars Jansons</name>
+    <sex>V</sex>
+    <birth>1976-09-28</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>65</id>
+    <name>Jānis Dālders</name>
+    <sex>V</sex>
+    <birth>1971-05-07</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>66</id>
+    <name>Jānis Šnepste</name>
+    <sex>V</sex>
+    <birth>1974-12-02</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>67</id>
+    <name>Andris Drešmanis</name>
+    <sex>V</sex>
+    <birth>1972-09-28</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>68</id>
+    <name>Viesturs Šlosbergs</name>
+    <sex>V</sex>
+    <birth>1977-08-21</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>69</id>
+    <name>Renārs Skudra</name>
+    <sex>V</sex>
+    <birth>1977-05-18</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>70</id>
+    <name>Gints Pētersons</name>
+    <sex>V</sex>
+    <birth>1972-08-07</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>71</id>
+    <name>Aldis Apšenieks</name>
+    <sex>V</sex>
+    <birth>1967-10-03</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>72</id>
+    <name>Viesturs Otomers</name>
+    <sex>V</sex>
+    <birth>1970-07-30</birth>
+    <country>Latvia</country>
+  </runner_data>
+  <runner_data>
+    <id>73</id>
+    <name>Andis Goldbergs</name>
+    <sex>V</sex>
+    <birth>1970-12-11</birth>
+    <country>Latvia</country>
+  </runner_data>
+</runners_data>

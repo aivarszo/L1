@@ -1,0 +1,172 @@
+606;Green Power Shoes;MO,MV;Gints Pētersons;1972-08-07;M;8000999;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+606;Green Power Shoes;MO,MV;Jānis Kleins;1976-03-18;M;1600454;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+602;LIELISKIE;MO,MV;Ainārs Grīnvalds;1975-09-17;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+602;LIELISKIE;MO,MV;Harijs Meiers;1974-12-05;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+603;Divi ar mugursomām;MO,MV;Māris Vabulnieks;1966-03-15;M;1302000;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+603;Divi ar mugursomām;MO,MV;Atis Kalējs;1972-11-04;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+607;Ņergas;MO,MV;Nikolajs Lucāns;1965-09-27;M;500751;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+607;Ņergas;MO,MV;Guntis Pikurs;1973-09-04;M;610033;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+608;Mēģinām atkal;MO,MV;Hardijs Lāns;1974-12-11;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+608;Mēģinām atkal;MO,MV;Aigars Hofmanis;1969-01-01;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+605;Mammut Latvija;MO,MV;Aigars Beks;1970-12-15;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+605;Mammut Latvija;MO,MV;Vilmārs Zeme;1961-06-15;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+601;Alnis brīvsolī;MO,MV;Ilmārs Dukulis;1964-12-19;M;1007369;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+601;Alnis brīvsolī;MO,MV;Arne Lūsis;1966-01-03;M;7877777;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+604;Novaator RSK;MO,MV;Villu Päärt;1972-04-08;M;*;Estonia;OK;ROG;2016-07-17 11:00:00;rog
+604;Novaator RSK;MO,MV;Matis Märtson;1965-07-26;M;9200590;Estonia;OK;ROG;2016-07-17 11:00:00;rog
+310;Apakšgrāvja adipināts;MO;Mārtiņš Krūze;1987-05-26;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+310;Apakšgrāvja adipināts;MO;Edgars Jurjāns;1987-03-11;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+314;Mazs bet negatīvs;MO;Ints Brunenieks;1976-09-07;M;9070976;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+314;Mazs bet negatīvs;MO;Andris Kosmačevs;1955-10-29;M;305813;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+314;Mazs bet negatīvs;MO;Zigmunds Fricsons;1981-12-31;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+312;Krūšu Inspekcija;MO;Guntis Šmaukstelis;1985-12-13;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+312;Krūšu Inspekcija;MO;Mārtiņš Sandars;1989-03-04;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+303;Ies takš mežā;MO;Didzis Dobelis;1990-04-01;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+303;Ies takš mežā;MO;Mārcis Laganovskis;1982-03-30;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+313;Pieplok pie zemes Ņergu mežs;MO;Miķelis Zumbergs;1982-05-08;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+313;Pieplok pie zemes Ņergu mežs;MO;Artūrs Jermolovs;1989-04-01;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+307;Pērkona krusts;MO;Reinholds Ditke;1993-08-13;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+307;Pērkona krusts;MO;Salvis Arels;1991-01-17;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+301;OK Kurmis;MO;Emīls Endele;1986-11-06;M;9990013;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+301;OK Kurmis;MO;Matīss Vīksne;1986-09-17;M;9111666;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+315;Zeļļi;MO;Helmuts Knopkens;1977-02-17;M;1411305;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+315;Zeļļi;MO;Artūrs Knopkens;1986-12-30;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+308;RIGA ADVENTURE TEAM;MO;Alberts Jasāns;1982-12-03;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+308;RIGA ADVENTURE TEAM;MO;Jānis Šneiders;1985-04-05;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+304;Mītavas roboti;MO;Aldis Pecka;1985-06-25;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+304;Mītavas roboti;MO;Vitālijs Osadčuks;1983-03-31;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+311;Ūdenszāles;MO;Mārtiņš Lukstaraups;1986-04-16;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+311;Ūdenszāles;MO;Mārtiņš Deičmanis;1986-01-03;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+302;84 rullē!;MO;Didzis Šapkus;1984-02-16;M;8632865;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+302;84 rullē!;MO;Artūrs Vaselis;1984-03-26;M;8626132;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+305;VSK Noskrien Rieksti;MO;Raimonds Ozoliņš;1983-07-10;M;980534;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+305;VSK Noskrien Rieksti;MO;Edgars Vanters;1982-09-14;M;9990777;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+309;Slapjie pumpuri;MO;Aigars Čeksters;1981-05-16;M;7001001;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+309;Slapjie pumpuri;MO;Vilnis Frišfelds;1974-04-15;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+306;Surikatu in omnia paratus;MO;Māris Sumčenko;1980-01-11;M;8631566;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+306;Surikatu in omnia paratus;MO;Sandis Zukulis;1981-12-26;M;8228228;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1;Bebri mežā;MO,MJ;Pēteris Ēcis;1999-05-07;M;2008867;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1;Bebri mežā;MO,MJ;Filips Ēcis;2002-06-18;M;2008863;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+2;Jaukie džeki;MO,MJ;Edijs Dzalbs;2000-05-09;M;2012413;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+2;Jaukie džeki;MO,MJ;Valters Reneslācis;1998-11-20;M;1399844;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1902;Blomes trio;MO;Jurģis Eberhards;1971-10-01;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1902;Blomes trio;MO;Renārs Eberhards;2002-01-11;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1902;Blomes trio;MO;Rūdolfu Eberhards;2002-01-11;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1901;Cietie rieksti;XO;Juris Pētersons;1979-02-12;M;7770777;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1901;Cietie rieksti;XO;Gatis Pētersons;2006-05-05;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1901;Cietie rieksti;XO;Jēkabs Pētersons;2008-02-28;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1901;Cietie rieksti;XO;Dace Pētersone;1979-12-12;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1903;Dzintarlapsas;XO;Ilze Krēmere;1976-12-20;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1903;Dzintarlapsas;XO;Ieva Simsone;1975-12-09;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1903;Dzintarlapsas;XO;Krišjānis Krēmers;2005-07-25;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+404;Kas meklē, tas atrod!;WO;Kristīna Ēce;1973-05-11;W;2008878;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+404;Kas meklē, tas atrod!;WO;Zita Grante;1978-06-06;W;200705;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+403;Sciurus vulgaris;WO;Linda Beldava;1980-10-08;W;7970797;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+403;Sciurus vulgaris;WO;Dace Veipa;1979-06-22;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+405;Košī teorēma;WO;Līga Linuža;1993-05-26;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+405;Košī teorēma;WO;Lāsma Gaile;1993-05-06;W;*;Ireland;OK;ROG;2016-07-17 11:00:00;rog
+402;Divplākšņi;WO;Lāsma Āboliņa;1970-02-28;W;8636803;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+402;Divplākšņi;WO;Antra Lukševica;1981-12-30;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+402;Divplākšņi;WO;Baiba Maskoļūna;1978-08-26;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+407;SunD;WO;Sandra Priedīte;1980-05-29;W;9500095;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+407;SunD;WO;Alda Bražūne;1982-03-31;W;9200486;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+406;Smilšu graudi;WO;Laine Štēbele;1988-06-24;W;7777927;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+406;Smilšu graudi;WO;Kristiāna Štēbele;1990-12-29;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+401;Čiepiņas +;WO;Zane Kaļva;1991-09-15;W;1395649;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+401;Čiepiņas +;WO;Linda Krēsliņa;1991-03-04;W;1395657;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1101;Amatciems;XO,XV,XSV;Viesturs Ziediņš;1955-01-01;M;211241;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1101;Amatciems;XO,XV,XSV;Ināra Ģipsle;1952-02-27;W;211243;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1102;ALAN;XO,XV,XSV;Andra Jansone;1959-12-12;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1102;ALAN;XO,XV,XSV;Aldis Zavickis;1954-12-08;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1301;Velmara;WO,WV,WSV,WUV;Māra Bolšteina;1943-12-11;W;1302622;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1301;Velmara;WO,WV,WSV,WUV;Velta Zjatkova;1939-03-24;W;1302646;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1401;Do;XO,XV,XSV,XUV;Daina Celma-Zida;1950-08-12;W;201050;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1401;Do;XO,XV,XSV,XUV;Oskars Zīds;1948-07-22;M;682046;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+901;ASIE PIPARI;MO,MV,MSV;Ilmārs Kaulakāns;1955-05-01;M;9102033;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+901;ASIE PIPARI;MO,MV,MSV;Harijs Lācars;1958-12-03;M;7201421;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+902;Triumvirāts;MO,MV,MSV;Juris Drunka;1952-09-04;M;1391652;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+902;Triumvirāts;MO,MV,MSV;Vitolds Bērziņš;1950-01-29;M;7088888;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+902;Triumvirāts;MO,MV,MSV;Helmuts Lukačovs;1950-07-15;M;9200077;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+505;Pētersoni.;XO;Kaspars Pētersons;1981-02-02;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+505;Pētersoni.;XO;Laura Pētersone;1982-11-06;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+512;Resnais Susurs;XO;Māris Avotiņš;1972-01-21;M;888959;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+512;Resnais Susurs;XO;Elīna Krēmere;2000-11-17;W;7700111;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+516;Sīkie;XO;Kārlis Kučinskis;1983-09-21;M;1302626;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+516;Sīkie;XO;Laura Kučinska;1978-05-22;W;1406535;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+516;Sīkie;XO;Eric Alexandre;1977-05-08;M;1403694;France;OK;ROG;2016-07-17 11:00:00;rog
+511;Surikati;XO;Pēteris Grīviņš;1985-04-10;M;9101202;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+511;Surikati;XO;Ieva Upmace;1984-12-24;W;9841224;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+508;STK;XO;Jānis Priedītis;1986-05-18;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+508;STK;XO;Elīna Aģe;1990-03-29;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+513;Salme Jumps;XO;Anneken Lemberg;1977-02-09;W;9102225;Estonia;OK;ROG;2016-07-17 11:00:00;rog
+513;Salme Jumps;XO;Priit Evardi;1973-05-29;M;*;Estonia;OK;ROG;2016-07-17 11:00:00;rog
+503;Ampēriņš;XO;Aleksandrs Riguns;1988-09-09;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+503;Ampēriņš;XO;Madara Apsalone;1985-04-10;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+503;Ampēriņš;XO;Ieva Grauduma;1992-10-14;W;7654321;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+501;Tērauds;XO;Mārtiņš Peisenieks;1984-09-03;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+501;Tērauds;XO;Ramona Zeltiņa;1992-01-05;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+514;Mežā pie zvēriņiem;XO;Pēteris Zavadskis;1986-07-25;M;7990000;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+514;Mežā pie zvēriņiem;XO;Signe Zavadska;1984-10-14;W;7550000;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+506;Alises galma prominences;XO;Valdis Sedlovs;1983-01-24;M;1955102;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+506;Alises galma prominences;XO;Liāna Sedlova;1986-04-15;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+510;Paskriet vari?;XO;Ivo Zemturis;1980-12-23;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+510;Paskriet vari?;XO;Juris Griņevičs;1979-04-24;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+510;Paskriet vari?;XO;Dace  Zadraka;1985-08-16;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+510;Paskriet vari?;XO;Anta Liepa;1989-04-10;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+515;KO MĒS BEZ TEVIS!!!;XO;Dace Ikšele;1967-02-07;W;2072670;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+515;KO MĒS BEZ TEVIS!!!;XO;Liene Ikšele;1987-08-01;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+515;KO MĒS BEZ TEVIS!!!;XO;Jānis  Muhins;1989-10-22;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+504;BEZ STRESA;XO;Viesturs Šlosbergs;1977-08-21;M;7206342;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+504;BEZ STRESA;XO;Santa Blūma;1971-11-07;W;7207200;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+509;Meža Dīvainīši;XO;Einārs Masteiko;1972-07-26;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+509;Meža Dīvainīši;XO;Elīna Masteiko;1984-05-18;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+502;Upīškalns;XO;Baiba Ābelniece;1979-03-22;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+502;Upīškalns;XO;Kaspars Kursinskis;1977-04-22;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+507;Liedagi-35;XO;Fadejs Precinieks;1979-02-07;M;1603076;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+507;Liedagi-35;XO;Zelma Preciniece;1982-09-05;W;1392107;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+517;Bumbierīši;XO;Mārtiņš Zvīdriņš;1991-10-08;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+517;Bumbierīši;XO;Līga Plakane;1970-02-25;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+702;Meža ogas;WO,WV;Sintija Alaine;1969-11-15;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+702;Meža ogas;WO,WV;Vizbulīte Celmiņa;1976-03-03;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+705;Cerība mirst pēdējā;WO,WV;Indra Segliņa;1970-05-16;W;700516;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+705;Cerība mirst pēdējā;WO,WV;Zane Blumberga;1969-07-30;W;1602330;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+703;OK Pūznis;WO,WV;Gerda Sirmā;1965-03-18;W;7203476;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+703;OK Pūznis;WO,WV;Sarmīte Vlodare;1958-10-06;W;7202737;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+703;OK Pūznis;WO,WV;Sandra Kazāne;1964-10-08;W;7203477;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+706;Piedzīvojumu meklējot;WO,WV;Vita Žukovska;1970-03-12;W;7203387;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+706;Piedzīvojumu meklējot;WO,WV;JanaJ Adata;1972-01-07;W;7203961;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+701;Apesciems;WO,WV;Daiga Krēsliņa;1965-09-21;W;1003101;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+701;Apesciems;WO,WV;Līga Vabulniece;1969-09-13;W;1301969;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+704;Pozitīvie skorpioni;WO,WV;Inta Poriķe;1963-10-25;W;1006148;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+704;Pozitīvie skorpioni;WO,WV;Liene Buša;1953-10-31;W;533110;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+810;Where is The Finish?!;XO,XV;Irita Puķīte;1974-12-17;W;7171274;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+810;Where is The Finish?!;XO,XV;Guntars Mankus;1969-07-05;M;7000003;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+805;Zirgs bez vārda;XO,XV;Astrīda Celmiņa;1966-11-10;W;7203960;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+805;Zirgs bez vārda;XO,XV;Mareks Tumašs;1976-07-17;M;7000073;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+809;Lapsu rogainings;XO,XV;Anita Liepiņa;1967-11-17;W;646599;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+809;Lapsu rogainings;XO,XV;Valters Kaminskis;1968-03-26;M;503707;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+804;Autostarts.lv;XO,XV;Marita Lapa;1970-09-03;W;8000555;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+804;Autostarts.lv;XO,XV;Aivars Lapa;1969-04-27;M;8000900;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+807;Marmotes;XO,XV;Inese Rudzīte;1973-05-25;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+807;Marmotes;XO,XV;Guntars Vība;1968-08-05;M;1407515;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+813;ALUSALA;XO,XV;Arvis Zvanītājs;1969-01-06;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+813;ALUSALA;XO,XV;Dzintars Laķis;1968-03-21;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+813;ALUSALA;XO,XV;Inta Luksa;1972-03-03;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+806;Ezisi;XO,XV;Ingrīda Barisa;1962-04-28;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+806;Ezisi;XO,XV;Ģirts Strujevičs;1972-09-04;M;7200147;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+812;Tõttajad;XO,XV;Imbi Soome;1969-11-29;W;*;Estonia;OK;ROG;2016-07-17 11:00:00;rog
+812;Tõttajad;XO,XV;Toomas Laur;1964-11-15;M;7200978;Estonia;OK;ROG;2016-07-17 11:00:00;rog
+803;Gandrīz Trio;XO,XV;Juris Naglis;1962-02-13;M;1406610;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+803;Gandrīz Trio;XO,XV;Ginta Bērziņa;1968-04-15;W;1406609;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+808;Taka;XO,XV;Jānis Pētersons;1969-06-23;M;9200244;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+808;Taka;XO,XV;Inese Midrijāne;1963-02-19;W;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+802;Mona-X;XO,XV;Pēteris Zariņš;1961-01-08;M;*;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+802;Mona-X;XO,XV;Baiba Ozola;1964-10-18;W;8628425;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+801;Vējš matos;XO,XV;Uldis Gaiss;1973-06-14;M;555944;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+801;Vējš matos;XO,XV;Gita Gaisa;1970-08-04;W;519519;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1001;HO-HO;WO,WV,WSV;Izolde Jumare;1956-03-08;W;1409552;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1001;HO-HO;WO,WV,WSV;Andra Melbārde;1957-08-22;W;1413890;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1002;Kurmis DR Krastā;WO,WV,WSV;Silvija Penkule;1960-11-10;W;9092128;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1002;Kurmis DR Krastā;WO,WV,WSV;Gunta Lebedoka;1954-03-04;W;9092126;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1003;Bebrenes;WO,WV,WSV;Ilze Vabole;1958-05-25;W;1603090;Latvia;OK;ROG;2016-07-17 11:00:00;rog
+1003;Bebrenes;WO,WV,WSV;Silvija Segliņa;1949-12-19;W;2005129;Latvia;OK;ROG;2016-07-17 11:00:00;rog

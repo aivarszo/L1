@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event_data>
+  <eventID>event1</eventID>
+  <eventname>aaa</eventname>
+  <eventplace>bbb</eventplace>
+  <eventlogo></eventlogo>
+  <eventtype>rogain</eventtype>
+  <starttime>2018-05-03 20:00:00</starttime>
+  <finishtime>2018-05-04 08:00:00</finishtime>
+  <latetime>2018-05-04 08:30:00</latetime>
+  <sunsettime></sunsettime>
+  <sunrisetime></sunrisetime>
+  <timelimit>60</timelimit>
+  <timepenalty>1</timepenalty>
+  <printer></printer>
+  <siport>\.\\COM3</siport>
+  <starttype>starttime</starttype>
+</event_data>

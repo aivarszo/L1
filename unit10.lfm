@@ -1,0 +1,60 @@
+object Form9: TForm9
+  Left = 669
+  Height = 172
+  Top = 355
+  Width = 263
+  Caption = 'Change team ID'
+  ClientHeight = 172
+  ClientWidth = 263
+  LCLVersion = '1.8.2.0'
+  object Label2: TLabel
+    Left = 40
+    Height = 17
+    Top = 16
+    Width = 38
+    Caption = 'from:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 17
+    Top = 48
+    Width = 19
+    Caption = 'to:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 94
+    Height = 17
+    Top = 16
+    Width = 45
+    Caption = 'Label4'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 96
+    Height = 27
+    Top = 48
+    Width = 113
+    OnChange = Edit1Change
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 40
+    Height = 30
+    Top = 104
+    Width = 99
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 168
+    Height = 30
+    Top = 104
+    Width = 48
+    Caption = 'OK'
+    ModalResult = 1
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<groups>
+  <group_data>
+    <id>1</id>
+    <group>OPEN3</group>
+    <start></start>
+    <finish></finish>
+    <late></late>
+    <course></course>
+  </group_data>
+  <group_data>
+    <id>2</id>
+    <group>WO3</group>
+    <start></start>
+    <finish></finish>
+    <late></late>
+    <course></course>
+  </group_data>
+  <group_data>
+    <id>3</id>
+    <group>VETERAN3</group>
+    <start></start>
+    <finish></finish>
+    <late></late>
+    <course></course>
+  </group_data>
+  <group_data>
+    <id>4</id>
+    <group>Family3</group>
+    <start></start>
+    <finish></finish>
+    <late></late>
+    <course></course>
+  </group_data>
+  <group_data>
+    <id>5</id>
+    <group>Ā/K</group>
+    <start></start>
+    <finish></finish>
+    <late></late>
+    <course></course>
+  </group_data>
+</groups>

@@ -1,0 +1,1460 @@
+unit Unit1;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Unit0, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
+  Grids, ExtCtrls, StdCtrls, FileCtrl, ValEdit, Types, DOM, XMLRead, XMLWrite, Math, LCLTranslator;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button2t: TButton;
+    Button1t: TButton;
+    Button1m1: TButton;
+    Button2m: TButton;
+    Button1m: TButton;
+    Button1g: TButton;
+    Button2m1: TButton;
+    Button3: TButton;
+    Button3m: TButton;
+    Button2g: TButton;
+    Button3g: TButton;
+    Button4: TButton;
+    Button4g: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    Button9: TButton;
+    FileListBox1: TFileListBox;
+    Label1: TLabel;
+    OpenDialog1: TOpenDialog;
+    PageControl1: TPageControl;
+    RadioGroup1: TRadioGroup;
+    StringGrid1: TValueListEditor;
+    StringGrid2: TStringGrid;
+    StringGrid3: TStringGrid;
+    StringGrid4: TStringGrid;
+    StringGrid5: TStringGrid;
+    StringGrid6: TStringGrid;
+    StringGrid7: TStringGrid;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    TabSheet4: TTabSheet;
+    TabSheet5: TTabSheet;
+    TabSheet6: TTabSheet;
+    TabSheet7: TTabSheet;
+    ToggleBox1: TToggleBox;
+    procedure Button1Click(Sender: TObject);
+    procedure Button1gClick(Sender: TObject);
+    procedure Button1m1Click(Sender: TObject);
+    procedure Button1tClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button2gClick(Sender: TObject);
+    procedure Button2m1Click(Sender: TObject);
+    procedure Button2mClick(Sender: TObject);
+    procedure Button2tClick(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button3gClick(Sender: TObject);
+    procedure Button1mClick(Sender: TObject);
+    procedure Button3mClick(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button4gClick(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
+    procedure Button9Click(Sender: TObject);
+    procedure StringGrid1SelectEditor(Sender: TObject; aCol, aRow: Integer;
+      var Editor: TWinControl);
+    procedure StringGrid1SetEditText(Sender: TObject; ACol, ARow: Integer;
+      const Value: string);
+    procedure StringGrid2SelectEditor(Sender: TObject; aCol, aRow: Integer;
+      var Editor: TWinControl);
+    procedure StringGrid2SetEditText(Sender: TObject; ACol, ARow: Integer;
+      const Value: string);
+    procedure StringGrid4SelectEditor(Sender: TObject; aCol, aRow: Integer;
+      var Editor: TWinControl);
+    procedure StringGrid4SetEditText(Sender: TObject; ACol, ARow: Integer;
+      const Value: string);
+    procedure StringGrid5SelectEditor(Sender: TObject; aCol, aRow: Integer;
+      var Editor: TWinControl);
+    procedure StringGrid5SetEditText(Sender: TObject; ACol, ARow: Integer;
+      const Value: string);
+    procedure writeEvent();
+    procedure TabSheet3OnExit(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure PageControl1Change(Sender: TObject);
+    procedure RadioGroup1Click(Sender: TObject);
+    procedure StringGrid2Click(Sender: TObject);
+    procedure StringGrid3Click(Sender: TObject);
+    procedure StringGrid4Click(Sender: TObject);
+    procedure StringGrid6Click(Sender: TObject);
+    procedure ToggleBox1Change(Sender: TObject);
+    procedure BitmapMake24Bit(const ABitmap: TBitmap);
+    procedure TeamGroupEditClick(r: integer);
+    procedure StringGrid3DrawCell(Sender: TObject; aCol, aRow: Integer;
+                                         aRect: TRect; aState: TGridDrawState);
+  private
+    InitialValue: string;
+
+  public
+       siReader: integer;
+       eventList: array [0..100] of TRadioButton;
+end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.ToggleBox1Change(Sender: TObject);
+begin
+     if siReader=0 then
+     begin
+          ToggleBox1.Caption:='SI Reader OFF';
+          siReader:=1;
+          Form6.LazSerial1.ShowSetupDialog;
+          Form6.LazSerial1.Open;
+          Form6.Show;
+          writeReader(siGetTime);
+     end
+     else begin
+       ToggleBox1.Caption:='SI Reader ON';
+       siReader:=0;
+       Form6.LazSerial1.Close;
+     end;
+end;
+
+procedure TForm1.RadioGroup1Click(Sender: TObject);
+var
+  Doc: TXMLDocument;
+  fname: string;
+  i,j,k: integer;
+  p: boolean;
+  dnd,dnd1,dnv: TDOMNode;
+  nd,nd1,nv:TTreeNode;
+  ss: array[0..6] of string;
+  ss1: array[0..7] of string;
+  ss2: array[0..5] of string;
+  ss3: array[0..3] of string;
+  tm1: TStringList;
+begin
+  for i:=0 to PageControl1.PageCount-1 do begin
+         PageControl1.Page[i].TabVisible:=true;
+  end;
+  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/event_data';
+  if FileExists(fname) then
+  begin
+    ReadXMLFile(Doc, fname);
+
+    dnd := Doc.DocumentElement.FindNode('eventID');
+    StringGrid1.Cells[1,0]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('eventname');
+    StringGrid1.Cells[1,1]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('eventplace');
+    StringGrid1.Cells[1,2]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('eventlogo');
+    StringGrid1.Cells[1,3]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('eventtype');
+    StringGrid1.Cells[1,4]:=dnd.TextContent;
+    evType:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('starttime');
+    StringGrid1.Cells[1,5]:=dnd.TextContent;
+    if dnd.TextContent<>'' then
+    begin
+       evStart:=laiks(dnd.TextContent);
+       evDate:=laiks(Copy(dnd.TextContent,0,10)+' 00:00:00');
+    end;
+    dnd := Doc.DocumentElement.FindNode('finishtime');
+    StringGrid1.Cells[1,6]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('latetime');
+    StringGrid1.Cells[1,7]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('sunsettime');
+    StringGrid1.Cells[1,8]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('sunrisetime');
+    StringGrid1.Cells[1,9]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('timelimit');
+    StringGrid1.Cells[1,10]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('timepenalty');
+    StringGrid1.Cells[1,11]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('printer');
+    StringGrid1.Cells[1,12]:=dnd.TextContent;
+    dnd := Doc.DocumentElement.FindNode('siport');
+    StringGrid1.Cells[1,13]:=dnd.TextContent;
+    Doc.Free;
+  end;
+
+  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/team_data';
+  if FileExists(fname) then
+  begin
+    ReadXMLFile(Doc, fname);
+    StringGrid2.RowCount:=1;
+
+    dnd:=Doc.DocumentElement.FirstChild;
+    ss[6]:=' R';
+    tm1:=TStringList.Create;
+    while Assigned(dnd) do
+    begin
+        dnd1:=dnd.FirstChild;
+        for i:=0 to 5 do ss[i]:='';
+        while Assigned(dnd1) do
+        begin
+             if dnd1.NodeName='bib' then
+                ss[0]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='team' then
+                ss[1]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='start' then
+                ss[2]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='status' then
+                ss[4]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='group' then
+                if ss[3]='' then ss[3]:=dnd1.ChildNodes.Item[0].NodeValue
+                   else ss[3]:=ss[3]+','+dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='member' then
+             begin
+               dnv:=dnd1.FirstChild;
+               while Assigned(dnv) do
+               begin
+                    if dnv.NodeName='runner' then
+                       if dnv.ChildNodes.Count>0 then
+                          tm1.Append(dnv.ChildNodes.Item[0].NodeValue)
+                       else
+                           tm1.Append('');
+                    if dnv.NodeName='card' then
+                       if dnv.ChildNodes.Count>0 then
+                          tm1.Append(dnv.ChildNodes.Item[0].NodeValue)
+                       else
+                           tm1.Append('');
+                    if dnv.NodeName='course' then
+                       if dnv.ChildNodes.Count>0 then
+                          tm1.Append(dnv.ChildNodes.Item[0].NodeValue)
+                       else
+                           tm1.Append('');
+                   dnv:=dnv.NextSibling;
+               end;
+               dnv.Free;
+             end;
+             dnd1:=dnd1.NextSibling;
+        end;
+        StringGrid2.InsertRowWithValues(StringGrid2.RowCount,ss);
+        StringGrid2.Objects[5,StringGrid2.RowCount-1]:=TStringList.Create;
+        (StringGrid2.Objects[5,StringGrid2.RowCount-1] as TStringList).AddStrings(tm1);
+        tm1.Clear;
+
+        dnd1.Free;
+        dnd:=dnd.NextSibling;
+    end;
+    dnd.Free;
+    Doc.Free;
+  end;
+  StringGrid2.ColWidths[5]:=0;
+  StringGrid2.Columns.Items[3].ReadOnly:=true;
+  StringGrid2.Columns.Items[6].ReadOnly:=true;
+
+
+  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/runner_data';
+  if FileExists(fname) then
+  begin
+    ReadXMLFile(Doc, fname);
+    StringGrid4.RowCount:=1;
+
+    dnd:=Doc.DocumentElement.FirstChild;
+    while Assigned(dnd) do
+    begin
+        dnd1:=dnd.FirstChild;
+        for i:=0 to 7 do ss1[i]:='';
+        while Assigned(dnd1) do
+        begin
+             if dnd1.NodeName='id' then
+                ss1[0]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='name' then
+                ss1[1]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='sex' then
+                ss1[5]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='birth' then
+                ss1[6]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='country' then
+                ss1[7]:=dnd1.ChildNodes.Item[0].NodeValue;
+             dnd1:=dnd1.NextSibling;
+        end;
+        StringGrid4.InsertRowWithValues(StringGrid4.RowCount,ss1);
+        dnd1.Free;
+        dnd:=dnd.NextSibling;
+    end;
+    dnd.Free;
+    Doc.Free;
+  end;
+  StringGrid3.ColWidths[6]:=0;
+
+  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/group_data';
+  if FileExists(fname) then
+  begin
+    ReadXMLFile(Doc, fname);
+    StringGrid5.RowCount:=1;
+
+    dnd:=Doc.DocumentElement.FirstChild;
+    while Assigned(dnd) do
+    begin
+        dnd1:=dnd.FirstChild;
+        for i:=0 to 5 do ss2[i]:='';
+        while Assigned(dnd1) do
+        begin
+             if dnd1.NodeName='id' then
+                if dnd1.ChildNodes.Count>0 then ss2[0]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='group' then
+                if dnd1.ChildNodes.Count>0 then ss2[1]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='start' then
+                if dnd1.ChildNodes.Count>0 then ss2[2]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='finish' then
+                if dnd1.ChildNodes.Count>0 then ss2[3]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='late' then
+                if dnd1.ChildNodes.Count>0 then ss2[4]:=dnd1.ChildNodes.Item[0].NodeValue;
+             if dnd1.NodeName='course' then
+                if dnd1.ChildNodes.Count>0 then ss2[5]:=dnd1.ChildNodes.Item[0].NodeValue;
+             dnd1:=dnd1.NextSibling;
+        end;
+        StringGrid5.InsertRowWithValues(StringGrid5.RowCount,ss2);
+        dnd1.Free;
+        dnd:=dnd.NextSibling;
+    end;
+  dnd.Free;
+  Doc.Free;
+  end;
+
+  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/course_data';
+  if FileExists(fname) then
+  begin
+    ReadXMLFile(Doc, fname);
+    StringGrid6.RowCount:=1;
+    Form2.StringGrid1.RowCount:=1;
+
+    dnd:=Doc.DocumentElement.FirstChild;
+    tm1:=TStringList.Create;
+    while Assigned(dnd) do
+    begin
+         if dnd.NodeName='course' then
+         begin
+             dnd1:=dnd.FirstChild;
+             for i:=0 to 3 do ss3[i]:='';
+             while Assigned(dnd1) do
+             begin
+                  if dnd1.NodeName='id' then
+                     if dnd1.ChildNodes.Count>0 then ss3[0]:=dnd1.ChildNodes.Item[0].NodeValue;
+                  if dnd1.NodeName='map' then
+                     if dnd1.ChildNodes.Count>0 then ss3[1]:=dnd1.ChildNodes.Item[0].NodeValue;
+                  if dnd1.NodeName='mperpix' then
+                     if dnd1.ChildNodes.Count>0 then ss3[2]:=dnd1.ChildNodes.Item[0].NodeValue;
+                  if dnd1.NodeName='cp' then
+                  begin
+                    dnv:=dnd1.FirstChild;
+                    while Assigned(dnv) do
+                    begin
+                         if dnv.NodeName='cp_id' then
+                            if dnv.ChildNodes.Count>0 then
+                               tm1.Append(dnv.ChildNodes.Item[0].NodeValue)
+                            else
+                                tm1.Append('');
+                         if dnv.NodeName='cp_points' then
+                            if dnv.ChildNodes.Count>0 then
+                               tm1.Append(dnv.ChildNodes.Item[0].NodeValue)
+                            else
+                                tm1.Append('');
+                         if dnv.NodeName='cp_ord' then
+                            if dnv.ChildNodes.Count>0 then
+                               tm1.Append(dnv.ChildNodes.Item[0].NodeValue)
+                            else
+                                tm1.Append('');
+                        dnv:=dnv.NextSibling;
+                    end;
+                    dnv.Free;
+                  end;
+                  dnd1:=dnd1.NextSibling;
+             end;
+             StringGrid6.InsertRowWithValues(StringGrid6.RowCount,ss3);
+             StringGrid6.Objects[3,StringGrid6.RowCount-1]:=TStringList.Create;
+             (StringGrid6.Objects[3,StringGrid6.RowCount-1] as TStringList).AddStrings(tm1);
+             tm1.Clear;
+             dnd1.Free;
+        end;
+        if dnd.NodeName='control' then
+        begin
+             dnd1:=dnd.FirstChild;
+             for i:=0 to 5 do ss2[i]:='';
+             while Assigned(dnd1) do
+             begin
+                  if dnd1.NodeName='id' then
+                     if dnd1.ChildNodes.Count>0 then ss2[1]:=dnd1.ChildNodes.Item[0].NodeValue;
+                  if dnd1.NodeName='mapx' then
+                     if dnd1.ChildNodes.Count>0 then ss2[4]:=dnd1.ChildNodes.Item[0].NodeValue;
+                  if dnd1.NodeName='mapy' then
+                     if dnd1.ChildNodes.Count>0 then ss2[5]:=dnd1.ChildNodes.Item[0].NodeValue;
+                  if dnd1.NodeName='stations' then
+                     if dnd1.ChildNodes.Count>0 then ss2[3]:=dnd1.ChildNodes.Item[0].NodeValue;
+                  dnd1:=dnd1.NextSibling;
+             end;
+             Form2.StringGrid1.InsertRowWithValues(Form2.StringGrid1.RowCount,ss2);
+             dnd1.Free;
+        end;
+        dnd:=dnd.NextSibling;
+    end;
+    dnd.Free;
+    Doc.Free;
+  end;
+  StringGrid6.ColWidths[3]:=0;
+
+  for i:=1 to StringGrid4.RowCount-1 do
+  begin
+      p:=false;
+      for j:=1 to StringGrid2.RowCount-1 do
+      begin
+           k:=0;
+           while (StringGrid2.Objects[5,j] as TStringList).Count>k do
+           begin
+               if (StringGrid2.Objects[5,j] as TStringList).Strings[k]=StringGrid4.Cells[0,i] then
+               begin
+                    StringGrid4.Cells[2,i]:=StringGrid2.Cells[0,j];
+                    StringGrid4.Cells[3,i]:=(StringGrid2.Objects[5,j] as TStringList).Strings[k+1];
+                    StringGrid4.Cells[4,i]:=(StringGrid2.Objects[5,j] as TStringList).Strings[k+2];
+                    p:=true;
+                    break;
+               end;
+               k:=k+3;
+           end;
+           if p then break;
+      end;
+  end;
+  StringGrid4.Columns.Items[0].ReadOnly:=true;
+  StringGrid4.Columns.Items[2].ReadOnly:=true;
+
+  if StringGrid1.Values['eventtype']='rogain' then
+  begin
+    StringGrid4.ColWidths[4]:=0;
+    StringGrid5.ColWidths[2]:=0;
+    StringGrid5.ColWidths[3]:=0;
+    StringGrid5.ColWidths[4]:=0;
+    StringGrid5.ColWidths[5]:=0;
+    Button3g.Visible:=False;
+  end;
+
+  if StringGrid6.RowCount=1 then Button7.Visible:=False;
+
+  TabSheet7.TabVisible:=false;
+
+  StringGrid2.Row:=1;
+  StringGrid2.Col:=0;
+  StringGrid2Click(StringGrid2);
+
+  Button1m1.Visible:=False;
+
+end;
+
+procedure TForm1.TeamGroupEditClick(r: integer);
+var
+  cb:array of TCheckBox;
+  i: integer;
+begin
+  Form4.CheckListBox1.Clear;
+  SetLength(cb,StringGrid5.RowCount-1);
+  for i:=1 to StringGrid5.RowCount-1 do
+  begin
+      cb[i-1]:=TCheckBox.Create(Form4.CheckListBox1);
+      Form4.CheckListBox1.AddItem(StringGrid5.Cells[1,i],cb[i-1]);
+      if Pos(StringGrid5.Cells[1,i],StringGrid2.Cells[3,r])>0 then
+         Form4.CheckListBox1.Checked[i-1]:=true;
+  end;
+  Form4.Caption:=StringGrid2.Cells[0,r];
+  if Form4.ShowModal=mrOK then
+  begin
+     StringGrid2.Cells[3,r]:=Form4.group_s;
+     StringGrid2.Col:=0;
+     r:=StringGrid2.Row;
+     Button1m.Color:=clRed;
+     Button1m.Font.Color:=clWhite;
+  end;
+end;
+
+procedure TForm1.StringGrid2Click(Sender: TObject);
+var
+  i,r,j: integer;
+  ss,ss1:TStringList;
+  s:array[0..6]of string;
+  ih,it:integer;
+  mc,psum:integer;
+  fname:string;
+begin
+  StringGrid3.RowCount:=1;
+  r:=StringGrid2.Row;
+  if StringGrid2.Col=3 then begin TeamGroupEditClick(r); exit; end;
+  i:=1;
+  for j:=1 to StringGrid4.RowCount-1 do
+  begin
+       if StringGrid2.Cells[0,r]=StringGrid4.Cells[2,j] then
+       begin
+            StringGrid3.InsertRowWithValues(i,['','','','','','','','','']);
+            StringGrid3.Cells[1,i]:=StringGrid4.Cells[1,j];
+            StringGrid3.Cells[2,i]:=StringGrid4.Cells[5,j];
+            StringGrid3.Cells[3,i]:=StringGrid4.Cells[6,j];
+            StringGrid3.Cells[4,i]:=StringGrid4.Cells[7,j];
+            StringGrid3.Cells[0,i]:=StringGrid4.Cells[0,j];
+            StringGrid3.Cells[5,i]:=StringGrid4.Cells[3,j];
+            StringGrid3.Cells[6,i]:=StringGrid4.Cells[4,j];
+            StringGrid3.Cells[7,i]:=StringGrid2.Cells[0,r];  // komandas ID
+          if FileExists('events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid3.Cells[5,i]+'_'+StringGrid2.Cells[0,r]) then
+          begin
+            StringGrid3.Cells[8,i]:='1'; // ir identa fails
+          end
+          else
+          begin
+            StringGrid3.Cells[8,i]:='0';
+          end;
+          i:=i+1;
+       end;
+  end;
+  StringGrid3.ColWidths[7]:=0;
+  StringGrid3.ColWidths[8]:=0;
+
+  //komandas rezultāts uz Form5
+  if StringGrid2.Col=6 then
+  begin
+      ss:=TStringList.Create;
+      ss1:=TStringList.Create;
+      if Form5.Caption<>'#' then Form5.Caption:=StringGrid2.Cells[0,r];
+      mc:=0;
+      for i:=1 to StringGrid3.RowCount-1 do
+      begin
+      if StringGrid3.Cells[0,i]<>'' then mc:=mc+1;
+      if StringGrid3.Cells[8,i]='1' then
+       begin
+            fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid3.Cells[5,i]+'_'+StringGrid3.Cells[7,i];
+            ss.LoadFromFile(fname);
+            for j:=0 to ss.Count-1 do ss.Strings[j]:=StringGrid3.Cells[5,i]+' '+ss.Strings[j];
+            ss1.AddStrings(ss);
+       end;
+      end;
+      if ss1.Count>0 then
+      begin
+           ss.Clear;
+           ss.AddStrings(ss1);
+           ss1.Clear;
+           Form5.StringGrid1.Clear;
+           j:=0;
+           for i:=0 to ss.Count-1 do
+           if Pos('=',ss.Strings[i])>0 then
+           begin
+                ss1.Delimiter:='=';
+                ss1.DelimitedText:=ss.Strings[i];
+                s[0]:=ss1.Strings[0];
+                s[1]:=ss1.Strings[1];
+                s[2]:=ss1.Strings[2]+' '+ss1.Strings[3];
+                s[3]:='';
+                s[4]:='';
+                s[5]:='';
+                s[6]:='';
+                Form5.StringGrid1.InsertRowWithValues(j,s);
+                j:=j+1;
+           end;
+           Form5.StringGrid1.ColWidths[2]:=200;
+           Form5.StringGrid1.SortColRow(true,2);
+
+           StringGrid6.Col:=0;
+           StringGrid6.Row:=1;
+           Button8Click(nil);
+           Form2.Hide;
+
+           ih:=0;
+           ss1.Clear;
+           ss1.Duplicates:=dupIgnore;
+           ss1.Sorted:=true;
+           psum:=0;
+           while ih<Form5.StringGrid1.RowCount do
+           begin
+                it:=ih;
+                while it<Form5.StringGrid1.RowCount do
+                begin
+                  if (laiks(Form5.StringGrid1.Cells[2,ih])*24*60*60+StrToInt(StringGrid1.Cells[1,10])<laiks(Form5.StringGrid1.Cells[2,it])*24*60*60)
+                      or (Form5.StringGrid1.Cells[1,ih]<>Form5.StringGrid1.Cells[1,it]) then break;
+                  it:=it+1;
+                end;
+                it:=it-1;
+                ss.Clear;
+                ss.Duplicates:=dupIgnore;
+                ss.Sorted:=true;
+                for j:=ih to it do
+                    ss.Add(Form5.StringGrid1.Cells[0,j]);
+                Form5.StringGrid1.Cells[3,it]:='MP';
+                if ss.Count=mc then
+                begin
+                  if ss1.IndexOf(Form5.StringGrid1.Cells[1,ih])>0 then
+                  begin
+                    Form5.StringGrid1.Cells[3,it]:='DUP';
+                    Form5.StringGrid1.Cells[5,it]:='0';
+                  end
+                  else
+                  begin
+                    Form5.StringGrid1.Cells[3,it]:='OK';
+                    for j:=1 to Form2.StringGrid1.RowCount-1 do
+                        if Form2.StringGrid1.Cells[1,j]=Form5.StringGrid1.Cells[1,ih] then
+                        begin
+                          Form5.StringGrid1.Cells[5,it]:=Form2.StringGrid1.Cells[2,j];
+                          psum:=psum+StrToInt(Form2.StringGrid1.Cells[2,j]);
+                          break;
+                        end;
+                  end;
+                  ss1.Add(Form5.StringGrid1.Cells[1,ih]);  //unikālie KP
+                  Str(round((laiks(Form5.StringGrid1.Cells[2,it])-laiks(Form5.StringGrid1.Cells[2,ih]))*24*60*60),s[0]);
+                  Form5.StringGrid1.Cells[4,it]:=s[0];
+                  while (ih<Form5.StringGrid1.RowCount) do
+                  begin
+                    if Form5.StringGrid1.Cells[1,ih]<>Form5.StringGrid1.Cells[1,it] then break;
+                    ih:=ih+1;
+                  end;
+                end
+                else
+                    ih:=ih+1;
+           end;
+           ss.Free;
+           ss1.Free;
+           Form5.StringGrid1.ColWidths[6]:=0;
+           Form5.Label1.Caption:=TimeToStr(laiks(Form5.StringGrid1.Cells[2,Form5.StringGrid1.RowCount-1])-laiks(Form5.StringGrid1.Cells[2,0]));
+           Str(psum,s[0]);
+           Form5.Label2.Caption:=s[0];
+           i:=Ceil((laiks(Form5.StringGrid1.Cells[2,Form5.StringGrid1.RowCount-1])-laiks(StringGrid1.Cells[1,6]))*24*60);
+           if i>0 then begin
+             Str(i,s[0]);
+             Form5.Label3.Caption:=s[0];
+             Str(psum-i,s[0]);
+             Form5.Label4.Caption:=s[0];
+             end
+           else
+           begin
+               Form5.Label3.Caption:='0';
+               Form5.Label4.Caption:=Form5.Label2.Caption;
+           end;
+           if Form5.Caption<>'#' then Form5.Show;
+      end;
+  end;
+end;
+
+procedure TForm1.StringGrid3Click(Sender: TObject);
+var
+  i:integer;
+begin
+  with StringGrid3 do
+  begin
+       if Col=5 then
+       begin
+            Form3.Memo1.Clear;
+            Form3.Caption:=Cells[5,Row]+'_'+Cells[7,Row];
+            if StringGrid3.Cells[8,Row]='1' then
+            begin
+                 Form3.fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+Form3.Caption;
+                 Form3.Memo1.Lines.LoadFromFile(Form3.fname);
+            end;
+            Form3.Show;
+       end;
+       if Col=1 then
+       begin
+            PageControl1.ActivePageIndex:=2;
+            for i:=1 to StringGrid4.RowCount-1 do
+            begin
+              if StringGrid4.Cells[0,i]=StringGrid3.Cells[0,Row] then
+              begin
+                StringGrid4.Row:=i;
+                break;
+              end;
+            end;
+       end;
+  end;
+end;
+
+procedure TForm1.StringGrid4Click(Sender: TObject);
+var
+  i:integer;
+begin
+  with StringGrid4 do
+  begin
+       if Col=2 then
+       begin
+            PageControl1.ActivePageIndex:=1;
+            for i:=1 to StringGrid2.RowCount-1 do
+            begin
+              if StringGrid2.Cells[0,i]=StringGrid4.Cells[2,Row] then
+              begin
+                StringGrid2.Row:=i;
+                break;
+              end;
+            end;
+       end;
+  end;
+end;
+
+procedure TForm1.StringGrid3DrawCell(Sender: TObject; aCol, aRow: Integer;
+                                     aRect: TRect; aState: TGridDrawState);
+begin
+  with StringGrid3 do
+    begin
+      if (aCol = 5) and (Cells[5, aRow]<>'') and (Cells[8, aRow]='1') then
+        begin
+          Canvas.Font.Color := clWhite;
+          Canvas.Brush.Color := clGreen;
+          Canvas.FillRect(aRect.Left, aRect.Top,
+                         aRect.Right, aRect.Bottom);
+          Canvas.TextOut(aRect.Left+5, aRect.Top+3, Cells[ACol, ARow]);
+        end;
+      if (aCol = 5) and (Cells[5, aRow]<>'') and (Cells[8, aRow]='0') then
+        begin
+          Canvas.Font.Color := clBlack;
+          Canvas.Brush.Color := clYellow;
+          Canvas.FillRect(aRect.Left, aRect.Top,
+                         aRect.Right, aRect.Bottom);
+          Canvas.TextOut(aRect.Left+5, aRect.Top+3, Cells[ACol, ARow]);
+        end;
+    end;
+ end;
+
+procedure TForm1.StringGrid6Click(Sender: TObject);
+begin
+    with StringGrid6 do
+    begin
+      if Col=1 then
+      begin
+         if OpenDialog1.Execute then
+           StringGrid6.Cells[1,Row]:=OpenDialog1.Filename;
+      end;
+    end;
+end;
+
+procedure TForm1.BitmapMake24Bit(const ABitmap: TBitmap);
+var
+  LTempBitmap: TBitmap;
+begin
+  if ABitmap.PixelFormat <> pf24bit then begin
+    LTempBitmap := TBitmap.Create;
+    try
+      LTempBitmap.PixelFormat := pf24bit;
+      LTempBitmap.SetSize(ABitmap.Width, ABitmap.Height);
+      LTempBitmap.Canvas.Draw(0, 0, ABitmap);
+      ABitmap.PixelFormat := pf24bit;
+      ABitmap.Canvas.Draw(0, 0, LTempBitmap);
+    finally
+      FreeAndNil(LTempBitmap);
+    end;
+  end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+   i,k: integer;
+   dropList : TStrings;
+begin
+     siReader:=0;
+     i:=1;
+     k:=0;
+     for i:=1 to FileListBox1.Count do
+     begin
+         if (FileListBox1.Items[i-1]='[.]') or (FileListBox1.Items[i-1]='[..]') then continue;
+         eventList[k]:=TRadioButton.create(RadioGroup1);
+         eventList[k].Caption:=copy(FileListBox1.Items[i-1],2,length(FileListBox1.Items[i-1])-2);
+         RadioGroup1.Items.AddObject(eventList[k].Caption,eventList[k]);
+         k:=k+1;
+     end;
+     dropList := TStringList.Create;
+     dropList.Add('rogain');
+//         ir := InsertRow('Key1','123,456',TRUE);
+//         ItemProps['Key1'].EditStyle := esSimple;
+//         ItemProps['Key1'].EditMask := '###,###';
+//         ir := InsertRow('Key2','Value2',TRUE);
+     StringGrid1.ItemProps['eventtype'].EditStyle:=esPickList;
+     StringGrid1.ItemProps['eventtype'].PickList.Assign(dropList);
+     StringGrid1.ItemProps['eventtype'].Readonly:=true;
+
+end;
+
+procedure TForm1.Button3gClick(Sender: TObject);
+var
+   i:integer;
+begin
+  for i:=1 to StringGrid5.RowCount-1 do
+  begin
+    StringGrid5.Cells[2,i]:=StringGrid1.Cells[1,5];
+    StringGrid5.Cells[3,i]:=StringGrid1.Cells[1,6];
+    StringGrid5.Cells[4,i]:=StringGrid1.Cells[1,7];
+  end;
+end;
+
+procedure TForm1.Button1gClick(Sender: TObject);
+begin
+  if StringGrid5.Cells[0,StringGrid5.RowCount-1]<>'' then
+     StringGrid5.InsertColRow(false,StringGrid5.RowCount);
+end;
+
+procedure TForm1.writeEvent();
+var
+   Doc: TXMLDocument;
+   RootNode, ElementNode,TextNode: TDOMNode;
+begin
+  with StringGrid1 do
+  begin
+       Doc := TXMLDocument.Create;
+       RootNode := Doc.CreateElement('event_data');
+       Doc.Appendchild(RootNode);
+       RootNode:= Doc.DocumentElement;
+       ElementNode:=Doc.CreateElement('eventID');
+       TextNode:=Doc.CreateTextNode(Values['eventID']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('eventname');
+       TextNode:=Doc.CreateTextNode(Values['eventname']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('eventplace');
+       TextNode:=Doc.CreateTextNode(Values['eventplace']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('eventlogo');
+       TextNode:=Doc.CreateTextNode(Values['eventlogo']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('eventtype');
+       TextNode:=Doc.CreateTextNode(Values['eventtype']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('starttime');
+       TextNode:=Doc.CreateTextNode(Values['starttime']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('finishtime');
+       TextNode:=Doc.CreateTextNode(Values['finishtime']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('latetime');
+       TextNode:=Doc.CreateTextNode(Values['latetime']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('sunsettime');
+       TextNode:=Doc.CreateTextNode(Values['sunsettime']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('sunrisetime');
+       TextNode:=Doc.CreateTextNode(Values['sunrisetime']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('timelimit');
+       TextNode:=Doc.CreateTextNode(Values['timelimit']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('timepenalty');
+       TextNode:=Doc.CreateTextNode(Values['timepenalty']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('printer');
+       TextNode:=Doc.CreateTextNode(Values['printer']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       ElementNode:=Doc.CreateElement('siport');
+       TextNode:=Doc.CreateTextNode(Values['siport']);
+       ElementNode.AppendChild(TextNode);
+       RootNode.AppendChild(ElementNode);
+       WriteXMLFile(Doc,'events/'+Values['eventID']+'/event_data');
+       Doc.Free;
+  end;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  //jauns events
+  with StringGrid1 do
+    if Values['eventID']<>'' then
+       if not DirectoryExists('events/'+Values['eventID']) then
+       begin
+            writeEvent;
+            CreateDir('events/'+Values['eventID']);
+            CreateDir('events/'+Values['eventID']+'/punches');
+            CreateDir('events/'+Values['eventID']+'/docs');
+            CreateDir('events/'+Values['eventID']+'/teamresults');
+            CreateDir('events/'+Values['eventID']+'/raw');
+       end;
+end;
+
+procedure TForm1.Button1m1Click(Sender: TObject);
+begin
+  //ieliek memberi komandā
+  (StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Append(StringGrid4.Cells[0,StringGrid4.Row]);
+  (StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Append(StringGrid4.Cells[3,StringGrid4.Row]);
+  (StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Append(StringGrid4.Cells[4,StringGrid4.Row]);
+  StringGrid4.Cells[2,StringGrid4.Row]:=StringGrid2.Cells[0,StringGrid2.Row];
+  StringGrid2Click(StringGrid2);
+  PageControl1.ActivePage:=TabSheet2;
+  Button1m.Color:=clRed;
+  Button1m.Font.Color:=clWhite;
+end;
+
+procedure TForm1.Button2m1Click(Sender: TObject);
+var
+   i,k:integer;
+begin
+  //jauns members
+  k:=0;
+  for i:=1 to StringGrid4.RowCount-1 do
+  begin
+    if StrToInt(StringGrid4.Cells[0,i])>k then k:=StrToInt(StringGrid4.Cells[0,i]);
+  end;
+  StringGrid4.InsertRowWithValues(StringGrid4.RowCount,['','','','','','','','']);
+  StringGrid4.Cells[0,StringGrid4.RowCount-1]:=IntToStr(k+1);
+  StringGrid4.Row:=StringGrid4.RowCount-1;
+end;
+
+procedure TForm1.Button2gClick(Sender: TObject);
+var
+   i:integer;
+begin
+  //ja grupa nav izmantota, var dzēst
+  for i:=1 to StringGrid2.RowCount-1 do
+  begin
+    if Pos(StringGrid5.Cells[1,StringGrid5.Row],StringGrid2.Cells[3,i])>0 then exit;;
+  end;
+  for i:=0 to StringGrid5.ColCount-1 do
+      StringGrid5.Cells[i,StringGrid5.Row]:=StringGrid5.Cells[i,StringGrid5.RowCount-1];
+  StringGrid5.RowCount:=StringGrid5.RowCount-1;
+end;
+
+procedure TForm1.Button1tClick(Sender: TObject);
+var
+   i,k:integer;
+begin
+  //jauna komanda
+  k:=0;
+  for i:=1 to StringGrid2.RowCount-1 do
+  begin
+    if StrToInt(StringGrid2.Cells[0,i])>k then k:=StrToInt(StringGrid2.Cells[0,i]);
+  end;
+  StringGrid2.InsertRowWithValues(StringGrid2.RowCount,['','','','','','']);
+  StringGrid2.Objects[5,StringGrid2.RowCount-1]:=TStringList.Create;
+  StringGrid2.Cells[0,StringGrid2.RowCount-1]:=IntToStr(k+1);
+  StringGrid2.Col:=0;
+  StringGrid2.Row:=StringGrid2.RowCount-1;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  StringGrid6.InsertRowWithValues(StringGrid6.RowCount,['','','']);
+  Button7.Visible:=True;
+end;
+
+procedure TForm1.Button2mClick(Sender: TObject);
+begin
+  //uz dalībnieka pievienošanu komandai
+  StringGrid4.SortColRow(true,2);
+  StringGrid4.Row:=1;
+  PageControl1.ActivePage:=TabSheet3;
+  Button1m1.Caption:='Append member to '+StringGrid2.Cells[0,StringGrid2.Row];
+  Button1m1.Visible:=true;
+end;
+
+procedure TForm1.Button2tClick(Sender: TObject);
+var
+   j:integer;
+begin
+    for j:=1 to StringGrid4.RowCount-1 do
+        if StringGrid4.Cells[2,j]=StringGrid2.Cells[0,StringGrid2.Row] then StringGrid4.Cells[2,j]:='';
+    for j:=0 to StringGrid2.ColCount-1 do
+        StringGrid2.Cells[j,StringGrid2.Row]:=StringGrid2.Cells[j,StringGrid2.RowCount-1];
+    StringGrid2.Objects[5,StringGrid2.Row]:=StringGrid2.Objects[5,StringGrid2.RowCount-1];
+    StringGrid2.Objects[5,StringGrid2.RowCount-1].Free;
+    StringGrid2.RowCount:=StringGrid2.RowCount-1;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var
+   i:integer;
+begin
+  if StringGrid6.RowCount>1 then
+  begin
+       for i:=0 to StringGrid6.ColCount-1 do
+           StringGrid6.Cells[i,StringGrid6.Row]:=StringGrid6.Cells[i,StringGrid6.RowCount-1];
+       StringGrid6.RowCount:=StringGrid6.RowCount-1;
+  end;
+  if StringGrid6.RowCount=1 then Button7.Visible:=False;
+
+end;
+procedure TForm1.TabSheet3OnExit(Sender: TObject);
+begin
+  Button1m1.Visible:=False;
+end;
+
+
+procedure TForm1.PageControl1Change(Sender: TObject);
+var
+   i,j,k:integer;
+   s:array[0..7]of string;
+   ss:string;
+   v:array of integer;
+   gn:array of string;
+begin
+  if PageControl1.ActivePage.Caption='Results' then
+  begin
+    for i:=0 to 7 do s[i]:='';
+    ss:='        ';
+    StringGrid7.RowCount:=1;
+    k:=1;
+    Form5.Caption:='#'; //lai neveras vaļā Form5 (komandas rezultāts)
+    for i:=1 to StringGrid2.RowCount-1 do
+    begin
+         if StringGrid2.Cells[4,i]='OK' then
+         begin
+              StringGrid7.InsertRowWithValues(k,s);
+              StringGrid2.Col:=6;
+              StringGrid2.Row:=i;
+              StringGrid7.Cells[0,k]:=StringGrid2.Cells[0,i];
+              StringGrid7.Cells[1,k]:=StringGrid2.Cells[1,i];
+              StringGrid7.Cells[2,k]:=Form5.Label1.Caption;
+              StringGrid7.Cells[3,k]:=Form5.Label2.Caption;
+              StringGrid7.Cells[4,k]:=Form5.Label3.Caption;
+              StringGrid7.Cells[5,k]:=Form5.Label4.Caption;
+              for j:=1 to 8 do ss[j]:=Chr(48+Ord('9')-Ord(StringGrid7.Cells[2,k][j]));
+              StringGrid7.Cells[7,k]:=Copy('000000',1,6-Length(Form5.Label4.Caption))+Form5.Label4.Caption+ss;
+              StringGrid7.SortColRow(true,7);
+              StringGrid7.SortOrder:=soDescending;
+              k:=k+1;
+         end;
+    end;
+    StringGrid2.Col:=0;
+    StringGrid7.ColWidths[7]:=0;
+    StringGrid7.ColWidths[1]:=200;
+    Form5.Caption:='';
+    SetLength(v,StringGrid5.RowCount);
+    SetLength(gn,StringGrid5.RowCount);
+    for i:=0 to StringGrid5.RowCount-1 do v[i]:=0;
+    for i:=1 to StringGrid7.RowCount-1 do
+    begin
+         k:=0;
+         while StringGrid2.Cells[0,k]<>StringGrid7.Cells[0,i] do k:=k+1;;
+         for j:=1 to StringGrid5.RowCount-1 do
+         begin
+            if Pos(StringGrid5.Cells[1,j],StringGrid2.Cells[3,k])>0 then
+            begin
+              v[j]:=v[j]+1;
+              StringGrid7.Cells[6,i]:=StringGrid7.Cells[6,i]+' '+StringGrid5.Cells[1,j]+':'+IntToStr(v[j]);
+            end;
+         end;
+    end;
+  end;
+  Button4g.Color:=clDefault;
+  Button4g.Font.Color:=clDefault;
+end;
+
+procedure TForm1.Button1mClick(Sender: TObject);
+var
+  Doc: TXMLDocument;
+  RootNode, ElementNode,ItemNode,ItemNode1,TextNode,TextNode1: TDOMNode;
+  i,j: integer;
+begin
+  Doc := TXMLDocument.Create;
+  RootNode := Doc.CreateElement('teams');
+  Doc.Appendchild(RootNode);
+  RootNode:= Doc.DocumentElement;
+  with StringGrid2 do
+     for i:=1 to RowCount-1 do
+     begin
+          ElementNode:=Doc.CreateElement('team_data');
+          ItemNode:=Doc.CreateElement('bib');
+          TextNode:=Doc.CreateTextNode(Cells[0,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('team');
+          TextNode:=Doc.CreateTextNode(Cells[1,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('start');
+          TextNode:=Doc.CreateTextNode(Cells[2,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('status');
+          TextNode:=Doc.CreateTextNode(Cells[4,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          for j:=1 to StringGrid3.RowCount-1 do
+          begin
+               ItemNode:=Doc.CreateElement('member');
+               ItemNode1:=Doc.CreateElement('runner');
+               TextNode1:=Doc.CreateTextNode(StringGrid3.Cells[0,j]);
+               ItemNode1.AppendChild(TextNode1);
+               ItemNode.AppendChild(ItemNode1);
+               ItemNode1:=Doc.CreateElement('card');
+               TextNode1:=Doc.CreateTextNode(StringGrid3.Cells[5,j]);
+               ItemNode1.AppendChild(TextNode1);
+               ItemNode.AppendChild(ItemNode1);
+               ItemNode1:=Doc.CreateElement('course');
+               TextNode1:=Doc.CreateTextNode(StringGrid3.Cells[6,j]);
+               ItemNode1.AppendChild(TextNode1);
+               ItemNode.AppendChild(ItemNode1);
+               ElementNode.AppendChild(ItemNode);
+          end;
+          for j:=1 to StringGrid5.RowCount-1 do
+               if Pos(StringGrid5.Cells[1,j],StringGrid2.Cells[3,i])>0 then
+               begin
+                ItemNode:=Doc.CreateElement('group');
+                TextNode:=Doc.CreateTextNode(StringGrid5.Cells[1,j]);
+                ItemNode.AppendChild(TextNode);
+                ElementNode.AppendChild(ItemNode);
+               end;
+          RootNode.AppendChild(ElementNode);
+     end;
+  WriteXMLFile(Doc,'events/'+StringGrid1.Values['eventID']+'/team_data');
+  Doc.Free;
+  Button1m.Color:=clDefault;
+  Button1m.Font.Color:=clDefault;
+end;
+
+procedure TForm1.Button3mClick(Sender: TObject);
+var
+   k:integer;
+begin
+//izmet memberi no komandas
+  k:=0;
+  while k<(StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Count do
+  begin
+       if (StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Strings[k]=StringGrid3.Cells[0,StringGrid3.Row] then break;
+       k:=k+3;
+  end;
+  while k<(StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Count-3 do
+  begin
+      (StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Strings[k]:=(StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Strings[k+3];
+      k:=k+1;
+  end;
+  for k:=1 to 3 do (StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Delete((StringGrid2.Objects[5,StringGrid2.Row] as TStringList).Count-1);
+  for k:=1 to StringGrid4.RowCount-1 do
+  begin
+    if StringGrid4.Cells[0,k]=StringGrid3.Cells[0,StringGrid3.Row] then
+    begin
+      StringGrid4.Cells[2,k]:='';
+    end;
+  end;
+  StringGrid2Click(StringGrid2);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+var
+  Doc: TXMLDocument;
+  RootNode, ElementNode,ItemNode,TextNode: TDOMNode;
+  i: integer;
+begin
+  //runners datu saglabāšana
+  Doc := TXMLDocument.Create;
+  RootNode := Doc.CreateElement('runners_data');
+  Doc.Appendchild(RootNode);
+  RootNode:= Doc.DocumentElement;
+  with StringGrid4 do
+     for i:=1 to RowCount-1 do
+     begin
+          ElementNode:=Doc.CreateElement('runner_data');
+          ItemNode:=Doc.CreateElement('id');
+          TextNode:=Doc.CreateTextNode(Cells[0,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('name');
+          TextNode:=Doc.CreateTextNode(Cells[1,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('sex');
+          TextNode:=Doc.CreateTextNode(Cells[5,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('birth');
+          TextNode:=Doc.CreateTextNode(Cells[6,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('country');
+          TextNode:=Doc.CreateTextNode(Cells[7,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          RootNode.AppendChild(ElementNode);
+     end;
+  WriteXMLFile(Doc,'events/'+StringGrid1.Values['eventID']+'/runner_data');
+  Doc.Free;
+  RadioGroup1Click(nil);
+  Button4.Color:=clDefault;
+  Button4.Font.Color:=clDefault;
+end;
+
+procedure TForm1.Button4gClick(Sender: TObject);
+var
+  Doc: TXMLDocument;
+  RootNode, ElementNode,ItemNode,TextNode: TDOMNode;
+  i: integer;
+begin
+  //grupu datu saglabāšana
+  Doc := TXMLDocument.Create;
+  RootNode := Doc.CreateElement('groups');
+  Doc.Appendchild(RootNode);
+  RootNode:= Doc.DocumentElement;
+  with StringGrid5 do
+     for i:=1 to RowCount-1 do
+     begin
+          ElementNode:=Doc.CreateElement('group_data');
+          ItemNode:=Doc.CreateElement('id');
+          TextNode:=Doc.CreateTextNode(Cells[0,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('group');
+          TextNode:=Doc.CreateTextNode(Cells[1,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('start');
+          TextNode:=Doc.CreateTextNode(Cells[2,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('finish');
+          TextNode:=Doc.CreateTextNode(Cells[3,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('late');
+          TextNode:=Doc.CreateTextNode(Cells[4,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          ItemNode:=Doc.CreateElement('course');
+          TextNode:=Doc.CreateTextNode(Cells[5,i]);
+          ItemNode.AppendChild(TextNode);
+          ElementNode.AppendChild(ItemNode);
+          RootNode.AppendChild(ElementNode);
+     end;
+  WriteXMLFile(Doc,'events/'+StringGrid1.Values['eventID']+'/group_data');
+  Doc.Free;
+  Button4g.Color:=clDefault;
+  Button4g.Font.Color:=clDefault;
+  RadioGroup1Click(nil);
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+     writeEvent;
+     Button5.Color:=clDefault;
+     Button5.Font.Color:=clDefault;
+     RadioGroup1Click(nil);
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+var
+    Doc: TXMLDocument;
+    RootNode, ElementNode,ItemNode,ItemNode1,TextNode,TextNode1: TDOMNode;
+    i,j: integer;
+begin
+  //distanču un KP saglabāšana
+    Doc := TXMLDocument.Create;
+    RootNode := Doc.CreateElement('course_data');
+    Doc.Appendchild(RootNode);
+    RootNode:= Doc.DocumentElement;
+    for i:=1 to StringGrid6.RowCount-1 do
+    with StringGrid6 do
+       begin
+            ElementNode:=Doc.CreateElement('course');
+            ItemNode:=Doc.CreateElement('id');
+            TextNode:=Doc.CreateTextNode(Cells[0,i]);
+            ItemNode.AppendChild(TextNode);
+            ElementNode.AppendChild(ItemNode);
+            ItemNode:=Doc.CreateElement('map');
+            TextNode:=Doc.CreateTextNode(Cells[1,i]);
+            ItemNode.AppendChild(TextNode);
+            ElementNode.AppendChild(ItemNode);
+            ItemNode:=Doc.CreateElement('mperpix');
+            TextNode:=Doc.CreateTextNode(Cells[2,i]);
+            ItemNode.AppendChild(TextNode);
+            ElementNode.AppendChild(ItemNode);
+            j:=0;
+            while j<(Objects[3,i] as TStringList).Count do
+            begin
+                 ItemNode:=Doc.CreateElement('cp');
+                 ItemNode1:=Doc.CreateElement('cp_id');
+                 TextNode1:=Doc.CreateTextNode((Objects[3,i] as TStringList).Strings[j]);
+                 ItemNode1.AppendChild(TextNode1);
+                 ItemNode.AppendChild(ItemNode1);
+                 ItemNode1:=Doc.CreateElement('cp_points');
+                 TextNode1:=Doc.CreateTextNode((Objects[3,i] as TStringList).Strings[j+1]);
+                 ItemNode1.AppendChild(TextNode1);
+                 ItemNode.AppendChild(ItemNode1);
+                 ItemNode1:=Doc.CreateElement('cp_ord');
+                 TextNode1:=Doc.CreateTextNode((Objects[3,i] as TStringList).Strings[j+2]);
+                 ItemNode1.AppendChild(TextNode1);
+                 ItemNode.AppendChild(ItemNode1);
+                 ElementNode.AppendChild(ItemNode);
+                 j:=j+3;
+            end;
+            RootNode.AppendChild(ElementNode);
+       end;
+    for j:=1 to Form2.StringGrid1.RowCount-1 do
+    begin
+                 ItemNode:=Doc.CreateElement('control');
+                 ItemNode1:=Doc.CreateElement('id');
+                 TextNode1:=Doc.CreateTextNode(Form2.StringGrid1.Cells[1,j]);
+                 ItemNode1.AppendChild(TextNode1);
+                 ItemNode.AppendChild(ItemNode1);
+                 ItemNode1:=Doc.CreateElement('mapx');
+                 TextNode1:=Doc.CreateTextNode(Form2.StringGrid1.Cells[4,j]);
+                 ItemNode1.AppendChild(TextNode1);
+                 ItemNode.AppendChild(ItemNode1);
+                 ItemNode1:=Doc.CreateElement('mapy');
+                 TextNode1:=Doc.CreateTextNode(Form2.StringGrid1.Cells[5,j]);
+                 ItemNode1.AppendChild(TextNode1);
+                 ItemNode.AppendChild(ItemNode1);
+                 ItemNode1:=Doc.CreateElement('stations');
+                 TextNode1:=Doc.CreateTextNode(Form2.StringGrid1.Cells[3,j]);
+                 ItemNode1.AppendChild(TextNode1);
+                 ItemNode.AppendChild(ItemNode1);
+                 RootNode.AppendChild(ItemNode);
+    end;
+
+    WriteXMLFile(Doc,'events/'+StringGrid1.Values['eventID']+'/course_data');
+    Doc.Free;
+    Button6.Color:=clDefault;
+    Button6.Font.Color:=clDefault;
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+     Form2.Caption:=StringGrid6.Cells[0,StringGrid6.Row];
+     if FileExists(StringGrid6.Cells[1,StringGrid6.Row]) then
+     begin
+        Form2.Image1.Picture.LoadFromFile(StringGrid6.Cells[1,StringGrid6.Row]);
+        Form2.imagefilename:=StringGrid6.Cells[1,StringGrid6.Row];
+        BitmapMake24Bit(Form2.Image1.Picture.Bitmap);
+     end
+     else
+         Form2.Image1.Picture.Bitmap:=nil;
+     Form2.SetState(1);
+     if Form2.ShowModal=mrOK then Button6Click(nil);
+end;
+
+procedure TForm1.Button8Click(Sender: TObject);
+var
+    i,j:integer;
+begin
+     with StringGrid6 do
+      begin
+        j:=0;
+        while j<(Objects[3,Row] as TStringList).Count-1 do
+        begin
+             for i:=1 to Form2.StringGrid1.RowCount-1 do
+             if Form2.StringGrid1.Cells[1,i]=(Objects[3,Row] as TStringList).Strings[j] then
+                Form2.StringGrid1.Cells[2,i]:=(Objects[3,Row] as TStringList).Strings[j+1];
+             j:=j+3;
+        end;
+         if Sender=Button8 then
+         begin
+              Form2.Caption:=Cells[0,Row];
+              if FileExists(Cells[1,Row]) then
+              begin
+                 Form2.Image1.Picture.LoadFromFile(Cells[1,Row]);
+                 BitmapMake24Bit(Form2.Image1.Picture.Bitmap);
+                 Form2.imagefilename:=Cells[1,Row];
+              end
+              else
+              begin
+                      Form2.Image1.Picture.Bitmap:=nil;
+                      Form2.imagefilename:='';
+              end;
+              Form2.SetState(2);
+              if Form2.ShowModal=mrOK then Button6Click(nil);
+         end;
+      end;
+end;
+
+procedure TForm1.Button9Click(Sender: TObject);
+var
+    dist: real;
+begin
+  Form2.SetState(3);
+     if FileExists(StringGrid6.Cells[1,StringGrid6.Row]) then
+     begin
+        Form2.Image1.Picture.LoadFromFile(StringGrid6.Cells[1,StringGrid6.Row]);
+        BitmapMake24Bit(Form2.Image1.Picture.Bitmap);
+        Form2.imagefilename:=StringGrid6.Cells[1,StringGrid6.Row];
+     end
+     else
+             Form2.Image1.Picture.Bitmap:=nil;
+  if Form2.ShowModal=mrOK then
+  begin
+    dist:=sqrt((Form2.ScaleX2-Form2.ScaleX1)*(Form2.ScaleX2-Form2.ScaleX1)+(Form2.ScaleY2-Form2.ScaleY1)*(Form2.ScaleY2-Form2.ScaleY1));
+    StringGrid6.Cells[2,StringGrid6.Row]:=FloatToStr(StrToInt(Form2.Edit1.Text)/dist);
+  end;
+end;
+
+procedure TForm1.StringGrid1SelectEditor(Sender: TObject; aCol, aRow: Integer;
+  var Editor: TWinControl);
+begin
+  InitialValue := StringGrid1.Cells[aCol,aRow];
+end;
+
+procedure TForm1.StringGrid1SetEditText(Sender: TObject; ACol, ARow: Integer;
+  const Value: string);
+begin
+  if Value <> InitialValue then
+  begin
+  Button5.Color:=clRed;
+  Button5.Font.Color:=clWhite;
+  end;
+end;
+
+procedure TForm1.StringGrid2SelectEditor(Sender: TObject; aCol, aRow: Integer;
+  var Editor: TWinControl);
+begin
+  InitialValue := StringGrid2.Cells[aCol,aRow];
+end;
+
+procedure TForm1.StringGrid2SetEditText(Sender: TObject; ACol, ARow: Integer;
+  const Value: string);
+begin
+  if Value <> InitialValue then
+  begin
+  Button1m.Color:=clRed;
+  Button1m.Font.Color:=clWhite;
+  end;
+end;
+
+procedure TForm1.StringGrid4SelectEditor(Sender: TObject; aCol, aRow: Integer;
+  var Editor: TWinControl);
+begin
+  InitialValue := StringGrid4.Cells[aCol,aRow];
+end;
+
+procedure TForm1.StringGrid4SetEditText(Sender: TObject; ACol, ARow: Integer;
+  const Value: string);
+begin
+  if Value <> InitialValue then
+  begin
+  Button4.Color:=clRed;
+  Button4.Font.Color:=clWhite;
+  end;
+end;
+
+procedure TForm1.StringGrid5SelectEditor(Sender: TObject; aCol, aRow: Integer;
+  var Editor: TWinControl);
+begin
+  InitialValue := StringGrid5.Cells[aCol,aRow];
+end;
+
+procedure TForm1.StringGrid5SetEditText(Sender: TObject; ACol, ARow: Integer;
+  const Value: string);
+begin
+  if Value <> InitialValue then
+  begin
+  Button4g.Color:=clRed;
+  Button4g.Font.Color:=clWhite;
+  end;
+end;
+
+
+end.
+

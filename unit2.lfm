@@ -19,6 +19,7 @@ object Form2: TForm2
     ClientWidth = 606
     TabOrder = 0
     object Image1: TImage
+      Cursor = crCross
       Left = 0
       Height = 552
       Top = 0
@@ -124,7 +125,7 @@ object Form2: TForm2
     Left = 28
     Height = 17
     Top = 601
-    Width = 508
+    Width = 497
     Caption = 'Enter distance (meters) between two points and click these points on map:'
     ParentColor = False
   end

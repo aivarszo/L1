@@ -173,6 +173,11 @@ msgstr ""
 msgid "sunrisetime"
 msgstr ""
 
+#: tform1.button34.caption
+msgctxt "tform1.button34.caption"
+msgid "Change team ID"
+msgstr ""
+
 #: tform1.button3g.caption
 msgid "Fill from event data"
 msgstr ""
@@ -307,42 +312,47 @@ msgctxt "tform1.menuitem1.caption"
 msgid "Event"
 msgstr ""
 
-#: tform1.menuitem11.caption
-msgid "Statistics"
+#: tform1.menuitem10.caption
+msgctxt "tform1.menuitem10.caption"
+msgid "New event"
 msgstr ""
 
 #: tform1.menuitem13.caption
-msgid "Teams' results"
+msgid "Team splits"
 msgstr ""
 
 #: tform1.menuitem15.caption
 msgid "Exit"
 msgstr ""
 
+#: tform1.menuitem18.caption
+msgid "Stats"
+msgstr ""
+
 #: tform1.menuitem2.caption
 msgctxt "tform1.menuitem2.caption"
-msgid "Import data"
+msgid "Data import"
+msgstr ""
+
+#: tform1.menuitem23.caption
+msgid "Datu eksport"
 msgstr ""
 
 #: tform1.menuitem3.caption
 msgctxt "tform1.menuitem3.caption"
-msgid "Read SIReader data"
+msgid "Import from SIReader"
 msgstr ""
 
 #: tform1.menuitem4.caption
 msgctxt "tform1.menuitem4.caption"
-msgid "Read SIME data"
+msgid "Import from SIME"
 msgstr ""
 
 #: tform1.menuitem5.caption
-msgid "Read rogaining.lv data"
+msgid "Import from rogaining.lv"
 msgstr ""
 
 #: tform1.menuitem6.caption
-msgid "Export data"
-msgstr ""
-
-#: tform1.menuitem7.caption
 msgid "Event data"
 msgstr ""
 
@@ -351,7 +361,8 @@ msgid "Startlist"
 msgstr ""
 
 #: tform1.menuitem9.caption
-msgid "New Event"
+msgctxt "tform1.menuitem9.caption"
+msgid "Copy event"
 msgstr ""
 
 #: tform1.radiogroup2.caption
@@ -736,6 +747,7 @@ msgid "OK"
 msgstr ""
 
 #: tform9.caption
+msgctxt "tform9.caption"
 msgid "Change team ID"
 msgstr ""
 
@@ -980,7 +992,13 @@ msgid "Event already exists!"
 msgstr ""
 
 #: unit1.mstt19a
-msgid "eventID field must contain event folder name and eventtype must be selected"
+msgid "eventID field must contain event folder name(use \"a-z,0-9\"), eventtype must be selected, eventname must be filled"
+msgstr ""
+
+#: unit1.mstt19b
+msgid ""
+"Event not created!\n"
+"Check your input!\n"
 msgstr ""
 
 #: unit1.mstt2

@@ -94,6 +94,7 @@ type
     Memo1: TMemo;
     Memo2: TMemo;
     MenuItem1: TMenuItem;
+    MenuItem10: TMenuItem;
     MenuItem15: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -179,6 +180,7 @@ type
     procedure Button9Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure LazSerial1RxData(Sender: TObject);
+    procedure MenuItem10Click(Sender: TObject);
     procedure MenuItem13Click(Sender: TObject);
     procedure MenuItem15Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
@@ -198,7 +200,7 @@ type
     procedure StringGrid5SelectEditor(Sender: TObject; aCol, aRow: Integer; var Editor: TWinControl);
     procedure StringGrid5SetEditText(Sender: TObject; ACol, ARow: Integer; const Value: string);
     procedure saveEverything();
-    procedure readEvent();
+    procedure readEvent(rd: Boolean; en: Integer);
     procedure readTeams();
     procedure readRunners();
     procedure readGroups();
@@ -272,7 +274,6 @@ var
 
   siReader: integer;
   siBackupMemP, siBackupMemC:array[0..3]of byte;
-  eventList: array of TRadioButton;
   cardNumber:longint;
   siReaderData:array of byte;
 
@@ -323,7 +324,8 @@ resourcestring
   mstT18e = 'There is no data.csv in event directory';
   mscC19 = 'Create Event';
   mstT19 = 'Event already exists!';
-  mstT19a = 'eventID field must contain event folder name and eventtype must be selected';
+  mstT19a = 'eventID field must contain event folder name(use "a-z,0-9"), eventtype must be selected, eventname must be filled';
+  mstT19b = 'Event not created!'#13#10'Check your input!';
   mscC20 = 'Data not saved';
   mstT20 = 'Current event is not saved! Save?';
 
@@ -473,27 +475,43 @@ begin
 end;
 
 //lasa eventa datus
-procedure TForm1.readEvent();
+procedure TForm1.readEvent(rd: Boolean; en: Integer);
 var
   fname:string;
   Doc: TXMLDocument;
   i:integer;
+  hlp: TValueListEditor;
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/event_data';
+  hlp:=TValueListEditor.Create(nil);
+  fname:='events/'+eventListID[en]+'/event_data';
   if FileExists(fname) then
   begin
     ReadXMLFile(Doc, fname);
     for i:=0 to StringGrid1.RowCount-1 do
         if Doc.DocumentElement.FindNode(StringGrid1.Keys[i]) <> nil then
-           StringGrid1.Values[StringGrid1.Keys[i]]:=Doc.DocumentElement.FindNode(StringGrid1.Keys[i]).TextContent;
+           if rd then
+              StringGrid1.Values[StringGrid1.Keys[i]]:=Doc.DocumentElement.FindNode(StringGrid1.Keys[i]).TextContent
+           else
+               hlp.Values[StringGrid1.Keys[i]]:=Doc.DocumentElement.FindNode(StringGrid1.Keys[i]).TextContent;
     Doc.Free;
 
-    evType:=StringGrid1.Values['eventtype'];
-    evStartType:=StringGrid1.Values['starttype'];
-    if StringGrid1.Values['starttime']<>'' then
+    if not rd then
     begin
-       evStart:=laiks(StringGrid1.Values['starttime']);
-       evDate:=laiks(Copy(StringGrid1.Values['starttime'],0,10)+' 00:00:00');
+      if hlp.Values['eventname']='' then
+         eventList[en].Caption:=hlp.Values['eventID']
+      else
+         eventList[en].Caption:=hlp.Values['eventname'];
+      RadioGroup1.Items.AddObject(eventList[en].Caption,eventList[en]);
+    end
+    else
+    begin
+         evType:=StringGrid1.Values['eventtype'];
+         evStartType:=StringGrid1.Values['starttype'];
+         if StringGrid1.Values['starttime']<>'' then
+         begin
+              evStart:=laiks(StringGrid1.Values['starttime']);
+              evDate:=laiks(Copy(StringGrid1.Values['starttime'],0,10)+' 00:00:00');
+         end;
     end;
   end;
 end;
@@ -508,7 +526,7 @@ var
   tm1: TStringList;
   ss: array[0..6] of string;
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/team_data';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/team_data';
   if FileExists(fname) then
   begin
     ReadXMLFile(Doc, fname);
@@ -591,7 +609,7 @@ var
   ss1: array[0..7] of string;
 
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/runner_data';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/runner_data';
   if FileExists(fname) then
   begin
     ReadXMLFile(Doc, fname);
@@ -634,7 +652,7 @@ var
   dnd,dnd1: TDOMNode;
   ss2: array[0..6] of string;
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/group_data';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/group_data';
   if FileExists(fname) then
   begin
     ReadXMLFile(Doc, fname);
@@ -682,7 +700,7 @@ var
   ss3: array[0..3] of string;
   tm1: TStringList;
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/course_data';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/course_data';
   if FileExists(fname) then
   begin
     ReadXMLFile(Doc, fname);
@@ -807,7 +825,7 @@ var
   p: boolean;
 begin
   saveEverything;
-  readEvent;
+  readEvent(true, RadioGroup1.ItemIndex);
   readTeams;
   readRunners;
   readGroups();
@@ -831,9 +849,9 @@ begin
 
                     if FileExists('punches_9999/'+StringGrid4.Cells[3,i]+'_9999') then
                     begin
-                        RenameFile('punches_9999/'+StringGrid4.Cells[3,i]+'_9999', 'events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid4.Cells[3,i]+'_'+StringGrid4.Cells[2,i]);
+                        RenameFile('punches_9999/'+StringGrid4.Cells[3,i]+'_9999', 'events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,i]+'_'+StringGrid4.Cells[2,i]);
                     end;
-                    if FileExists('events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid4.Cells[3,i]+'_'+StringGrid4.Cells[2,i]) then
+                    if FileExists('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,i]+'_'+StringGrid4.Cells[2,i]) then
                     begin
                         StringGrid4.Cells[8,i]:='+';
                     end;
@@ -999,7 +1017,7 @@ begin
             StringGrid3.Cells[5,i]:=StringGrid4.Cells[3,j];
             StringGrid3.Cells[6,i]:=StringGrid4.Cells[4,j];
             StringGrid3.Cells[7,i]:=StringGrid2.Cells[0,r];  // komandas ID
-          if FileExists('events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid3.Cells[5,i]+'_'+StringGrid2.Cells[0,r]) then
+          if FileExists('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid3.Cells[5,i]+'_'+StringGrid2.Cells[0,r]) then
           begin
             StringGrid3.Cells[8,i]:='1'; // ir identa fails
           end
@@ -1028,7 +1046,7 @@ begin
       if StringGrid3.Cells[0,i]<>'' then mc:=mc+1;
       if StringGrid3.Cells[8,i]='1' then
        begin
-            fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid3.Cells[5,i]+'_'+StringGrid3.Cells[7,i];
+            fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid3.Cells[5,i]+'_'+StringGrid3.Cells[7,i];
             ss.LoadFromFile(fname);
             for j:=0 to ss.Count-1 do ss.Strings[j]:=StringGrid3.Cells[5,i]+' '+ss.Strings[j];
             ss1.AddStrings(ss);
@@ -1167,7 +1185,7 @@ begin
             Form3.Caption:=Cells[5,Row]+'_'+Cells[7,Row];
             if Cells[8,Row]='1' then
             begin
-                 Form3.fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+Form3.Caption;
+                 Form3.fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+Form3.Caption;
                  Form3.Memo1.Lines.LoadFromFile(Form3.fname);
                  Form3.Show;
             end
@@ -1176,7 +1194,7 @@ begin
               if MessageDlg(mscC3,mstT3,mtConfirmation,[mbNo, mbYes],0)=mrYes then
               begin
                 //taisa tukšu identu failu
-                Form3.fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+Form3.Caption;
+                Form3.fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+Form3.Caption;
                 Form3.Memo1.Lines.SaveToFile(Form3.fname);
                 Form3.Memo1.Lines.LoadFromFile(Form3.fname);
                 Form3.Show;
@@ -1287,13 +1305,15 @@ var
 begin
      k:=0;
      FileListBox1.UpdateFileList;
+     RadioGroup1.Items.Clear;
      SetLength(eventList,FileListBox1.Count);
+     SetLength(eventListID,FileListBox1.Count);
      for i:=1 to FileListBox1.Count do
      begin
          if (FileListBox1.Items[i-1]='[.]') or (FileListBox1.Items[i-1]='[..]') then continue;
          eventList[k]:=TRadioButton.create(RadioGroup1);
-         eventList[k].Caption:=copy(FileListBox1.Items[i-1],2,length(FileListBox1.Items[i-1])-2);
-         RadioGroup1.Items.AddObject(eventList[k].Caption,eventList[k]);
+         eventListID[k]:=copy(FileListBox1.Items[i-1],2,length(FileListBox1.Items[i-1])-2);
+         readEvent(false,k);
          k:=k+1;
      end;
 end;
@@ -1619,7 +1639,7 @@ begin
       exit;
   end;
 
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/courses.xml';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/courses.xml';
   if FileExists(fname) then
   begin
     ReadXMLFile(Doc, fname);
@@ -1899,7 +1919,7 @@ var
    i,j:integer;
    fname,ss1,s:string;
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/docs/ALL.htm';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/docs/ALL.htm';
   Form3.Memo1.Clear;
   Form3.Memo1.Lines.Add('<html><head>');
   Form3.Memo1.Lines.Add('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
@@ -2146,7 +2166,7 @@ begin
           RootNode.AppendChild(ElementNode);
           if FileExists('punches_9999/'+Cells[3,i]+'_9999') then
           begin
-            RenameFile('punches_9999/'+Cells[3,i]+'_9999', 'events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+Cells[3,i]+'_'+Cells[2,i]);
+            RenameFile('punches_9999/'+Cells[3,i]+'_9999', 'events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+Cells[3,i]+'_'+Cells[2,i]);
             StringGrid4.Cells[8,i]:='+';
           end;
      end;
@@ -2517,8 +2537,8 @@ begin
                      begin
                           StringGrid4.Cells[2,j]:=Form9.Edit1.Text;
                           if StringGrid4.Cells[8,j]='+' then
-                          RenameFile('events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid4.Cells[3,i]+'_'+Form9.Label4.Caption,
-                          'events/'+eventList[RadioGroup1.ItemIndex].Caption+'/punches/'+StringGrid4.Cells[3,i]+'_'+Form9.Edit1.Text);
+                          RenameFile('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,i]+'_'+Form9.Label4.Caption,
+                          'events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,i]+'_'+Form9.Edit1.Text);
                           break;
                      end;
             end;
@@ -2764,7 +2784,7 @@ var
     s,s1,s2:string;
 begin
   tname:='';
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption;
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex];
   for i:=1 to StringGrid4.RowCount-1 do
       if StringGrid4.Cells[3,i]=IntToStr(cardNumber) then
       begin
@@ -2896,7 +2916,7 @@ begin
 end;
 
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/raw/';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/raw/';
   s:=LazSerial1.ReadData;
 //for i:=1 to Length(s) do
 //  Write(IntToHex(Ord(s[i]),2)+' ');
@@ -3380,6 +3400,7 @@ begin
 
 end;
 
+
 //komandu spliti un ceļš
 procedure TForm1.MenuItem13Click(Sender: TObject);
 var
@@ -3421,7 +3442,7 @@ begin
   if StringGrid2.Cells[4,i]='OK' then begin
     k:=0;
     while allSplits[k].team<>StringGrid2.Cells[0,i] do k:=k+1;
-    fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/teamresults/'+StringGrid2.Cells[0,i]+'.htm';
+    fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/teamresults/'+StringGrid2.Cells[0,i]+'.htm';
     Form3.Memo1.Clear;
     Form3.Memo1.Lines.Add('<html><head>');
     Form3.Memo1.Lines.Add('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
@@ -3500,7 +3521,7 @@ begin
               LineTo(Round(StrToFloat(Form2.StringGrid1.Cells[4,m])),Round(StrToFloat(Form2.StringGrid1.Cells[5,m])));
         end;
       end;
-      Form2.Image1.Picture.SaveToFile('events/'+eventList[RadioGroup1.ItemIndex].Caption+'/teamresults/'+StringGrid2.Cells[0,i]+'.png');
+      Form2.Image1.Picture.SaveToFile('events/'+eventListID[RadioGroup1.ItemIndex]+'/teamresults/'+StringGrid2.Cells[0,i]+'.png');
     end;
   end;
 end;
@@ -3701,11 +3722,11 @@ var
 begin
  if MessageDlg(mscC18, mstT18, mtConfirmation,[mbYes, mbNo],0) = mrYes then
  begin
-   fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/event.csv';
+   fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/event.csv';
    if FileExists(fname) then
    begin
-     jvCSVBase1.CSVFileName:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/event.csv';
-     jvCSVBase1.DataBaseOpen('events/'+eventList[RadioGroup1.ItemIndex].Caption+'/event.csv');  //EventId;SI-Card;CN;Mode;Source;DayOfWeek;PunchDate;PunchTime;No;Cnt
+     jvCSVBase1.CSVFileName:='events/'+eventListID[RadioGroup1.ItemIndex]+'/event.csv';
+     jvCSVBase1.DataBaseOpen('events/'+eventListID[RadioGroup1.ItemIndex]+'/event.csv');  //EventId;SI-Card;CN;Mode;Source;DayOfWeek;PunchDate;PunchTime;No;Cnt
      jvCSVEdit1.CSVField:='SI-Card'; //1
      jvCSVEdit2.CSVField:='CN'; //2
      jvCSVEdit3.CSVField:='Mode'; //3
@@ -3777,7 +3798,7 @@ var
 begin
    if MessageDlg(mscC18, mstT18b, mtConfirmation,[mbYes, mbNo],0) = mrYes then
    begin
-     fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/splits.csv';
+     fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/splits.csv';
      if FileExists(fname) then
      begin
        AssignFile(tf,fname);  //Stno;Chip;...
@@ -3855,7 +3876,7 @@ begin
 }
  if MessageDlg(mscC18, mstT18d, mtConfirmation,[mbYes, mbNo],0) = mrYes then
  begin
-   fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/data.csv';
+   fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/data.csv';
    if FileExists(fname) then
    begin
      jvCSVBase1.CSVFileName:=fname;
@@ -3920,7 +3941,7 @@ var
   fname:string;
   i,j:integer;
 begin
-  fname:='events/'+eventList[RadioGroup1.ItemIndex].Caption+'/docs/startlist.htm';
+  fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/docs/startlist.htm';
   Form3.Memo1.Clear;
   Form3.Memo1.Lines.Add('<html><head>');
   Form3.Memo1.Lines.Add('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
@@ -3959,6 +3980,20 @@ begin
 end;
 
 //jauns events
+procedure TForm1.MenuItem10Click(Sender: TObject);
+begin
+  saveEverything;
+  StringGrid1.Clean(1,0,1,16,[]);
+  StringGrid2.RowCount:=1;
+  StringGrid3.RowCount:=1;
+  StringGrid4.RowCount:=1;
+  StringGrid5.RowCount:=1;
+  StringGrid6.RowCount:=1;
+  StringGrid7.RowCount:=1;
+  MenuItem9Click(Sender);
+end;
+
+//eventa kopija
 procedure TForm1.MenuItem9Click(Sender: TObject);
 var
   i:integer;
@@ -3966,7 +4001,7 @@ begin
  MessageDlg(mscC19,mstT19a,mtConfirmation,[mbOK],0);
  if Form7.ShowModal=mrOK then
  with Form7.ValueListEditor1 do
-   if (Values['eventID']<>'')and(Values['eventtype']<>'') then
+   if (Values['eventID']<>'') and onlyAlphaNumeric(Values['eventID']) and (Values['eventtype']<>'') and (Values['eventname']<>'') then
    begin
       if not DirectoryExists('events/'+Values['eventID']) then
       begin
@@ -3977,6 +4012,7 @@ begin
            CreateDir('events/'+Values['eventID']+'/raw');
            StringGrid1.Values['eventID']:=Values['eventID'];
            StringGrid1.Values['eventtype']:=Values['eventtype'];
+           StringGrid1.Values['eventname']:=Values['eventname'];
            StringGrid1.Values['starttime']:=FormatDateTime('YYYY-MM-DD',Now)+' 00:00:00';
            StringGrid1.Show;
            writeEvent;
@@ -3988,17 +4024,24 @@ begin
            Button1mClick(Button1m);
            loadEvents;
            for i:=0 to RadioGroup1.Items.Count-1 do
-               if RadioGroup1.Items[i]=Values['eventID'] then
-               begin
-                    (RadioGroup1.Controls[i] as TRadioButton).Checked:=True;
-                    break;
-               end;
+           begin
+             if RadioGroup1.Items[i]=Values['eventname'] then
+             begin
+               (RadioGroup1.Controls[i] as TRadioButton).Checked:=True;
+               break;
+             end;
+           end;
       end
       else
       begin
           MessageDlg(mscC19,mstT19,mtConfirmation,[mbOK],0);
           exit;
       end;
+   end
+   else
+   begin
+     MessageDlg(mscC19,mstT19b,mtConfirmation,[mbOK],0);
+     exit;
    end;
 end;
 
@@ -4033,6 +4076,11 @@ begin
   begin
     StringGrid1.Cells[ACol,ARow]:=InitialValue;
     exit;
+  end;
+  if aRow=1 then
+  begin
+    eventList[RadioGroup1.ItemIndex].Caption:=Value;
+    RadioGroup1.Items[RadioGroup1.ItemIndex]:=Value;
   end;
   if Value <> InitialValue then
   begin

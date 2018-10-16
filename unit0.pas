@@ -8,9 +8,11 @@ uses
   Classes, SysUtils, StdCtrls;
 
 function laiks(s:string):TDateTime;
+function onlyAlphaNumeric(s:string):Boolean;
 
 var
-      eventList: array [0..100] of TRadioButton;
+      eventList: array of TRadioButton;
+      eventListID: array of string;
       evStart,evDate: TDateTime;
       evType, evStartType: string;
 
@@ -28,6 +30,21 @@ begin
   fmt.ShortDateFormat:='yyyy-mm-dd';
   fmt.ShortTimeFormat:='hh:nn:ss';
   laiks:=StrToDateTime(Copy(s,1,19),fmt);
+end;
+
+function onlyAlphaNumeric(s: string): Boolean;
+var
+   an:Boolean;
+   i:integer;
+begin
+  an:=true;
+  for i:=1 to Length(s) do
+      if not (s[i] in ['0'..'9','a'..'z']) then
+      begin
+        an:=false;
+        break;
+      end;
+  onlyAlphaNumeric:=an;
 end;
 
 end.

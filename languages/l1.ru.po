@@ -175,6 +175,11 @@ msgstr ""
 msgid "sunrisetime"
 msgstr ""
 
+#: tform1.button34.caption
+msgctxt "tform1.button34.caption"
+msgid "Change team ID"
+msgstr ""
+
 #: tform1.button3g.caption
 msgid "Fill from event data"
 msgstr "Заполнить из данных соревнований"
@@ -309,51 +314,73 @@ msgctxt "tform1.menuitem1.caption"
 msgid "Event"
 msgstr "Соревнования"
 
-#: tform1.menuitem11.caption
-msgid "Statistics"
-msgstr "Статистика"
+#: tform1.menuitem10.caption
+#, fuzzy
+#| msgid "New Event"
+msgctxt "tform1.menuitem10.caption"
+msgid "New event"
+msgstr "Новые соревнования"
 
 #: tform1.menuitem13.caption
-msgid "Teams' results"
+#, fuzzy
+#| msgid "Teams' results"
+msgid "Team splits"
 msgstr "Результаты команд"
 
 #: tform1.menuitem15.caption
 msgid "Exit"
 msgstr "Конец работы"
 
+#: tform1.menuitem18.caption
+msgid "Stats"
+msgstr ""
+
 #: tform1.menuitem2.caption
+#, fuzzy
+#| msgid "Import data"
 msgctxt "tform1.menuitem2.caption"
-msgid "Import data"
+msgid "Data import"
 msgstr "Импорт данных"
 
+#: tform1.menuitem23.caption
+msgid "Datu eksport"
+msgstr ""
+
 #: tform1.menuitem3.caption
+#, fuzzy
+#| msgid "Read SIReader data"
 msgctxt "tform1.menuitem3.caption"
-msgid "Read SIReader data"
+msgid "Import from SIReader"
 msgstr "Читать данные с файла SIReader"
 
 #: tform1.menuitem4.caption
+#, fuzzy
+#| msgid "Read SIME data"
 msgctxt "tform1.menuitem4.caption"
-msgid "Read SIME data"
+msgid "Import from SIME"
 msgstr "Читать данные с файла SIME"
 
 #: tform1.menuitem5.caption
-msgid "Read rogaining.lv data"
+#, fuzzy
+#| msgid "Read rogaining.lv data"
+msgid "Import from rogaining.lv"
 msgstr "Читать данные rogaining.lv"
 
 #: tform1.menuitem6.caption
-msgid "Export data"
-msgstr "Экспорт данных"
-
-#: tform1.menuitem7.caption
+#, fuzzy
+#| msgid "Export data"
 msgid "Event data"
-msgstr "Данные соревнований"
+msgstr "Экспорт данных"
 
 #: tform1.menuitem8.caption
 msgid "Startlist"
 msgstr "Список старта"
 
 #: tform1.menuitem9.caption
-msgid "New Event"
+#, fuzzy
+#| msgid "New event"
+msgctxt "tform1.menuitem9.caption"
+msgid "Copy event"
 msgstr "Новые соревнования"
 
 #: tform1.radiogroup2.caption
@@ -738,6 +765,7 @@ msgid "OK"
 msgstr ""
 
 #: tform9.caption
+msgctxt "tform9.caption"
 msgid "Change team ID"
 msgstr ""
 
@@ -982,7 +1010,13 @@ msgid "Event already exists!"
 msgstr "Такие соревнования уже существуют!"
 
 #: unit1.mstt19a
-msgid "eventID field must contain event folder name and eventtype must be selected"
+msgid "eventID field must contain event folder name(use \"a-z,0-9\"), eventtype must be selected, eventname must be filled"
+msgstr ""
+
+#: unit1.mstt19b
+msgid ""
+"Event not created!\n"
+"Check your input!\n"
 msgstr ""
 
 #: unit1.mstt2
@@ -1058,3 +1092,4 @@ msgstr "Повторяются номера КП:"
 #: unit2.mst2t2
 msgid "Are you sure to remove control?"
 msgstr "Удалить КП?"
+

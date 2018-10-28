@@ -1,7 +1,7 @@
 object Form6: TForm6
-  Left = 753
+  Left = 792
   Height = 928
-  Top = 124
+  Top = 122
   Width = 1128
   Caption = 'Form6'
   ClientHeight = 928
@@ -57,6 +57,7 @@ object Form6: TForm6
     MouseWheelOption = mwGrid
     RowCount = 1
     TabOrder = 0
+    OnDrawCell = StringGrid7DrawCell
     ColWidths = (
       64
       268

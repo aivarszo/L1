@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 521
+  Left = 678
   Height = 815
-  Top = 235
+  Top = 213
   Width = 1047
   Align = alBottom
   Anchors = [akBottom]
@@ -1504,5 +1504,22 @@ object Form1: TForm1
         OnClick = MenuItem15Click
       end
     end
+  end
+  object Process1: TProcess
+    Active = False
+    Executable = 'lp'
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 279
+    top = 647
   end
 end

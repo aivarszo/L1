@@ -748,7 +748,7 @@ msgid "Form7"
 msgstr ""
 
 #: tform8.caption
-msgid "Form8"
+msgid "Laiks"
 msgstr ""
 
 #: tform8.label1.caption

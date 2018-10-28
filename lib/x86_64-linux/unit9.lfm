@@ -3,7 +3,7 @@ object Form8: TForm8
   Height = 563
   Top = 153
   Width = 780
-  Caption = 'Form8'
+  Caption = 'Laiks'
   ClientHeight = 563
   ClientWidth = 780
   LCLVersion = '1.8.2.0'

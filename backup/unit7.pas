@@ -16,6 +16,8 @@ type
     StringGrid7: TStringGrid;
     Timer1: TTimer;
     procedure Timer1Timer(Sender: TObject);
+    procedure StringGrid7DrawCell(Sender: TObject; aCol, aRow: Integer;
+  aRect: TRect; aState: TGridDrawState);
     procedure setBB(bb1:boolean);
   private
 
@@ -58,6 +60,30 @@ begin
       Timer1.Interval:=10000;
       bb:=true;
       exit;
+    end;
+end;
+//krāsas vietām
+procedure TForm6.StringGrid7DrawCell(Sender: TObject; aCol, aRow: Integer;
+  aRect: TRect; aState: TGridDrawState);
+begin
+  with StringGrid7 do
+    begin
+      if (aCol = 6) and (Pos(':1 ',Cells[6, aRow])>0) then
+        begin
+          Canvas.Font.Color := clWhite;
+          Canvas.Brush.Color := clRed;
+          Canvas.FillRect(aRect.Left, aRect.Top,
+                         aRect.Right, aRect.Bottom);
+          Canvas.TextOut(aRect.Left+5, aRect.Top+3, Cells[ACol, ARow]);
+        end
+        else
+        begin
+          Canvas.Font.Color := clBlack;
+          Canvas.Brush.Color := clWhite;
+          Canvas.FillRect(aRect.Left, aRect.Top,
+                         aRect.Right, aRect.Bottom);
+          Canvas.TextOut(aRect.Left+5, aRect.Top+3, Cells[ACol, ARow]);
+        end;
     end;
 end;
 

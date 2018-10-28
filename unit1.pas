@@ -8,7 +8,7 @@ uses
   Unit0, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Unit8, Unit9, Unit10, LazSerial,
   jvCSVBase, Classes, SysUtils, FileUtil, DateTimePicker, Forms,
   Controls, Graphics, Dialogs, ComCtrls, Grids, ExtCtrls, StdCtrls, FileCtrl,
-  ValEdit, Types, DOM, XMLRead, XMLWrite, Math, LCLTranslator, Menus,
+  ValEdit, Types, DOM, XMLRead, XMLWrite, process, Math, LCLTranslator, Menus,
   LazHelpHTML, LazSynaSer, LR_Class, LR_Desgn, LR_Barc, LR_DSet, LR_RRect,
   LR_Shape, LR_ChBox, LR_PGrid, Lr_CrossTab;
 
@@ -111,6 +111,7 @@ type
     MenuItem19: TMenuItem;
     OpenDialog1: TOpenDialog;
     PageControl1: TPageControl;
+    Process1: TProcess;
     RadioGroup1: TRadioGroup;
     RadioGroup2: TRadioGroup;
     ScrollBox1: TScrollBox;
@@ -1166,6 +1167,10 @@ begin
            begin
              Form5.Show;
              if Button26.Checked then TeamPDFResult;
+             Process1.Parameters.Add('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/200705_404');
+             Process1.Active:=true;
+             Process1.Execute;
+             Process1.Active:=false;
            end;
       end;
   end;
@@ -1268,6 +1273,9 @@ begin
 
 //distances kartes faila izvēle
 procedure TForm1.StringGrid6Click(Sender: TObject);
+var
+  k:real;
+  LTempBitmap: TBitmap;
 begin
     with StringGrid6 do
     begin
@@ -1275,6 +1283,26 @@ begin
       begin
          if OpenDialog1.Execute then
            StringGrid6.Cells[1,Row]:=OpenDialog1.Filename;
+         // TODO jāpārbauda, vai fails der kā bilde
+         Form2.Image1.Picture.LoadFromFile(StringGrid6.Cells[1,1]);
+         BitmapMake24Bit(Form2.Image1.Picture.Bitmap);
+         if Form2.Image1.Picture.Bitmap.Width > Form2.Image1.Picture.Bitmap.Height then
+            k:=Form2.Image1.Picture.Bitmap.Width / 1600
+         else
+            k:=Form2.Image1.Picture.Bitmap.Height / 1600;
+         LTempBitmap := TBitmap.Create;
+         try
+           LTempBitmap.PixelFormat := pf24bit;
+           LTempBitmap.SetSize(trunc(Form2.Image1.Picture.Bitmap.Width/k),trunc(Form2.Image1.Picture.Bitmap.Height/k));
+           LTempBitmap.Canvas.StretchDraw(Rect(0,0,trunc(Form2.Image1.Picture.Bitmap.Width/k),trunc(Form2.Image1.Picture.Bitmap.Height/k)), Form2.Image1.Picture.Bitmap);
+           Form2.Image1.Picture.Bitmap.PixelFormat := pf24bit;
+           Form2.Image1.Picture.Bitmap.SetSize(trunc(Form2.Image1.Picture.Bitmap.Width/k),trunc(Form2.Image1.Picture.Bitmap.Height/k));
+           Form2.Image1.Picture.Bitmap.Canvas.Draw(0,0, LTempBitmap);
+         finally
+           FreeAndNil(LTempBitmap);
+         end;
+         Form2.Image1.Picture.SaveToFile('events/'+eventListID[RadioGroup1.ItemIndex]+'/'+eventListID[RadioGroup1.ItemIndex]+'_map.png');
+         StringGrid6.Cells[1,Row]:='events/'+eventListID[RadioGroup1.ItemIndex]+'/'+eventListID[RadioGroup1.ItemIndex]+'_map.png';
       end;
     end;
 end;
@@ -1897,7 +1925,7 @@ begin
             if v[j]=1 then s:='<span class="wingold">'+IntToStr(v[j])+'</span>';
             if v[j]=2 then s:='<span class="winsilver">'+IntToStr(v[j])+'</span>';
             if v[j]=3 then s:='<span class="winbronz">'+IntToStr(v[j])+'</span>';
-            StringGrid7.Cells[8,i]:=StringGrid7.Cells[8,i]+' '+StringGrid5.Cells[1,j]+':'+s;
+            StringGrid7.Cells[8,i]:=StringGrid7.Cells[8,i]+' '+StringGrid5.Cells[1,j]+':'+s+' ';
           end;
        end;
        if StringGrid7.Cells[6,i]<>'' then
@@ -1905,7 +1933,7 @@ begin
          Form6.StringGrid7.InsertRowWithValues(m,['','','','','','','','','']);
          for j:=0 to StringGrid7.ColCount-1 do begin
            if j=6 then s:=IntToStr(m)+'.: ' else s:='';
-           Form6.StringGrid7.Cells[j,m]:=s+StringGrid7.Cells[j,i];
+           Form6.StringGrid7.Cells[j,m]:=s+StringGrid7.Cells[j,i]+' '; // beigās tukšums vietu krāsām
          end;
          m:=m+1;
        end;
@@ -2626,10 +2654,10 @@ begin
   prevTime:=0;
   prevKP:='';
   frReport1.LoadFromFile('teamReport.lrf');
-//  frReport1.ShowReport;
+  frReport1.ShowReport;
   frReport1.PrepareReport;
   frReport1.PrintToDefault:=true;
-  frReport1.PrintPreparedReport('',0);
+//  frReport1.PrintPreparedReport('',0);
 end;
 
 procedure TForm1.frReport1GetValue(const ParName: String; var ParValue: Variant);

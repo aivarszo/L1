@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event_data>
+  <eventID>lvm2017h4</eventID>
+  <eventname>LVM 2017 4H</eventname>
+  <eventplace>*</eventplace>
+  <eventlogo>new_logo</eventlogo>
+  <eventtype>rogain</eventtype>
+  <starttime>2018-05-03 09:00:00</starttime>
+  <finishtime>2018-05-03 18:00:00</finishtime>
+  <latetime>2018-05-03 18:30:00</latetime>
+  <sunsettime>2016-05-31 22:30:00</sunsettime>
+  <sunrisetime>2016-05-31 05:30:00</sunrisetime>
+  <timelimit>60</timelimit>
+  <timepenalty>1</timepenalty>
+  <printer>CITIZEN CT-S310</printer>
+  <siport>\\.\COM3</siport>
+  <starttype>starttime</starttype>
+  <penaltytype></penaltytype>
+  <routetype></routetype>
+</event_data>

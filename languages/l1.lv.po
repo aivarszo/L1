@@ -244,7 +244,7 @@ msgstr "Izvēlies un iestati:"
 
 #: tform1.jvcsvedit1.text
 msgctxt "tform1.jvcsvedit1.text"
-msgid "jvCSVEdit1"
+msgid "1;580619;1;CLR;RDO;5;"
 msgstr ""
 
 #: tform1.jvcsvedit10.text
@@ -599,6 +599,10 @@ msgstr "SI lasītājs"
 msgctxt "tform1.togglebox2.caption"
 msgid "Reading SI cards..."
 msgstr "Lasa SI kartes..."
+
+#: tform1.togglebox3.caption
+msgid "Print split receipts"
+msgstr ""
 
 #: tform2.button1.caption
 msgctxt "TFORM2.BUTTON1.CAPTION"

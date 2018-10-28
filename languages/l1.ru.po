@@ -245,7 +245,7 @@ msgstr "Выберите и установите:"
 
 #: tform1.jvcsvedit1.text
 msgctxt "tform1.jvcsvedit1.text"
-msgid "jvCSVEdit1"
+msgid "1;580619;1;CLR;RDO;5;"
 msgstr ""
 
 #: tform1.jvcsvedit10.text
@@ -600,6 +600,10 @@ msgstr "Считыватель СИ"
 msgctxt "tform1.togglebox2.caption"
 msgid "Reading SI cards..."
 msgstr "Считывает СИ карты..."
+
+#: tform1.togglebox3.caption
+msgid "Print split receipts"
+msgstr ""
 
 #: tform2.button1.caption
 msgctxt "TFORM2.BUTTON1.CAPTION"

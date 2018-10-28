@@ -1,0 +1,39 @@
+object Form3: TForm3
+  Left = 749
+  Height = 533
+  Top = 181
+  Width = 320
+  Caption = 'Form3'
+  ClientHeight = 533
+  ClientWidth = 320
+  LCLVersion = '1.6.4.0'
+  object Memo1: TMemo
+    Left = 11
+    Height = 440
+    Top = 7
+    Width = 296
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 48
+    Height = 25
+    Top = 472
+    Width = 85
+    Caption = 'Save'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 183
+    Height = 25
+    Top = 472
+    Width = 89
+    Caption = 'Close'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+end

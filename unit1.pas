@@ -133,6 +133,7 @@ type
     TabSheet9: TTabSheet;
     ToggleBox1: TToggleBox;
     ToggleBox2: TToggleBox;
+    ToggleBox3: TToggleBox;
     procedure Button15Click(Sender: TObject);
     procedure Button16Click(Sender: TObject);
     procedure Button17Click(Sender: TObject);
@@ -207,6 +208,7 @@ type
     procedure readGroups();
     procedure readCourses();
     procedure ToggleBox2Change(Sender: TObject);
+    procedure ToggleBox3Change(Sender: TObject);
     procedure writeEvent();
     procedure loadEvents();
     procedure TeamPDFResult();
@@ -262,7 +264,7 @@ var
 
   blockNr: byte; //identa nolasīšanai
   punchCount: integer; //identa nolasīšanai
-  currT,rStart,rDate: TDateTime; //identa nolasīšanai
+  currT,rStart,rDate, prevT: TDateTime; //identa nolasīšanai
   startTime,finishTime:integer; //identa nolasīšanai
   extraBackup: boolean; //ja stacijas backups "dzēsts"
 
@@ -801,6 +803,11 @@ begin
   end;
 end;
 
+procedure TForm1.ToggleBox3Change(Sender: TObject);
+begin
+
+end;
+
 //pārbauda vai saglabāts events un saglabā
 procedure TForm1.saveEverything();
 begin
@@ -1054,7 +1061,8 @@ begin
        end
        else
        begin
-         MessageDlg(mscC2,mstT2+StringGrid3.Cells[5,i]+mstT2a,mtConfirmation,[mbOk],0);
+            if Form5.Caption <> '#' then
+               MessageDlg(mscC2,mstT2+StringGrid3.Cells[5,i]+mstT2a,mtConfirmation,[mbOk],0);
          exit;
        end;
       end;
@@ -1081,6 +1089,12 @@ begin
                 s[8]:='';
                 Form5.StringGrid1.InsertRowWithValues(j,s);
                 j:=j+1;
+           end;
+           if Form5.StringGrid1.RowCount=0 then
+           begin
+              if Form5.Caption <> '#' then
+                MessageDlg(mscC2,mstT2+mstT2a,mtConfirmation,[mbOk],0);
+              exit;
            end;
            Form5.StringGrid1.ColWidths[2]:=200;
            Form5.StringGrid1.SortColRow(true,2);
@@ -1166,11 +1180,14 @@ begin
            if Form5.Caption<>'#' then
            begin
              Form5.Show;
-             if Button26.Checked then TeamPDFResult;
-             Process1.Parameters.Add('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/200705_404');
-             Process1.Active:=true;
-             Process1.Execute;
-             Process1.Active:=false;
+             if Button26.Checked then
+             begin
+                  TeamPDFResult;
+                  //Process1.Parameters.Add('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/200705_404');
+                  //Process1.Active:=true;
+                  //Process1.Execute;
+                  //Process1.Active:=false;
+             end;
            end;
       end;
   end;
@@ -2565,9 +2582,8 @@ begin
                      begin
                           StringGrid4.Cells[2,j]:=Form9.Edit1.Text;
                           if StringGrid4.Cells[8,j]='+' then
-                          RenameFile('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,i]+'_'+Form9.Label4.Caption,
-                          'events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,i]+'_'+Form9.Edit1.Text);
-                          break;
+                          RenameFile('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,j]+'_'+Form9.Label4.Caption,
+                          'events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/'+StringGrid4.Cells[3,j]+'_'+Form9.Edit1.Text);
                      end;
             end;
   end;
@@ -2837,13 +2853,14 @@ begin
   if tname='' then
   begin
     tname:='9999';
-    fname:='punches_9999/';
-    AssignFile(FO,fname+IntToStr(cardNumber)+'_'+tname);
+    fname:='punches_9999/'+IntToStr(cardNumber)+'_'+tname;
+    AssignFile(FO,fname);
     Rewrite(FO);
   end
   else
   begin
-    AssignFile(FO,fname+'/punches/'+IntToStr(cardNumber)+'_'+tname);
+    fname:=fname+'/punches/'+IntToStr(cardNumber)+'_'+tname;
+    AssignFile(FO,fname);
     Rewrite(FO);
   end;
   for i:=1 to 5 do
@@ -2866,6 +2883,15 @@ begin
   end;
   CloseFile(FI);
   CloseFile(FO);
+  if ToggleBox3.State = cbChecked then
+  begin
+       Process1.Parameters.Clear;
+       Process1.Parameters.Add('/p');
+       Process1.Parameters.Add(fname);
+       Process1.Active:=true;
+       Process1.Execute;
+       Process1.Active:=false;
+  end;
   if pn=StringGrid3.RowCount-1 then
   begin
     StringGrid2.Cells[4,tn]:='OK';
@@ -2890,7 +2916,7 @@ var
 
 procedure AdjTime();
 begin
-  if dtm>currT then
+  if dtm<prevT then
   begin
     rStart:=rStart+0.5;
     currT:=currT+0.5;
@@ -2918,6 +2944,7 @@ begin
     while (rStart+0.5<evStart) do rStart:=rStart+0.5;
     currT:=rStart+0.5;
     dtm:=evStart;
+    prevT:=dtm;
   end
   else
       dtm:=startTime;
@@ -3035,6 +3062,7 @@ begin
 			tm:=Ord(s[basepointer+1])*256+Ord(s[basepointer+2]);
 			dtm:=rStart+tm/86400;
                         AdjTime;
+                        prevT:=dtm;
 			Memo1.Append(IntToStr(code)+'='+FormatDateTime('YYYY-MM-DD hh:nn:ss',dtm));
 		end;
 		if (k>30)and(k<=36) then
@@ -3076,6 +3104,7 @@ begin
 		    tm:=Ord(s[7+4*i+2])shl 8+Ord(s[7+4*i+3]);
     		    dtm:=rStart+tm/86400;
                     AdjTime;
+                    prevT:=dtm;
 		    Memo1.Append(IntToStr(Ord(s[7+4*i+1]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
             end;
 	    if punchCount>32 then punchCount:=punchCount-32 else punchCount:=0;
@@ -3123,6 +3152,7 @@ begin
    				tm:=(Ord(s[7+14*4+4*i+2])shl 8)+Ord(s[7+14*4+4*i+3]);
         			dtm:=rStart+tm/86400;
                                 AdjTime;
+                                prevT:=dtm;
    				Memo1.Append(s[7+14*4+4*i+1]+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
    				i:=i+1;
    			end;
@@ -3136,6 +3166,7 @@ begin
    				tm:=(Ord(s[7+14*4+8*i+5])shl 8)+Ord(s[7+14*4+8*i+6]);
         			dtm:=rStart+tm/86400;
                                 AdjTime;
+                                prevT:=dtm;
    				Memo1.Append(IntToStr(Ord(s[7+14*4+8*i]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
    				i:=i+1;
    			end;
@@ -3160,6 +3191,7 @@ begin
    				tm:=(Ord(s[7+4*i+2])shl 8)+Ord(s[7+4*i+3]);
         			dtm:=rStart+tm/86400;
                                 AdjTime;
+                                prevT:=dtm;
   				Memo1.Append(IntToStr(Ord(s[7+4*i+1]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
                                 i:=i+1;
    			end;
@@ -3174,6 +3206,7 @@ begin
    				tm:=(Ord(s[15+4*i+2])shl 8)+Ord(s[15+4*i+3]);
         			dtm:=rStart+tm/86400;
                                 AdjTime;
+                                prevT:=dtm;
    				Memo1.Append(IntToStr(Ord(s[15+4*i+1]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
                                 i:=i+1;
    			end;
@@ -3188,6 +3221,7 @@ begin
    				tm:=(Ord(s[7+12*4+4*i+2])shl 8)+Ord(s[7+12*4+4*i+3]);
         			dtm:=rStart+tm/86400;
                                 AdjTime;
+                                prevT:=dtm;
    				Memo1.Append(IntToStr(Ord(s[7+12*4+4*i+1]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
                                 i:=i+1;
    			end;
@@ -3202,6 +3236,7 @@ begin
    				tm:=(Ord(s[7+8*i+5])shl 8)+Ord(s[7+8*i+6]);
         			dtm:=rStart+tm/86400;
                                 AdjTime;
+                                prevT:=dtm;
    				Memo1.Append(IntToStr(Ord(s[7+8*i]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
                                 i:=i+1;
    			end;
@@ -3218,6 +3253,7 @@ begin
    			tm:=(Ord(s[7+4*i+2])shl 8)+Ord(s[7+4*i+3]);
 			dtm:=rStart+tm/86400;
                         AdjTime;
+                        prevT:=dtm;
    			Memo1.Append(IntToStr(Ord(s[7+4*i+1]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
                         i:=i+1;
    		end;
@@ -3743,33 +3779,34 @@ end;
 procedure TForm1.MenuItem3Click(Sender: TObject);
 var
   j,n1:integer;
-  dd,fname,line:string;
+  dd,fname,line,line1:string;
   p_clear,p_check,p_start:string;
-  pf:TextFile;
-  p_p:TStringList;
+  pf,cf:TextFile;
+  p_p, fieldlist:TStringList;
 begin
  if MessageDlg(mscC18, mstT18, mtConfirmation,[mbYes, mbNo],0) = mrYes then
  begin
    fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/event.csv';
    if FileExists(fname) then
    begin
-     jvCSVBase1.CSVFileName:='events/'+eventListID[RadioGroup1.ItemIndex]+'/event.csv';
-     jvCSVBase1.DataBaseOpen('events/'+eventListID[RadioGroup1.ItemIndex]+'/event.csv');  //EventId;SI-Card;CN;Mode;Source;DayOfWeek;PunchDate;PunchTime;No;Cnt
-     jvCSVEdit1.CSVField:='SI-Card'; //1
-     jvCSVEdit2.CSVField:='CN'; //2
-     jvCSVEdit3.CSVField:='Mode'; //3
-     jvCSVEdit4.CSVField:='PunchDate'; //6
-     jvCSVEdit5.CSVField:='PunchTime'; //7
-     jvCSVEdit6.CSVField:='No'; //8
-     jvCSVEdit7.CSVField:='Cnt'; //9
+     fieldlist:=TStringList.Create;
+     AssignFile(cf,fname);
+     Reset(cf);
+     //'EventId','SI-Card','CN','Mode','Source','DayOfWeek','PunchDate','PunchTime','No','Cnt'
+     Readln(cf,line1);
+     fieldlist.AddStrings(line1.Split(';'));
      p_clear:=' None';
      p_check:=' None';
      p_start:=' None';
      p_p:=TStringList.Create;
      line:='';
-     while jvCSVBase1.RecordNext do
+     while not EOF(cf) do
      begin
-       if jvCSVEdit1.Caption<>line then
+       Readln(cf,line1);
+       fieldlist.Clear;
+       fieldlist.AddStrings(line1.Split(';'));
+       if fieldlist.Count=0 then break;
+       if fieldlist[1]<>line then
        begin
          if line<>'' then begin
            AssignFile(pf,'punches_9999/'+line+'_9999');
@@ -3790,24 +3827,38 @@ begin
            p_start:=' None';
            p_p.Clear;
          end;
-         line:=jvCSVEdit1.Caption;
+         line:=fieldlist[1];
        end;
-       if jvCSVEdit4.Caption='' then
+       if fieldlist[6]='' then
        begin
          if (StrToInt(StringGrid1.Values['starttime'].Substring(11,2))<12) then n1:=0 else n1:=1;
-         dd:=StringGrid1.Values['starttime'].Substring(0,11)+IntToStr(StrToInt(Copy(jvCSVEdit5.Caption,2,2))+12*n1)+Copy(jvCSVEdit5.Caption,4,6);
+         dd:=StringGrid1.Values['starttime'].Substring(0,11)+IntToStr(StrToInt(Copy(fieldlist[7],2,2))+12*n1)+Copy(fieldlist[7],4,6);
        end
        else
        begin
-         dd:=StringGrid1.Values['starttime'].Substring(0,10)+Copy(jvCSVEdit5.Caption,1,9);
+         dd:=StringGrid1.Values['starttime'].Substring(0,10)+Copy(fieldlist[7],1,9);
        end;
-       if(jvCSVEdit3.Caption='CLR') then p_clear:=jvCSVEdit5.Caption;
-       if(jvCSVEdit3.Caption='CHK') then p_check:=jvCSVEdit5.Caption;
-       if(jvCSVEdit3.Caption='STA') then p_start:=Copy(jvCSVEdit5.Caption,1,9);
-       if(jvCSVEdit3.Caption='FIN') then p_p.Add('F='+dd);
-       if(jvCSVEdit3.Caption=' CN') then p_p.Add(jvCSVEdit2.Caption+'='+dd);
+       if(fieldlist[3]='CLR') then p_clear:=fieldlist[7];
+       if(fieldlist[3]='CHK') then p_check:=fieldlist[7];
+       if(fieldlist[3]='STA') then p_start:=Copy(fieldlist[7],1,9);
+       if(fieldlist[3]='FIN') then p_p.Add('F='+dd);
+       if(fieldlist[3]=' CN') then p_p.Add(fieldlist[2]+'='+dd);
      end;
-     jvCSVBase1.DataBaseClose;
+
+     AssignFile(pf,'punches_9999/'+line+'_9999');
+     Rewrite(pf);
+     writeln(pf,'card: '+line);
+     writeln(pf,'clear:'+p_clear);
+     writeln(pf,'check:'+p_check);
+     writeln(pf,'start:'+p_start);
+     writeln(pf,'punches:');
+     writeln(pf,'S='+StringGrid1.Values['starttime']);
+     for j:=0 to p_p.Count-1 do
+     begin
+         writeln(pf,p_p[j]);
+     end;
+     CloseFile(pf);
+
     end
     else
       MessageDlg(mscC18,mstT18a,mtConfirmation,[mbOK],0);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<runners_data>
+  <runner_data>
+    <id>000001</id>
+    <name>aa</name>
+    <sex>s</sex>
+    <birth>122333131</birth>
+    <country>df</country>
+  </runner_data>
+  <runner_data>
+    <id>2</id>
+    <name>ooo</name>
+    <sex>v</sex>
+    <birth>12345</birth>
+    <country>jhg</country>
+  </runner_data>
+</runners_data>

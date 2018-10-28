@@ -1,0 +1,8 @@
+{"version":1,"strings":[
+{"hash":207523745,"name":"unit2.msc2c1","sourcebytes":[65,116,116,101,110,116,105,111,110,33],"value":"Attention!"},
+{"hash":116645114,"name":"unit2.mst2t1","sourcebytes":[67,111,110,116,114,111,108,32,110,117,109,98,101,114,32,114,101,112,101,97,116,115,58],"value":"Control number repeats:"},
+{"hash":102988732,"name":"unit2.msc2c2","sourcebytes":[82,101,109,111,118,101,32,99,111,110,116,114,111,108],"value":"Remove control"},
+{"hash":173790095,"name":"unit2.mst2t2","sourcebytes":[65,114,101,32,121,111,117,32,115,117,114,101,32,116,111,32,114,101,109,111,118,101,32,99,111,110,116,114,111,108,63],"value":"Are you sure to remove control?"},
+{"hash":258841283,"name":"unit2.cap2c1","sourcebytes":[83,101,116,32,115,116,97,116,105,111,110,115,32,102,114,111,109,32,99,111,110,116,114,111,108,115],"value":"Set stations from controls"},
+{"hash":207073955,"name":"unit2.cap2c2","sourcebytes":[83,101,116,32,112,111,105,110,116,115,32,102,114,111,109,32,99,111,110,116,114,111,108,115],"value":"Set points from controls"}
+]}

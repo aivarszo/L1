@@ -242,49 +242,6 @@ msgctxt "tform1.groupbox1.caption"
 msgid "Select and set:"
 msgstr "Izvēlies un iestati:"
 
-#: tform1.jvcsvedit1.text
-msgctxt "tform1.jvcsvedit1.text"
-msgid "1;580619;1;CLR;RDO;5;"
-msgstr ""
-
-#: tform1.jvcsvedit10.text
-msgid "jvCSVEdit10"
-msgstr ""
-
-#: tform1.jvcsvedit2.text
-msgctxt "tform1.jvcsvedit2.text"
-msgid "jvCSVEdit2"
-msgstr ""
-
-#: tform1.jvcsvedit3.text
-msgctxt "tform1.jvcsvedit3.text"
-msgid "jvCSVEdit3"
-msgstr ""
-
-#: tform1.jvcsvedit4.text
-msgid "jvCSVEdit4"
-msgstr ""
-
-#: tform1.jvcsvedit5.text
-msgid "jvCSVEdit5"
-msgstr ""
-
-#: tform1.jvcsvedit6.text
-msgid "jvCSVEdit6"
-msgstr ""
-
-#: tform1.jvcsvedit7.text
-msgid "jvCSVEdit7"
-msgstr ""
-
-#: tform1.jvcsvedit8.text
-msgid "jvCSVEdit8"
-msgstr ""
-
-#: tform1.jvcsvedit9.text
-msgid "jvCSVEdit9"
-msgstr ""
-
 #: tform1.label1.caption
 msgctxt "tform1.label1.caption"
 msgid "Select Event:"

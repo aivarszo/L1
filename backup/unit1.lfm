@@ -1,20 +1,20 @@
 object Form1: TForm1
   Left = 517
-  Height = 667
-  Top = 10
-  Width = 1060
+  Height = 665
+  Top = 27
+  Width = 1061
   HorzScrollBar.Page = 1051
   VertScrollBar.Page = 626
   Align = alBottom
   Anchors = [akBottom]
   AutoScroll = True
   Caption = 'Events with SI'
-  ClientHeight = 647
-  ClientWidth = 1060
+  ClientHeight = 642
+  ClientWidth = 1061
   Menu = MainMenu1
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '1.8.2.0'
   object PageControl1: TPageControl
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -34,12 +34,12 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/event.html'
       Caption = 'Event'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       object StringGrid1: TValueListEditor
         AnchorSideTop.Control = TabSheet1
         AnchorSideBottom.Side = asrBottom
-        Left = 264
+        Left = 266
         Height = 336
         Top = 40
         Width = 757
@@ -76,7 +76,7 @@ object Form1: TForm1
         )
         ColWidths = (
           163
-          573
+          579
         )
       end
       object Button5: TButton
@@ -84,7 +84,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = StringGrid1
         AnchorSideRight.Side = asrBottom
-        Left = 752
+        Left = 754
         Height = 50
         Top = 376
         Width = 269
@@ -101,17 +101,17 @@ object Form1: TForm1
         Height = 336
         Top = 40
         Width = 258
-        HorzScrollBar.Page = 27
+        HorzScrollBar.Page = 12
         VertScrollBar.Page = 12
         Anchors = [akTop]
-        ClientHeight = 332
-        ClientWidth = 254
+        ClientHeight = 334
+        ClientWidth = 256
         TabOrder = 2
         object RadioGroup1: TRadioGroup
           Left = 8
           Height = 4
           Top = 8
-          Width = 19
+          Width = 4
           AutoFill = False
           AutoSize = True
           ChildSizing.LeftRightSpacing = 6
@@ -125,9 +125,9 @@ object Form1: TForm1
       end
       object Label1: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 16
-        Width = 66
+        Width = 85
         Caption = 'Select Event:'
         ParentColor = False
       end
@@ -190,7 +190,7 @@ object Form1: TForm1
         Top = 384
         Width = 288
         Caption = 'Select and set:'
-        ClientHeight = 148
+        ClientHeight = 149
         ClientWidth = 284
         TabOrder = 6
         Visible = False
@@ -243,7 +243,7 @@ object Form1: TForm1
           Left = 8
           Height = 23
           Top = 8
-          Width = 137
+          Width = 167
           CenturyFrom = 1941
           MaxDate = 2958465
           MinDate = -53780
@@ -285,14 +285,14 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/teams.html'
       Caption = 'Teams'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object StringGrid2: TStringGrid
         Left = 8
-        Height = 265
+        Height = 262
         Top = 16
-        Width = 958
+        Width = 962
         Anchors = [akTop, akLeft, akRight, akBottom]
         ColCount = 7
         ColumnClickSorts = True
@@ -346,8 +346,8 @@ object Form1: TForm1
       object StringGrid3: TStringGrid
         Left = 8
         Height = 173
-        Top = 345
-        Width = 958
+        Top = 342
+        Width = 962
         Anchors = [akLeft, akRight, akBottom]
         ColCount = 9
         FixedCols = 0
@@ -403,9 +403,9 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = StringGrid3
         AnchorSideRight.Side = asrBottom
-        Left = 869
+        Left = 873
         Height = 50
-        Top = 518
+        Top = 515
         Width = 97
         Anchors = [akTop, akRight]
         Caption = 'Save changes'
@@ -420,7 +420,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 104
         Height = 50
-        Top = 518
+        Top = 515
         Width = 69
         Caption = 'Remove'
         Constraints.MinHeight = 50
@@ -433,7 +433,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 8
         Height = 50
-        Top = 518
+        Top = 515
         Width = 96
         Caption = 'Add member'
         Constraints.MinHeight = 50
@@ -447,7 +447,7 @@ object Form1: TForm1
         AnchorSideBottom.Side = asrBottom
         Left = 8
         Height = 50
-        Top = 281
+        Top = 278
         Width = 80
         AutoSize = True
         Caption = 'New team'
@@ -460,10 +460,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 199
+        Left = 204
         Height = 50
-        Top = 281
-        Width = 89
+        Top = 278
+        Width = 94
         AutoSize = True
         Caption = 'Delete team'
         Constraints.MinHeight = 50
@@ -475,10 +475,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 551
+        Left = 575
         Height = 50
-        Top = 281
-        Width = 92
+        Top = 278
+        Width = 101
         AutoSize = True
         Caption = 'Set starttime'
         Constraints.MinHeight = 50
@@ -490,10 +490,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 469
+        Left = 491
         Height = 50
-        Top = 281
-        Width = 82
+        Top = 278
+        Width = 84
         AutoSize = True
         Caption = 'Set groups'
         Constraints.MinHeight = 50
@@ -505,10 +505,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 288
+        Left = 298
         Height = 50
-        Top = 281
-        Width = 89
+        Top = 278
+        Width = 96
         AutoSize = True
         Caption = 'Export team'
         Constraints.MinHeight = 50
@@ -520,10 +520,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 377
+        Left = 394
         Height = 50
-        Top = 281
-        Width = 92
+        Top = 278
+        Width = 97
         AutoSize = True
         Caption = 'Import team'
         Constraints.MinHeight = 50
@@ -537,8 +537,8 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 88
         Height = 50
-        Top = 281
-        Width = 111
+        Top = 278
+        Width = 116
         AutoSize = True
         Caption = 'Change team ID'
         Constraints.MinHeight = 50
@@ -550,15 +550,15 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/members.html'
       Caption = 'Members'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       OnExit = TabSheet3OnExit
       TabVisible = False
       object StringGrid4: TStringGrid
         Left = 16
-        Height = 464
+        Height = 461
         Top = 8
-        Width = 906
+        Width = 910
         Anchors = [akTop, akLeft, akRight, akBottom]
         ColCount = 9
         ColumnClickSorts = True
@@ -626,8 +626,8 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 16
         Height = 50
-        Top = 472
-        Width = 98
+        Top = 469
+        Width = 102
         AutoSize = True
         Caption = 'New member'
         Constraints.MinHeight = 50
@@ -639,10 +639,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid4
         AnchorSideTop.Side = asrBottom
-        Left = 114
+        Left = 118
         Height = 50
-        Top = 472
-        Width = 34
+        Top = 469
+        Width = 22
         AutoSize = True
         Caption = 'A'
         Constraints.MinHeight = 50
@@ -654,14 +654,15 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = StringGrid4
         AnchorSideRight.Side = asrBottom
-        Left = 872
+        Left = 826
         Height = 50
-        Top = 472
-        Width = 50
+        Top = 469
+        Width = 100
         Anchors = [akTop, akRight]
         AutoSize = True
         Caption = 'Save'
         Constraints.MinHeight = 50
+        Constraints.MinWidth = 100
         OnClick = Button4Click
         TabOrder = 3
       end
@@ -670,8 +671,8 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/groups.html'
       Caption = 'Groups'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object StringGrid5: TStringGrid
         Left = 10
@@ -803,8 +804,8 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/courses.html'
       Caption = 'Courses'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object StringGrid6: TStringGrid
         Left = 8
@@ -892,7 +893,7 @@ object Form1: TForm1
       object Button7: TButton
         AnchorSideTop.Control = StringGrid6
         AnchorSideTop.Side = asrBottom
-        Left = 272
+        Left = 273
         Height = 50
         Top = 320
         Width = 119
@@ -906,8 +907,10 @@ object Form1: TForm1
         AnchorSideLeft.Control = Button7
         AnchorSideTop.Control = Button7
         AnchorSideTop.Side = asrBottom
-        Left = 272
-        Height = 103
+        AnchorSideBottom.Control = Button2
+        AnchorSideBottom.Side = asrBottom
+        Left = 273
+        Height = 50
         Top = 370
         Width = 121
         Anchors = [akTop, akLeft, akBottom]
@@ -920,9 +923,11 @@ object Form1: TForm1
         AnchorSideLeft.Control = Button7
         AnchorSideTop.Control = Button8
         AnchorSideTop.Side = asrBottom
-        Left = 272
+        AnchorSideBottom.Control = Button3
+        AnchorSideBottom.Side = asrBottom
+        Left = 273
         Height = 50
-        Top = 473
+        Top = 420
         Width = 119
         Anchors = [akTop, akLeft, akBottom]
         Caption = 'Set scale'
@@ -948,14 +953,14 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/results.html'
       Caption = 'Results'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object StringGrid7: TStringGrid
         Left = 8
-        Height = 541
+        Height = 538
         Top = 11
-        Width = 833
+        Width = 837
         Anchors = [akTop, akLeft, akRight, akBottom]
         ColCount = 9
         Columns = <        
@@ -1026,21 +1031,21 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/sipunches.html'
       Caption = 'SI punches'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object Label2: TLabel
         Left = 16
-        Height = 15
+        Height = 17
         Top = 18
-        Width = 34
+        Width = 45
         Caption = 'Label2'
         ParentColor = False
       end
       object Memo1: TMemo
         Left = 16
-        Height = 581
-        Top = 80
+        Height = 504
+        Top = 40
         Width = 263
         Lines.Strings = (
           'Memo1'
@@ -1053,14 +1058,14 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/siconfig.html'
       Caption = 'SI Config'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object RadioGroup2: TRadioGroup
         Left = 24
         Height = 107
         Top = 24
-        Width = 194
+        Width = 154
         AutoFill = True
         Caption = 'SI Reader Mode'
         ChildSizing.LeftRightSpacing = 6
@@ -1070,8 +1075,8 @@ object Form1: TForm1
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 87
-        ClientWidth = 190
+        ClientHeight = 88
+        ClientWidth = 150
         Items.Strings = (
           'Direct'
           'Remote'
@@ -1081,15 +1086,15 @@ object Form1: TForm1
       end
       object Label3: TLabel
         Left = 262
-        Height = 15
+        Height = 17
         Top = 24
-        Width = 27
+        Width = 33
         Caption = 'Time'
         ParentColor = False
       end
       object Edit1: TEdit
         Left = 262
-        Height = 23
+        Height = 27
         Top = 48
         Width = 170
         TabOrder = 1
@@ -1097,7 +1102,7 @@ object Form1: TForm1
       object Button15: TButton
         Left = 262
         Height = 31
-        Top = 72
+        Top = 80
         Width = 79
         Caption = 'Get'
         OnClick = Button15Click
@@ -1106,7 +1111,7 @@ object Form1: TForm1
       object Button16: TButton
         Left = 353
         Height = 31
-        Top = 72
+        Top = 80
         Width = 78
         Caption = 'Set'
         OnClick = Button16Click
@@ -1114,18 +1119,18 @@ object Form1: TForm1
       end
       object Label4: TLabel
         Left = 262
-        Height = 15
+        Height = 17
         Top = 128
-        Width = 71
+        Width = 91
         Caption = 'Station mode'
         ParentColor = False
       end
       object ComboBox1: TComboBox
         Left = 262
-        Height = 23
+        Height = 29
         Top = 152
         Width = 169
-        ItemHeight = 15
+        ItemHeight = 0
         Items.Strings = (
           'Control'
           'Start'
@@ -1138,7 +1143,7 @@ object Form1: TForm1
         Text = 'ComboBox1'
       end
       object Button17: TButton
-        Left = 264
+        Left = 262
         Height = 34
         Top = 184
         Width = 79
@@ -1157,15 +1162,15 @@ object Form1: TForm1
       end
       object Label5: TLabel
         Left = 265
-        Height = 15
+        Height = 17
         Top = 232
-        Width = 82
+        Width = 104
         Caption = 'Station number'
         ParentColor = False
       end
       object Edit2: TEdit
         Left = 265
-        Height = 23
+        Height = 27
         Top = 256
         Width = 79
         TabOrder = 7
@@ -1173,7 +1178,7 @@ object Form1: TForm1
       object Button19: TButton
         Left = 265
         Height = 34
-        Top = 304
+        Top = 288
         Width = 79
         Caption = 'Get'
         OnClick = Button19Click
@@ -1182,7 +1187,7 @@ object Form1: TForm1
       object Button20: TButton
         Left = 356
         Height = 34
-        Top = 304
+        Top = 288
         Width = 78
         Caption = 'Set'
         OnClick = Button20Click
@@ -1199,9 +1204,9 @@ object Form1: TForm1
       end
       object CheckGroup1: TCheckGroup
         Left = 538
-        Height = 275
+        Height = 219
         Top = 29
-        Width = 241
+        Width = 177
         AutoFill = True
         Caption = 'Configuration'
         ChildSizing.LeftRightSpacing = 6
@@ -1212,8 +1217,8 @@ object Form1: TForm1
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 255
-        ClientWidth = 237
+        ClientHeight = 200
+        ClientWidth = 173
         Items.Strings = (
           'extended protocol'
           'auto send out'
@@ -1229,45 +1234,45 @@ object Form1: TForm1
       object Button22: TButton
         Left = 538
         Height = 30
-        Top = 336
+        Top = 256
         Width = 94
         Caption = 'Get'
         OnClick = Button22Click
         TabOrder = 12
       end
       object Button23: TButton
-        Left = 264
+        Left = 512
         Height = 42
-        Top = 432
-        Width = 164
+        Top = 328
+        Width = 169
         Caption = 'Get Station Backup'
         OnClick = Button23Click
         TabOrder = 13
       end
       object Memo2: TMemo
-        Left = 496
-        Height = 160
-        Top = 392
-        Width = 196
+        Left = 688
+        Height = 224
+        Top = 328
+        Width = 212
         Lines.Strings = (
           'Memo2'
         )
         TabOrder = 14
       end
       object Button24: TButton
-        Left = 264
+        Left = 513
         Height = 38
-        Top = 584
-        Width = 164
+        Top = 424
+        Width = 167
         Caption = 'Clear Backup'
         OnClick = Button24Click
         TabOrder = 15
       end
       object Button27: TButton
-        Left = 484
-        Height = 31
-        Top = 639
-        Width = 129
+        Left = 513
+        Height = 40
+        Top = 376
+        Width = 168
         Caption = 'Save backup'
         OnClick = Button27Click
         TabOrder = 16
@@ -1290,113 +1295,16 @@ object Form1: TForm1
     TabOrder = 1
   end
   object FileListBox1: TFileListBox
-    Left = 1120
+    Left = 1121
     Height = 34
-    Top = 575
+    Top = 570
     Width = 40
     Anchors = [akRight, akBottom]
     Directory = 'events'
     FileType = [ftDirectory]
     ItemHeight = 0
     TabOrder = 2
-    Visible = False
-  end
-  object jvCSVEdit1: TjvCSVEdit
-    Left = 584
-    Height = 23
-    Top = 504
-    Width = 88
-    TabOrder = 3
-    Text = '1;580619;1;CLR;RDO;5;'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-    CSVField = '﻿EventId;SI-Card;CN;Mode;Source;DayOfWeek;PunchDate;PunchTime;No;Cnt'
-  end
-  object jvCSVEdit2: TjvCSVEdit
-    Left = 584
-    Height = 23
-    Top = 536
-    Width = 32
-    TabOrder = 4
-    Text = 'jvCSVEdit2'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit3: TjvCSVEdit
-    Left = 622
-    Height = 23
-    Top = 536
-    Width = 27
-    TabOrder = 5
-    Text = 'jvCSVEdit3'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit4: TjvCSVEdit
-    Left = 656
-    Height = 23
-    Top = 536
-    Width = 36
-    TabOrder = 6
-    Text = 'jvCSVEdit4'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit5: TjvCSVEdit
-    Left = 705
-    Height = 23
-    Top = 536
-    Width = 30
-    TabOrder = 7
-    Text = 'jvCSVEdit5'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit6: TjvCSVEdit
-    Left = 746
-    Height = 23
-    Top = 536
-    Width = 32
-    TabOrder = 8
-    Text = 'jvCSVEdit6'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit7: TjvCSVEdit
-    Left = 789
-    Height = 23
-    Top = 536
-    Width = 32
-    TabOrder = 9
-    Text = 'jvCSVEdit7'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit8: TjvCSVEdit
-    Left = 833
-    Height = 23
-    Top = 536
-    Width = 23
-    TabOrder = 10
-    Text = 'jvCSVEdit8'
-    Visible = False
-  end
-  object jvCSVEdit9: TjvCSVEdit
-    Left = 865
-    Height = 23
-    Top = 536
-    Width = 31
-    TabOrder = 11
-    Text = 'jvCSVEdit9'
-    Visible = False
-  end
-  object jvCSVEdit10: TjvCSVEdit
-    Left = 904
-    Height = 23
-    Top = 536
-    Width = 27
-    TabOrder = 12
-    Text = 'jvCSVEdit10'
+    TopIndex = -1
     Visible = False
   end
   object ToggleBox2: TToggleBox
@@ -1413,7 +1321,7 @@ object Form1: TForm1
     Font.Color = clWhite
     OnChange = ToggleBox2Change
     ParentFont = False
-    TabOrder = 13
+    TabOrder = 3
     Visible = False
   end
   object OpenDialog1: TOpenDialog
@@ -1432,8 +1340,8 @@ object Form1: TForm1
     Device = '/dev/ttyS0'
     RcvLineCRLF = False
     OnRxData = LazSerial1RxData
-    left = 960
-    top = 744
+    left = 848
+    top = 472
   end
   object frReport1: TfrReport
     InitialZoom = pzDefault
@@ -1535,15 +1443,7 @@ object Form1: TForm1
     WindowTop = 0
     WindowWidth = 0
     FillAttribute = 0
-    left = 712
-    top = 416
-  end
-  object jvCSVBase1: TjvCSVBase
-    CSVFileName = 'C:\Users\skola\Documents\lazarus\L1\event.csv'
-    CSVFieldNames.Strings = (
-      '﻿EventId;SI-Card;CN;Mode;Source;DayOfWeek;PunchDate;PunchTime;No;Cnt'
-    )
-    left = 584
-    top = 435
+    left = 912
+    top = 472
   end
 end

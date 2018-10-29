@@ -73,17 +73,6 @@ type
     GroupBox1: TGroupBox;
     HTMLBrowserHelpViewer1: THTMLBrowserHelpViewer;
     HTMLHelpDatabase1: THTMLHelpDatabase;
-    jvCSVBase1: TjvCSVBase;
-    jvCSVEdit1: TjvCSVEdit;
-    jvCSVEdit10: TjvCSVEdit;
-    jvCSVEdit2: TjvCSVEdit;
-    jvCSVEdit3: TjvCSVEdit;
-    jvCSVEdit4: TjvCSVEdit;
-    jvCSVEdit5: TjvCSVEdit;
-    jvCSVEdit6: TjvCSVEdit;
-    jvCSVEdit7: TjvCSVEdit;
-    jvCSVEdit8: TjvCSVEdit;
-    jvCSVEdit9: TjvCSVEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -2886,7 +2875,13 @@ begin
   if ToggleBox3.State = cbChecked then
   begin
        Process1.Parameters.Clear;
+       {$IFDEF Windows}
+       Process1.Executable:='notepad';
        Process1.Parameters.Add('/p');
+       {$ENDIF}
+       {$IFDEF UNIX}
+       Process1.Executable:='lp';
+       {$ENDIF}
        Process1.Parameters.Add(fname);
        Process1.Active:=true;
        Process1.Execute;
@@ -3943,9 +3938,10 @@ end;
 procedure TForm1.MenuItem5Click(Sender: TObject);
 var
   fname:string;
-  line:string;
+  line,line1:string;
   tm1:TStringList;
   tn:integer;
+  fin:text;
 begin
 {
 "Number","Team","Group","Name","Surname","B.d.","B.m.","B.y.","Age","Sex",
@@ -3958,27 +3954,21 @@ begin
    fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/data.csv';
    if FileExists(fname) then
    begin
-     jvCSVBase1.CSVFileName:=fname;
-     jvCSVBase1.DataBaseOpen(fname);
-     jvCSVEdit1.CSVField:='Number'; //0
-     jvCSVEdit2.CSVField:='Team'; //1
-     jvCSVEdit3.CSVField:='Name'; //3
-     jvCSVEdit4.CSVField:='Surname'; //4
-     jvCSVEdit5.CSVField:='B.d.'; //5
-     jvCSVEdit6.CSVField:='B.m.'; //6
-     jvCSVEdit7.CSVField:='B.y.'; //7
-     jvCSVEdit8.CSVField:='Sex'; //9
-     jvCSVEdit9.CSVField:='Sportident'; //10
-     jvCSVEdit10.CSVField:='Nationality'; //12
+     AssignFile(fin,fname);
+     Reset(fin);
+     Readln(fin,line1);
      line:='';
      tn:=1;
      tm1:=TStringList.Create;
      repeat
-       if Length(jvCSVEdit5.Caption)=1 then jvCSVEdit5.Caption:='0'+jvCSVEdit5.Caption;
-       if Length(jvCSVEdit5.Caption)=0 then jvCSVEdit5.Caption:='01';
-       if Length(jvCSVEdit6.Caption)=1 then jvCSVEdit6.Caption:='0'+jvCSVEdit6.Caption;
-       if Length(jvCSVEdit6.Caption)=0 then jvCSVEdit6.Caption:='01';
-       if line<>jvCSVEdit1.Caption then
+       tm1.Clear;
+       Readln(fin,line1);
+       tm1.AddStrings(line1.Split([';']));
+       if Length(tm1[5])=1 then tm1[5]:='0'+tm1[5];
+       if Length(tm1[5])=0 then tm1[5]:='01';
+       if Length(tm1[6])=1 then tm1[6]:='0'+tm1[6];
+       if Length(tm1[6])=0 then tm1[6]:='01';
+       if line<>tm1[0] then
        begin
          if line<>'' then
          begin
@@ -3986,18 +3976,18 @@ begin
            (StringGrid2.Objects[5,StringGrid2.RowCount-1] as TStringList).AddStrings(tm1);
            tm1.Clear;
          end;
-         StringGrid2.InsertRowWithValues(StringGrid2.RowCount,[jvCSVEdit1.Caption,jvCSVEdit2.Caption,'','','','',' R']);
-         line:=jvCSVEdit1.Caption;
+         StringGrid2.InsertRowWithValues(StringGrid2.RowCount,[tm1[0],tm1[1],'','','','',' R']);
+         line:=tm1[0];
        end;
-       StringGrid4.InsertRowWithValues(StringGrid4.RowCount,[IntToStr(tn),jvCSVEdit3.Caption+' '+jvCSVEdit4.Caption,jvCSVEdit1.Caption,
-       jvCSVEdit9.Caption,'',jvCSVEdit8.Caption,jvCSVEdit7.Caption+'-'+jvCSVEdit6.Caption+'-'+jvCSVEdit5.Caption,jvCSVEdit10.Caption,'-']);
+       StringGrid4.InsertRowWithValues(StringGrid4.RowCount,[IntToStr(tn),tm1[3]+' '+tm1[4],tm1[0],
+       tm1[10],'',tm1[9],tm1[7]+'-'+tm1[6]+'-'+tm1[5],tm1[12],'-']);
        tm1.Add(IntToStr(tn));
-       tm1.Add(jvCSVEdit9.Caption);
+       tm1.Add(tm1[10]);
        tm1.Add('');
        tn:=tn+1;
-     until not jvCSVBase1.RecordNext;
+     until not EOF(fin);
      tm1.Free;
-     jvCSVBase1.DataBaseClose;
+     CloseFile(fin);
      Button1m.Color:=clRed;
      Button1m.Font.Color:=clWhite;
      Button1m.Font.Bold:=true;

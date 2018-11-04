@@ -1,16 +1,16 @@
 object Form1: TForm1
-  Left = 517
-  Height = 667
-  Top = 10
-  Width = 1060
-  HorzScrollBar.Page = 1051
+  Left = 185
+  Height = 665
+  Top = 25
+  Width = 1008
+  HorzScrollBar.Page = 1008
   VertScrollBar.Page = 626
   Align = alBottom
   Anchors = [akBottom]
   AutoScroll = True
   Caption = 'Events with SI'
-  ClientHeight = 647
-  ClientWidth = 1060
+  ClientHeight = 628
+  ClientWidth = 1008
   Menu = MainMenu1
   OnClose = FormClose
   OnCreate = FormCreate
@@ -654,14 +654,15 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = StringGrid4
         AnchorSideRight.Side = asrBottom
-        Left = 872
+        Left = 822
         Height = 50
         Top = 472
-        Width = 50
+        Width = 100
         Anchors = [akTop, akRight]
         AutoSize = True
         Caption = 'Save'
         Constraints.MinHeight = 50
+        Constraints.MinWidth = 100
         OnClick = Button4Click
         TabOrder = 3
       end
@@ -906,8 +907,10 @@ object Form1: TForm1
         AnchorSideLeft.Control = Button7
         AnchorSideTop.Control = Button7
         AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = Button2
+        AnchorSideBottom.Side = asrBottom
         Left = 272
-        Height = 103
+        Height = 50
         Top = 370
         Width = 121
         Anchors = [akTop, akLeft, akBottom]
@@ -920,9 +923,11 @@ object Form1: TForm1
         AnchorSideLeft.Control = Button7
         AnchorSideTop.Control = Button8
         AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = Button3
+        AnchorSideBottom.Side = asrBottom
         Left = 272
         Height = 50
-        Top = 473
+        Top = 420
         Width = 119
         Anchors = [akTop, akLeft, akBottom]
         Caption = 'Set scale'
@@ -1026,21 +1031,21 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/sipunches.html'
       Caption = 'SI punches'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object Label2: TLabel
         Left = 16
-        Height = 15
+        Height = 17
         Top = 18
-        Width = 34
+        Width = 45
         Caption = 'Label2'
         ParentColor = False
       end
       object Memo1: TMemo
         Left = 16
-        Height = 581
-        Top = 80
+        Height = 504
+        Top = 40
         Width = 263
         Lines.Strings = (
           'Memo1'
@@ -1053,14 +1058,14 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/siconfig.html'
       Caption = 'SI Config'
-      ClientHeight = 562
-      ClientWidth = 1043
+      ClientHeight = 559
+      ClientWidth = 1047
       TabVisible = False
       object RadioGroup2: TRadioGroup
         Left = 24
         Height = 107
         Top = 24
-        Width = 194
+        Width = 154
         AutoFill = True
         Caption = 'SI Reader Mode'
         ChildSizing.LeftRightSpacing = 6
@@ -1071,7 +1076,7 @@ object Form1: TForm1
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
         ClientHeight = 87
-        ClientWidth = 190
+        ClientWidth = 150
         Items.Strings = (
           'Direct'
           'Remote'
@@ -1081,15 +1086,15 @@ object Form1: TForm1
       end
       object Label3: TLabel
         Left = 262
-        Height = 15
+        Height = 17
         Top = 24
-        Width = 27
+        Width = 33
         Caption = 'Time'
         ParentColor = False
       end
       object Edit1: TEdit
         Left = 262
-        Height = 23
+        Height = 27
         Top = 48
         Width = 170
         TabOrder = 1
@@ -1097,7 +1102,7 @@ object Form1: TForm1
       object Button15: TButton
         Left = 262
         Height = 31
-        Top = 72
+        Top = 80
         Width = 79
         Caption = 'Get'
         OnClick = Button15Click
@@ -1106,7 +1111,7 @@ object Form1: TForm1
       object Button16: TButton
         Left = 353
         Height = 31
-        Top = 72
+        Top = 80
         Width = 78
         Caption = 'Set'
         OnClick = Button16Click
@@ -1114,9 +1119,9 @@ object Form1: TForm1
       end
       object Label4: TLabel
         Left = 262
-        Height = 15
+        Height = 17
         Top = 128
-        Width = 71
+        Width = 91
         Caption = 'Station mode'
         ParentColor = False
       end
@@ -1138,7 +1143,7 @@ object Form1: TForm1
         Text = 'ComboBox1'
       end
       object Button17: TButton
-        Left = 264
+        Left = 262
         Height = 34
         Top = 184
         Width = 79
@@ -1157,15 +1162,15 @@ object Form1: TForm1
       end
       object Label5: TLabel
         Left = 265
-        Height = 15
+        Height = 17
         Top = 232
-        Width = 82
+        Width = 104
         Caption = 'Station number'
         ParentColor = False
       end
       object Edit2: TEdit
         Left = 265
-        Height = 23
+        Height = 27
         Top = 256
         Width = 79
         TabOrder = 7
@@ -1173,7 +1178,7 @@ object Form1: TForm1
       object Button19: TButton
         Left = 265
         Height = 34
-        Top = 304
+        Top = 288
         Width = 79
         Caption = 'Get'
         OnClick = Button19Click
@@ -1182,7 +1187,7 @@ object Form1: TForm1
       object Button20: TButton
         Left = 356
         Height = 34
-        Top = 304
+        Top = 288
         Width = 78
         Caption = 'Set'
         OnClick = Button20Click
@@ -1199,9 +1204,9 @@ object Form1: TForm1
       end
       object CheckGroup1: TCheckGroup
         Left = 538
-        Height = 275
+        Height = 219
         Top = 29
-        Width = 241
+        Width = 177
         AutoFill = True
         Caption = 'Configuration'
         ChildSizing.LeftRightSpacing = 6
@@ -1212,8 +1217,8 @@ object Form1: TForm1
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 255
-        ClientWidth = 237
+        ClientHeight = 199
+        ClientWidth = 173
         Items.Strings = (
           'extended protocol'
           'auto send out'
@@ -1229,45 +1234,45 @@ object Form1: TForm1
       object Button22: TButton
         Left = 538
         Height = 30
-        Top = 336
+        Top = 256
         Width = 94
         Caption = 'Get'
         OnClick = Button22Click
         TabOrder = 12
       end
       object Button23: TButton
-        Left = 264
+        Left = 512
         Height = 42
-        Top = 432
-        Width = 164
+        Top = 328
+        Width = 169
         Caption = 'Get Station Backup'
         OnClick = Button23Click
         TabOrder = 13
       end
       object Memo2: TMemo
-        Left = 496
-        Height = 160
-        Top = 392
-        Width = 196
+        Left = 688
+        Height = 224
+        Top = 328
+        Width = 212
         Lines.Strings = (
           'Memo2'
         )
         TabOrder = 14
       end
       object Button24: TButton
-        Left = 264
+        Left = 513
         Height = 38
-        Top = 584
-        Width = 164
+        Top = 424
+        Width = 167
         Caption = 'Clear Backup'
         OnClick = Button24Click
         TabOrder = 15
       end
       object Button27: TButton
-        Left = 484
-        Height = 31
-        Top = 639
-        Width = 129
+        Left = 513
+        Height = 40
+        Top = 376
+        Width = 168
         Caption = 'Save backup'
         OnClick = Button27Click
         TabOrder = 16
@@ -1290,113 +1295,15 @@ object Form1: TForm1
     TabOrder = 1
   end
   object FileListBox1: TFileListBox
-    Left = 1120
+    Left = 1154
     Height = 34
-    Top = 575
+    Top = 556
     Width = 40
     Anchors = [akRight, akBottom]
     Directory = 'events'
     FileType = [ftDirectory]
     ItemHeight = 0
     TabOrder = 2
-    Visible = False
-  end
-  object jvCSVEdit1: TjvCSVEdit
-    Left = 584
-    Height = 23
-    Top = 504
-    Width = 88
-    TabOrder = 3
-    Text = '1;580619;1;CLR;RDO;5;'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-    CSVField = '﻿EventId;SI-Card;CN;Mode;Source;DayOfWeek;PunchDate;PunchTime;No;Cnt'
-  end
-  object jvCSVEdit2: TjvCSVEdit
-    Left = 584
-    Height = 23
-    Top = 536
-    Width = 32
-    TabOrder = 4
-    Text = 'jvCSVEdit2'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit3: TjvCSVEdit
-    Left = 622
-    Height = 23
-    Top = 536
-    Width = 27
-    TabOrder = 5
-    Text = 'jvCSVEdit3'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit4: TjvCSVEdit
-    Left = 656
-    Height = 23
-    Top = 536
-    Width = 36
-    TabOrder = 6
-    Text = 'jvCSVEdit4'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit5: TjvCSVEdit
-    Left = 705
-    Height = 23
-    Top = 536
-    Width = 30
-    TabOrder = 7
-    Text = 'jvCSVEdit5'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit6: TjvCSVEdit
-    Left = 746
-    Height = 23
-    Top = 536
-    Width = 32
-    TabOrder = 8
-    Text = 'jvCSVEdit6'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit7: TjvCSVEdit
-    Left = 789
-    Height = 23
-    Top = 536
-    Width = 32
-    TabOrder = 9
-    Text = 'jvCSVEdit7'
-    Visible = False
-    CSVDataBase = jvCSVBase1
-  end
-  object jvCSVEdit8: TjvCSVEdit
-    Left = 833
-    Height = 23
-    Top = 536
-    Width = 23
-    TabOrder = 10
-    Text = 'jvCSVEdit8'
-    Visible = False
-  end
-  object jvCSVEdit9: TjvCSVEdit
-    Left = 865
-    Height = 23
-    Top = 536
-    Width = 31
-    TabOrder = 11
-    Text = 'jvCSVEdit9'
-    Visible = False
-  end
-  object jvCSVEdit10: TjvCSVEdit
-    Left = 904
-    Height = 23
-    Top = 536
-    Width = 27
-    TabOrder = 12
-    Text = 'jvCSVEdit10'
     Visible = False
   end
   object ToggleBox2: TToggleBox
@@ -1413,7 +1320,7 @@ object Form1: TForm1
     Font.Color = clWhite
     OnChange = ToggleBox2Change
     ParentFont = False
-    TabOrder = 13
+    TabOrder = 3
     Visible = False
   end
   object OpenDialog1: TOpenDialog
@@ -1432,8 +1339,8 @@ object Form1: TForm1
     Device = '/dev/ttyS0'
     RcvLineCRLF = False
     OnRxData = LazSerial1RxData
-    left = 960
-    top = 744
+    left = 848
+    top = 472
   end
   object frReport1: TfrReport
     InitialZoom = pzDefault
@@ -1491,6 +1398,7 @@ object Form1: TForm1
         end
         object MenuItem5: TMenuItem
           Caption = 'Import from rogaining.lv'
+          OnClick = MenuItem5Click
         end
       end
       object MenuItem23: TMenuItem
@@ -1500,6 +1408,11 @@ object Form1: TForm1
         Caption = 'Event data'
         object MenuItem8: TMenuItem
           Caption = 'Startlist'
+          OnClick = MenuItem8Click
+        end
+        object MenuItem11: TMenuItem
+          Caption = 'Stats'
+          OnClick = MenuItem11Click
         end
       end
       object MenuItem7: TMenuItem
@@ -1535,15 +1448,7 @@ object Form1: TForm1
     WindowTop = 0
     WindowWidth = 0
     FillAttribute = 0
-    left = 712
-    top = 416
-  end
-  object jvCSVBase1: TjvCSVBase
-    CSVFileName = 'C:\Users\skola\Documents\lazarus\L1\event.csv'
-    CSVFieldNames.Strings = (
-      '﻿EventId;SI-Card;CN;Mode;Source;DayOfWeek;PunchDate;PunchTime;No;Cnt'
-    )
-    left = 584
-    top = 435
+    left = 912
+    top = 472
   end
 end

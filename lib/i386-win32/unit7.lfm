@@ -1,45 +1,64 @@
 object Form6: TForm6
-  Left = 792
-  Height = 928
-  Top = 122
-  Width = 1128
+  Left = 213
+  Height = 742
+  Top = 11
+  Width = 1120
   Caption = 'Form6'
-  ClientHeight = 928
-  ClientWidth = 1128
-  LCLVersion = '1.8.2.0'
+  ClientHeight = 742
+  ClientWidth = 1120
+  LCLVersion = '1.8.4.0'
   object StringGrid7: TStringGrid
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
     Left = 0
-    Height = 894
+    Height = 742
     Top = 0
-    Width = 840
+    Width = 1070
     Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 50
     ColCount = 9
     Columns = <    
       item
+        MinSize = 0
+        MaxSize = 0
         Title.Caption = 'ID'
-        Width = 64
       end    
       item
+        MinSize = 0
+        MaxSize = 0
         Title.Caption = 'Team'
         Width = 268
       end    
       item
+        MinSize = 0
+        MaxSize = 0
         Title.Caption = 'Time'
         Width = 91
       end    
       item
+        MinSize = 0
+        MaxSize = 0
         Title.Caption = 'Points'
         Width = 64
       end    
       item
+        MinSize = 0
+        MaxSize = 0
         Title.Caption = 'Penalty'
         Width = 64
       end    
       item
+        MinSize = 0
+        MaxSize = 0
         Title.Caption = 'Result'
         Width = 64
       end    
       item
+        MinSize = 0
         MaxSize = 0
         Title.Caption = 'Place(s)'
         Width = 213
@@ -54,9 +73,12 @@ object Form6: TForm6
         Visible = False
       end>
     FixedCols = 0
+    Font.Height = -19
     MouseWheelOption = mwGrid
+    ParentFont = False
     RowCount = 1
     TabOrder = 0
+    TitleFont.Height = -19
     OnDrawCell = StringGrid7DrawCell
     ColWidths = (
       64
@@ -75,6 +97,28 @@ object Form6: TForm6
       0
       'ID'
     )
+  end
+  object Button1: TButton
+    Left = 1064
+    Height = 44
+    Top = 8
+    Width = 46
+    Caption = '+'
+    Font.Height = -27
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 1064
+    Height = 43
+    Top = 72
+    Width = 46
+    Caption = '-'
+    Font.Height = -27
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 2
   end
   object Timer1: TTimer
     Interval = 0

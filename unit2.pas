@@ -109,12 +109,12 @@ var
 begin
   if Shift*[ssShift,ssCtrl]=[] then
   begin
-     ScrollBox1.ScrollBy(0,WheelDelta);
+     ScrollBox1.VertScrollBar.Position:=ScrollBox1.VertScrollBar.Position-WheelDelta;
      Handled := true;
   end;
   if Shift*[ssShift]=[ssShift] then
   begin
-     ScrollBox1.ScrollBy(WheelDelta,0);
+     ScrollBox1.HorzScrollBar.Position:=ScrollBox1.HorzScrollBar.Position-WheelDelta;
      Handled := true;
   end;
   if Shift*[ssCtrl]=[ssCtrl] then

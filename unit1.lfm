@@ -1,20 +1,20 @@
 object Form1: TForm1
-  Left = 510
+  Left = 185
   Height = 665
-  Top = 27
-  Width = 1061
-  HorzScrollBar.Page = 1051
+  Top = 25
+  Width = 1008
+  HorzScrollBar.Page = 1008
   VertScrollBar.Page = 626
   Align = alBottom
   Anchors = [akBottom]
   AutoScroll = True
   Caption = 'Events with SI'
-  ClientHeight = 642
-  ClientWidth = 1061
+  ClientHeight = 628
+  ClientWidth = 1008
   Menu = MainMenu1
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.8.2.0'
+  LCLVersion = '1.8.4.0'
   object PageControl1: TPageControl
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -34,12 +34,12 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/event.html'
       Caption = 'Event'
-      ClientHeight = 559
-      ClientWidth = 1047
+      ClientHeight = 562
+      ClientWidth = 1043
       object StringGrid1: TValueListEditor
         AnchorSideTop.Control = TabSheet1
         AnchorSideBottom.Side = asrBottom
-        Left = 266
+        Left = 264
         Height = 336
         Top = 40
         Width = 757
@@ -76,7 +76,7 @@ object Form1: TForm1
         )
         ColWidths = (
           163
-          579
+          573
         )
       end
       object Button5: TButton
@@ -84,7 +84,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = StringGrid1
         AnchorSideRight.Side = asrBottom
-        Left = 754
+        Left = 752
         Height = 50
         Top = 376
         Width = 269
@@ -101,17 +101,17 @@ object Form1: TForm1
         Height = 336
         Top = 40
         Width = 258
-        HorzScrollBar.Page = 12
+        HorzScrollBar.Page = 27
         VertScrollBar.Page = 12
         Anchors = [akTop]
-        ClientHeight = 334
-        ClientWidth = 256
+        ClientHeight = 332
+        ClientWidth = 254
         TabOrder = 2
         object RadioGroup1: TRadioGroup
           Left = 8
           Height = 4
           Top = 8
-          Width = 4
+          Width = 19
           AutoFill = False
           AutoSize = True
           ChildSizing.LeftRightSpacing = 6
@@ -125,9 +125,9 @@ object Form1: TForm1
       end
       object Label1: TLabel
         Left = 8
-        Height = 17
+        Height = 15
         Top = 16
-        Width = 85
+        Width = 66
         Caption = 'Select Event:'
         ParentColor = False
       end
@@ -190,7 +190,7 @@ object Form1: TForm1
         Top = 384
         Width = 288
         Caption = 'Select and set:'
-        ClientHeight = 149
+        ClientHeight = 148
         ClientWidth = 284
         TabOrder = 6
         Visible = False
@@ -243,7 +243,7 @@ object Form1: TForm1
           Left = 8
           Height = 23
           Top = 8
-          Width = 167
+          Width = 137
           CenturyFrom = 1941
           MaxDate = 2958465
           MinDate = -53780
@@ -285,14 +285,14 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/teams.html'
       Caption = 'Teams'
-      ClientHeight = 559
-      ClientWidth = 1047
+      ClientHeight = 562
+      ClientWidth = 1043
       TabVisible = False
       object StringGrid2: TStringGrid
         Left = 8
-        Height = 262
+        Height = 265
         Top = 16
-        Width = 962
+        Width = 958
         Anchors = [akTop, akLeft, akRight, akBottom]
         ColCount = 7
         ColumnClickSorts = True
@@ -346,8 +346,8 @@ object Form1: TForm1
       object StringGrid3: TStringGrid
         Left = 8
         Height = 173
-        Top = 342
-        Width = 962
+        Top = 345
+        Width = 958
         Anchors = [akLeft, akRight, akBottom]
         ColCount = 9
         FixedCols = 0
@@ -403,9 +403,9 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = StringGrid3
         AnchorSideRight.Side = asrBottom
-        Left = 873
+        Left = 869
         Height = 50
-        Top = 515
+        Top = 518
         Width = 97
         Anchors = [akTop, akRight]
         Caption = 'Save changes'
@@ -420,7 +420,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 104
         Height = 50
-        Top = 515
+        Top = 518
         Width = 69
         Caption = 'Remove'
         Constraints.MinHeight = 50
@@ -433,7 +433,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 8
         Height = 50
-        Top = 515
+        Top = 518
         Width = 96
         Caption = 'Add member'
         Constraints.MinHeight = 50
@@ -447,7 +447,7 @@ object Form1: TForm1
         AnchorSideBottom.Side = asrBottom
         Left = 8
         Height = 50
-        Top = 278
+        Top = 281
         Width = 80
         AutoSize = True
         Caption = 'New team'
@@ -460,10 +460,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 204
+        Left = 199
         Height = 50
-        Top = 278
-        Width = 94
+        Top = 281
+        Width = 89
         AutoSize = True
         Caption = 'Delete team'
         Constraints.MinHeight = 50
@@ -475,10 +475,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 575
+        Left = 551
         Height = 50
-        Top = 278
-        Width = 101
+        Top = 281
+        Width = 92
         AutoSize = True
         Caption = 'Set starttime'
         Constraints.MinHeight = 50
@@ -490,10 +490,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 491
+        Left = 469
         Height = 50
-        Top = 278
-        Width = 84
+        Top = 281
+        Width = 82
         AutoSize = True
         Caption = 'Set groups'
         Constraints.MinHeight = 50
@@ -505,10 +505,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 298
+        Left = 288
         Height = 50
-        Top = 278
-        Width = 96
+        Top = 281
+        Width = 89
         AutoSize = True
         Caption = 'Export team'
         Constraints.MinHeight = 50
@@ -520,10 +520,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid2
         AnchorSideTop.Side = asrBottom
-        Left = 394
+        Left = 377
         Height = 50
-        Top = 278
-        Width = 97
+        Top = 281
+        Width = 92
         AutoSize = True
         Caption = 'Import team'
         Constraints.MinHeight = 50
@@ -537,8 +537,8 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 88
         Height = 50
-        Top = 278
-        Width = 116
+        Top = 281
+        Width = 111
         AutoSize = True
         Caption = 'Change team ID'
         Constraints.MinHeight = 50
@@ -550,15 +550,15 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/members.html'
       Caption = 'Members'
-      ClientHeight = 559
-      ClientWidth = 1047
+      ClientHeight = 562
+      ClientWidth = 1043
       OnExit = TabSheet3OnExit
       TabVisible = False
       object StringGrid4: TStringGrid
         Left = 16
-        Height = 461
+        Height = 464
         Top = 8
-        Width = 910
+        Width = 906
         Anchors = [akTop, akLeft, akRight, akBottom]
         ColCount = 9
         ColumnClickSorts = True
@@ -626,8 +626,8 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         Left = 16
         Height = 50
-        Top = 469
-        Width = 102
+        Top = 472
+        Width = 98
         AutoSize = True
         Caption = 'New member'
         Constraints.MinHeight = 50
@@ -639,10 +639,10 @@ object Form1: TForm1
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = StringGrid4
         AnchorSideTop.Side = asrBottom
-        Left = 118
+        Left = 114
         Height = 50
-        Top = 469
-        Width = 22
+        Top = 472
+        Width = 34
         AutoSize = True
         Caption = 'A'
         Constraints.MinHeight = 50
@@ -654,9 +654,9 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = StringGrid4
         AnchorSideRight.Side = asrBottom
-        Left = 826
+        Left = 822
         Height = 50
-        Top = 469
+        Top = 472
         Width = 100
         Anchors = [akTop, akRight]
         AutoSize = True
@@ -671,8 +671,8 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/groups.html'
       Caption = 'Groups'
-      ClientHeight = 559
-      ClientWidth = 1047
+      ClientHeight = 562
+      ClientWidth = 1043
       TabVisible = False
       object StringGrid5: TStringGrid
         Left = 10
@@ -804,8 +804,8 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/courses.html'
       Caption = 'Courses'
-      ClientHeight = 559
-      ClientWidth = 1047
+      ClientHeight = 562
+      ClientWidth = 1043
       TabVisible = False
       object StringGrid6: TStringGrid
         Left = 8
@@ -893,7 +893,7 @@ object Form1: TForm1
       object Button7: TButton
         AnchorSideTop.Control = StringGrid6
         AnchorSideTop.Side = asrBottom
-        Left = 273
+        Left = 272
         Height = 50
         Top = 320
         Width = 119
@@ -909,7 +909,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Control = Button2
         AnchorSideBottom.Side = asrBottom
-        Left = 273
+        Left = 272
         Height = 50
         Top = 370
         Width = 121
@@ -925,7 +925,7 @@ object Form1: TForm1
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Control = Button3
         AnchorSideBottom.Side = asrBottom
-        Left = 273
+        Left = 272
         Height = 50
         Top = 420
         Width = 119
@@ -953,14 +953,14 @@ object Form1: TForm1
       HelpType = htKeyword
       HelpKeyword = 'html/results.html'
       Caption = 'Results'
-      ClientHeight = 559
-      ClientWidth = 1047
+      ClientHeight = 562
+      ClientWidth = 1043
       TabVisible = False
       object StringGrid7: TStringGrid
         Left = 8
-        Height = 538
+        Height = 541
         Top = 11
-        Width = 837
+        Width = 833
         Anchors = [akTop, akLeft, akRight, akBottom]
         ColCount = 9
         Columns = <        
@@ -1075,7 +1075,7 @@ object Form1: TForm1
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 88
+        ClientHeight = 87
         ClientWidth = 150
         Items.Strings = (
           'Direct'
@@ -1127,10 +1127,10 @@ object Form1: TForm1
       end
       object ComboBox1: TComboBox
         Left = 262
-        Height = 29
+        Height = 23
         Top = 152
         Width = 169
-        ItemHeight = 0
+        ItemHeight = 15
         Items.Strings = (
           'Control'
           'Start'
@@ -1217,7 +1217,7 @@ object Form1: TForm1
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 200
+        ClientHeight = 199
         ClientWidth = 173
         Items.Strings = (
           'extended protocol'
@@ -1295,16 +1295,15 @@ object Form1: TForm1
     TabOrder = 1
   end
   object FileListBox1: TFileListBox
-    Left = 1121
+    Left = 1154
     Height = 34
-    Top = 570
+    Top = 556
     Width = 40
     Anchors = [akRight, akBottom]
     Directory = 'events'
     FileType = [ftDirectory]
     ItemHeight = 0
     TabOrder = 2
-    TopIndex = -1
     Visible = False
   end
   object ToggleBox2: TToggleBox
@@ -1409,6 +1408,11 @@ object Form1: TForm1
         Caption = 'Event data'
         object MenuItem8: TMenuItem
           Caption = 'Startlist'
+          OnClick = MenuItem8Click
+        end
+        object MenuItem11: TMenuItem
+          Caption = 'Stats'
+          OnClick = MenuItem11Click
         end
       end
       object MenuItem7: TMenuItem

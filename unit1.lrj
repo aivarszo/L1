@@ -113,6 +113,7 @@
 {"hash":8577508,"name":"tform1.menuitem23.caption","sourcebytes":[68,97,116,117,32,101,107,115,112,111,114,116],"value":"Datu eksport"},
 {"hash":90334305,"name":"tform1.menuitem6.caption","sourcebytes":[69,118,101,110,116,32,100,97,116,97],"value":"Event data"},
 {"hash":144411140,"name":"tform1.menuitem8.caption","sourcebytes":[83,116,97,114,116,108,105,115,116],"value":"Startlist"},
+{"hash":5941427,"name":"tform1.menuitem11.caption","sourcebytes":[83,116,97,116,115],"value":"Stats"},
 {"hash":5941427,"name":"tform1.menuitem18.caption","sourcebytes":[83,116,97,116,115],"value":"Stats"},
 {"hash":134063939,"name":"tform1.menuitem13.caption","sourcebytes":[84,101,97,109,32,115,112,108,105,116,115],"value":"Team splits"},
 {"hash":315140,"name":"tform1.menuitem15.caption","sourcebytes":[69,120,105,116],"value":"Exit"}

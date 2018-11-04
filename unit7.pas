@@ -6,15 +6,19 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Grids,
-  ExtCtrls, Types;
+  ExtCtrls, StdCtrls, Types;
 
 type
 
   { TForm6 }
 
   TForm6 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
     StringGrid7: TStringGrid;
     Timer1: TTimer;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure StringGrid7DrawCell(Sender: TObject; aCol, aRow: Integer;
   aRect: TRect; aState: TGridDrawState);
@@ -46,7 +50,7 @@ begin
   begin
     StringGrid7.Row:=1;
     StringGrid7.Row:=StringGrid7.VisibleRowCount;
-    Timer1.Interval:=10000;
+    Timer1.Interval:=15000;
     bb:=false;
     exit;
   end
@@ -62,6 +66,19 @@ begin
       exit;
     end;
 end;
+
+procedure TForm6.Button1Click(Sender: TObject);
+begin
+  StringGrid7.Font.Size:=StringGrid7.Font.Size + 2;
+  StringGrid7.AutoSizeColumns;
+end;
+
+procedure TForm6.Button2Click(Sender: TObject);
+begin
+  StringGrid7.Font.Size:=StringGrid7.Font.Size - 2;
+  StringGrid7.AutoSizeColumns;
+end;
+
 //krāsas vietām
 procedure TForm6.StringGrid7DrawCell(Sender: TObject; aCol, aRow: Integer;
   aRect: TRect; aState: TGridDrawState);

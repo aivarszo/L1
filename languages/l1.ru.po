@@ -278,6 +278,11 @@ msgctxt "tform1.menuitem10.caption"
 msgid "New event"
 msgstr "Новые соревнования"
 
+#: tform1.menuitem11.caption
+msgctxt "tform1.menuitem11.caption"
+msgid "Stats"
+msgstr ""
+
 #: tform1.menuitem13.caption
 #, fuzzy
 #| msgid "Teams' results"
@@ -289,6 +294,7 @@ msgid "Exit"
 msgstr "Конец работы"
 
 #: tform1.menuitem18.caption
+msgctxt "tform1.menuitem18.caption"
 msgid "Stats"
 msgstr ""
 
@@ -619,7 +625,28 @@ msgstr "КартаX"
 msgid "MapY"
 msgstr "КартаY"
 
+#: tform3.button1.caption
+#, fuzzy
+msgctxt "tform3.button1.caption"
+msgid "Save"
+msgstr "Сохранить"
+
+#: tform3.button2.caption
+#, fuzzy
+msgctxt "tform3.button2.caption"
+msgid "Close"
+msgstr "Закрыть"
+
+#: tform3.button3.caption
+msgid "Print"
+msgstr ""
+
+#: tform3.caption
+msgid "Form3"
+msgstr ""
+
 #: tform5.button2.caption
+msgctxt "tform5.button2.caption"
 msgid "Close"
 msgstr "Закрыть"
 
@@ -643,6 +670,14 @@ msgstr ""
 #: tform5.label4.caption
 msgctxt "tform5.label4.caption"
 msgid "Label4"
+msgstr ""
+
+#: tform6.button1.caption
+msgid "+"
+msgstr ""
+
+#: tform6.button2.caption
+msgid "-"
 msgstr ""
 
 #: tform6.caption

@@ -277,6 +277,11 @@ msgctxt "tform1.menuitem10.caption"
 msgid "New event"
 msgstr "Jauns pasākums"
 
+#: tform1.menuitem11.caption
+msgctxt "tform1.menuitem11.caption"
+msgid "Stats"
+msgstr ""
+
 #: tform1.menuitem13.caption
 #, fuzzy
 #| msgid "Teams' results"
@@ -288,6 +293,7 @@ msgid "Exit"
 msgstr "Darba beigas"
 
 #: tform1.menuitem18.caption
+msgctxt "tform1.menuitem18.caption"
 msgid "Stats"
 msgstr ""
 
@@ -618,7 +624,28 @@ msgstr "KartesX"
 msgid "MapY"
 msgstr "KartesY"
 
+#: tform3.button1.caption
+#, fuzzy
+msgctxt "tform3.button1.caption"
+msgid "Save"
+msgstr "Saglabāt"
+
+#: tform3.button2.caption
+#, fuzzy
+msgctxt "tform3.button2.caption"
+msgid "Close"
+msgstr "Aizvērt"
+
+#: tform3.button3.caption
+msgid "Print"
+msgstr ""
+
+#: tform3.caption
+msgid "Form3"
+msgstr ""
+
 #: tform5.button2.caption
+msgctxt "tform5.button2.caption"
 msgid "Close"
 msgstr "Aizvērt"
 
@@ -642,6 +669,14 @@ msgstr ""
 #: tform5.label4.caption
 msgctxt "tform5.label4.caption"
 msgid "Label4"
+msgstr ""
+
+#: tform6.button1.caption
+msgid "+"
+msgstr ""
+
+#: tform6.button2.caption
+msgid "-"
 msgstr ""
 
 #: tform6.caption

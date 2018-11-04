@@ -6,15 +6,19 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Grids,
-  ExtCtrls, Types;
+  ExtCtrls, StdCtrls, Types;
 
 type
 
   { TForm6 }
 
   TForm6 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
     StringGrid7: TStringGrid;
     Timer1: TTimer;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure StringGrid7DrawCell(Sender: TObject; aCol, aRow: Integer;
   aRect: TRect; aState: TGridDrawState);
@@ -62,6 +66,19 @@ begin
       exit;
     end;
 end;
+
+procedure TForm6.Button1Click(Sender: TObject);
+begin
+  StringGrid7.Font.Size:=StringGrid7.Font.Size + 2;
+  StringGrid7.AutoSizeColumns;
+end;
+
+procedure TForm6.Button2Click(Sender: TObject);
+begin
+  StringGrid7.Font.Size:=StringGrid7.Font.Size - 2;
+  StringGrid7.AutoSizeColumns;
+end;
+
 //krāsas vietām
 procedure TForm6.StringGrid7DrawCell(Sender: TObject; aCol, aRow: Integer;
   aRect: TRect; aState: TGridDrawState);
@@ -75,11 +92,20 @@ begin
           Canvas.FillRect(aRect.Left, aRect.Top,
                          aRect.Right, aRect.Bottom);
           Canvas.TextOut(aRect.Left+5, aRect.Top+3, Cells[ACol, ARow]);
-        end
-        else
+          exit;
+        end;
+      if (aCol = 6) and (Pos(':2 ',Cells[6, aRow])>0) then
         begin
-          Canvas.Font.Color := clBlack;
-          Canvas.Brush.Color := clWhite;
+          Canvas.Font.Color := clWhite;
+          Canvas.Brush.Color := clGreen;
+          Canvas.FillRect(aRect.Left, aRect.Top,
+                         aRect.Right, aRect.Bottom);
+          Canvas.TextOut(aRect.Left+5, aRect.Top+3, Cells[ACol, ARow]);
+        end;
+      if (aCol = 6) and (Pos(':3 ',Cells[6, aRow])>0) then
+        begin
+          Canvas.Font.Color := clWhite;
+          Canvas.Brush.Color := clBlue;
           Canvas.FillRect(aRect.Left, aRect.Top,
                          aRect.Right, aRect.Bottom);
           Canvas.TextOut(aRect.Left+5, aRect.Top+3, Cells[ACol, ARow]);

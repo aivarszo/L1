@@ -84,6 +84,7 @@ type
     Memo2: TMemo;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
+    MenuItem11: TMenuItem;
     MenuItem15: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -172,6 +173,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure LazSerial1RxData(Sender: TObject);
     procedure MenuItem10Click(Sender: TObject);
+    procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem13Click(Sender: TObject);
     procedure MenuItem15Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
@@ -876,7 +878,8 @@ begin
               if StringGrid4.Cells[8,j]='+' then k:=k+1;
          end;
     end;
-    if k=kk then StringGrid2.Cells[4,i]:='OK' else StringGrid2.Cells[4,i]:='DNF';
+    if k=kk then StringGrid2.Cells[4,i]:='OK' else
+       if StringGrid2.Cells[4,i]<>'DNS' then StringGrid2.Cells[4,i]:='DNF';
   end;
 
   StringGrid5.ColWidths[0]:=0;
@@ -970,26 +973,28 @@ var
 begin
   k:=0;
   while allSplits[k].team<>StringGrid2.Cells[0,StringGrid2.Row] do k:=k+1;
-  vKP:=Form5.StringGrid1.Cells[1,0];
+  i:=0;
+  vKP:=Form5.StringGrid1.Cells[1,i];
   vL:=laiks(Form5.StringGrid1.Cells[2,0]);
   j:=0;
-  for i:=0 to Form5.StringGrid1.RowCount-1 do
-  begin
-    if (Form5.StringGrid1.Cells[5,i]<>'') and (Form5.StringGrid1.Cells[1,i]<>vKP) then
-    begin
-      nL:=laiks(Form5.StringGrid1.Cells[2,i])-vL;
-      SetLength(allsplits[k].splits,j+1);
-      allSplits[k].splits[j].kp_from:=vKP;
-      allSplits[k].splits[j].kp_to:=Form5.StringGrid1.Cells[1,i];
-      allSplits[k].splits[j].time:=nL;
-      allSplits[k].splits[j].delta_t:=Form5.StringGrid1.Cells[4,i];
-      allSplits[k].splits[j].points:=Form5.StringGrid1.Cells[5,i];
-      Form5.StringGrid1.Cells[7,i]:=FloatToStr(nL);
-      j:=j+1;
-      vL:=laiks(Form5.StringGrid1.Cells[2,i]);
-      vKP:=Form5.StringGrid1.Cells[1,i];
-    end;
-  end;
+  repeat
+    while (i < Form5.StringGrid1.RowCount-1) and (Form5.StringGrid1.Cells[1,i+1]=vKP) do i:=i+1;
+    if i<Form5.StringGrid1.RowCount-1 then nL:=laiks(Form5.StringGrid1.Cells[2,i+1])-vL;
+    SetLength(allsplits[k].splits,j+1);
+    allSplits[k].splits[j].kp_from:=vKP;
+    if i<Form5.StringGrid1.RowCount-1 then allSplits[k].splits[j].kp_to:=Form5.StringGrid1.Cells[1,i+1];
+    if i<Form5.StringGrid1.RowCount-1 then vKP:=Form5.StringGrid1.Cells[1,i+1];
+    allSplits[k].splits[j].time:=nL;
+    allSplits[k].splits[j].delta_t:=Form5.StringGrid1.Cells[4,i];
+    if Form5.StringGrid1.Cells[5,i] = '' then
+       allSplits[k].splits[j].points:='0'
+    else
+       allSplits[k].splits[j].points:=Form5.StringGrid1.Cells[5,i];
+    Form5.StringGrid1.Cells[6,i]:=FloatToStr(nL);
+    j:=j+1;
+    if i<Form5.StringGrid1.RowCount-1 then vL:=laiks(Form5.StringGrid1.Cells[2,i+1]);
+    i:=i+1;
+  until i > Form5.StringGrid1.RowCount-1;
 end;
 
 begin
@@ -1149,7 +1154,7 @@ begin
            end;
            ss.Free;
            ss1.Free;
-           Form5.StringGrid1.ColWidths[6]:=0;
+           //Form5.StringGrid1.ColWidths[6]:=0;
            Form5.Label1.Caption:=TimeToStr(laiks(Form5.StringGrid1.Cells[2,Form5.StringGrid1.RowCount-1])-laiks(Form5.StringGrid1.Cells[2,0]));
            Form5.Label2.Caption:=IntToStr(psum);
            if StringGrid1.Values['penaltytype']='started minute' then
@@ -1172,10 +1177,6 @@ begin
              if Button26.Checked then
              begin
                   TeamPDFResult;
-                  //Process1.Parameters.Add('events/'+eventListID[RadioGroup1.ItemIndex]+'/punches/200705_404');
-                  //Process1.Active:=true;
-                  //Process1.Execute;
-                  //Process1.Active:=false;
              end;
            end;
       end;
@@ -1482,7 +1483,7 @@ begin
        // jātaisa dzimuma izvēles variants
           if StringGrid3.Cells[2,j]='V' then gendM:=gendM+1;
           if StringGrid3.Cells[2,j]='S' then gendW:=gendW+1;
-          age:=(laiks(StringGrid1.Values['starttime'])-laiks(Copy(StringGrid3.Cells[3,j],1,10)+' 00:00:00')) / 365;
+          age:=(laiks(StringGrid1.Values['starttime'])-laiks(Copy(StringGrid3.Cells[3,j],1,10)+' 00:00:00')) / 365.25;
           if age<minage then minage:=age;
           if age>maxage then maxage:=age;
       end;
@@ -1496,7 +1497,7 @@ begin
         StringGrid2.Cells[3,i]:=StringGrid2.Cells[3,i]+','+gend+'J';
         groups.Add(gend+'J');
       end;
-      if minage>=45 then
+      if minage>=40 then
       begin
         StringGrid2.Cells[3,i]:=StringGrid2.Cells[3,i]+','+gend+'V';
         groups.Add(gend+'V');
@@ -1882,7 +1883,7 @@ begin
     Form5.Caption:='#'; //lai neveras vaļā Form5 (komandas rezultāts)
     for i:=1 to StringGrid2.RowCount-1 do
     begin
-         if StringGrid2.Cells[4,i]='OK' then
+         if (StringGrid2.Cells[4,i]='OK') then
          begin
               StringGrid7.InsertRowWithValues(k,s);
               StringGrid2.Row:=i; // komandas dalībnieku saraksta aktualizācija
@@ -1892,7 +1893,13 @@ begin
               StringGrid7.Cells[2,k]:=Form5.Label1.Caption;
               StringGrid7.Cells[3,k]:=Form5.Label2.Caption;
               StringGrid7.Cells[4,k]:=Form5.Label3.Caption;
-              StringGrid7.Cells[5,k]:=Form5.Label4.Caption;
+              if Form5.Label4.Caption[1]='-' then
+              begin
+                 StringGrid7.Cells[5,k]:='0';
+                 Form5.Label4.Caption:='0';
+              end
+              else
+                 StringGrid7.Cells[5,k]:=Form5.Label4.Caption;
               for j:=1 to 8 do ss[j]:=Chr(48+Ord('9')-Ord(StringGrid7.Cells[2,k][j]));
               StringGrid7.Cells[7,k]:=Copy('000000',1,6-Length(Form5.Label4.Caption))+Form5.Label4.Caption+ss;
               StringGrid7.SortColRow(true,7);
@@ -1989,7 +1996,8 @@ begin
     begin
       ss1:=ss1+'<li>'+StringGrid3.Cells[1,j]+'<br />';
     end;
-    Form3.Memo1.Lines.Add('<td><a href="../teamresults/'+Form6.StringGrid7.Cells[0,i]+'.htm">'+Form6.StringGrid7.Cells[1,i]+
+    ss1:='';
+    Form3.Memo1.Lines.Add('<td><a href="../teamresults/'+Form6.StringGrid7.Cells[0,i].Trim+'.htm">'+Form6.StringGrid7.Cells[1,i]+
     '</a><br /><div class="css_members">'+ss1+'</div></td>');
     Form3.Memo1.Lines.Add('<td>'+Form6.StringGrid7.Cells[2,i]+'<br />'+Form6.StringGrid7.Cells[3,i]+'<br />'+Form6.StringGrid7.Cells[4,i]+'</td>');
     Form3.Memo1.Lines.Add('<td class="css_result">'+Form6.StringGrid7.Cells[5,i]+'</td>');
@@ -2928,7 +2936,7 @@ begin
   Memo1.Lines.SaveToFile(fname+IntToStr(cardNumber));
   Label2.Caption:=capC6;
   processPunch(cardNumber);
-  //beep($01);
+  beep($01);
 end;
 
 procedure setStart();
@@ -3148,7 +3156,7 @@ begin
         			dtm:=rStart+tm/86400;
                                 AdjTime;
                                 prevT:=dtm;
-   				Memo1.Append(s[7+14*4+4*i+1]+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
+   				Memo1.Append(IntToStr(Ord(s[7+14*4+4*i+1]))+'='+FormatDateTime('yyyy-mm-dd hh:nn:ss',dtm));
    				i:=i+1;
    			end;
    			punchCount:=punchCount-i;
@@ -3472,8 +3480,8 @@ var
    splitcount,splitplace:integer;
    s:string;
 begin
-  PageControl1.ActivePage:=TabSheet6;
-  PageControl1Change(PageControl1);
+  //PageControl1.ActivePage:=TabSheet6;
+  //PageControl1Change(PageControl1);
   SetLength(bestSplits,Form2.StringGrid1.RowCount*Form2.StringGrid1.RowCount);
   for i:=1 to Form2.StringGrid1.RowCount-1 do
   begin
@@ -3501,21 +3509,20 @@ begin
   if StringGrid2.Cells[4,i]='OK' then begin
     k:=0;
     while allSplits[k].team<>StringGrid2.Cells[0,i] do k:=k+1;
-    fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/teamresults/'+StringGrid2.Cells[0,i]+'.htm';
+    fname:='events/'+eventListID[RadioGroup1.ItemIndex]+'/teamresults/'+StringGrid2.Cells[0,i].Trim+'.htm';
     Form3.Memo1.Clear;
     Form3.Memo1.Lines.Add('<html><head>');
     Form3.Memo1.Lines.Add('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
     Form3.Memo1.Lines.Add('<link rel="stylesheet" type="text/css" media="screen" href="style.css" />');
     Form3.Memo1.Lines.Add('</head><body>');
     Form3.Memo1.Lines.Add('<table border="1">');
-    Form3.Memo1.Lines.Add('<tr class="resultheader"><td>KP</td><td>Atzīmēšanās laiks(intervāls)</td><td>Posma laiks(Labākais p.l.)<br /> [Vieta posmā]</td><td>Punkti</td><td>Distance</td><td>min/km</td><td>1 punkta laiks/distance</td></tr>');
-    Form3.Memo1.Lines.Add('<tr class="r1"><td>S</td><td>'+StringGrid1.Values['starttime']+
-      '</td><td></td><td></td><td></td><td></td><td></td></tr>');
+    Form3.Memo1.Lines.Add('<tr class="resultheader"><td>KP</td><td>Atzīmēšanās laiks(intervāls)</td><td>Posma laiks(Labākais p.l.)<br /> [Vieta posmā]</td><td>Punkti</td><td>Distance</td><td>min/km</td>'); //<td>1 punkta laiks/distance</td></tr>');
+    Form3.Memo1.Lines.Add('<tr class="r1"><td>S</td><td>'+StringGrid1.Values['starttime']+'</td><td></td><td></td><td></td></tr>'); //<td></td></tr>');
     tottime:=0;
     totpoints:=0;
     totdist:=0;
     totbest:=0;
-    for j:=0 to Length(allSplits[k].splits)-1 do
+    for j:=0 to Length(allSplits[k].splits)-2 do
     begin
       if j mod 2=0 then s:='r0' else s:='r1';
       Form3.Memo1.Lines.Add('<tr class="'+s+'"><td>'+allSplits[k].splits[j].kp_to+'</td>');
@@ -3531,25 +3538,25 @@ begin
             if m<>k then splitcount:=splitcount+1;
             if (allSplits[m].splits[n].time<allSplits[k].splits[j].time) then splitplace:=splitplace+1;
           end;
-      for m:=0 to Length(bestSplits)-1 do
+      for m:=0 to Length(bestSplits)-2 do
         if (bestSplits[m].kp_from=allSplits[k].splits[j].kp_from)and(bestSplits[m].kp_to=allSplits[k].splits[j].kp_to) then break;
       totbest:=totbest+bestSplits[m].time;
       Form3.Memo1.Lines.Add('<td>'+FormatDateTime('hh:nn:ss',allSplits[k].splits[j].time)+
       ' ('+FormatDateTime('hh:nn:ss',bestSplits[m].time)+') ['+IntToStr(splitplace)+'./'+IntToStr(splitcount)+']</td>');
-      totpoints:=totpoints+StrToInt(allSplits[k].splits[j].points);
-      Form3.Memo1.Lines.Add('<td>'+allSplits[k].splits[j].points+' | '+IntToStr(totpoints)+'</td>');
+      totpoints:=totpoints+StrToInt(allSplits[k].splits[j+1].points);
+      Form3.Memo1.Lines.Add('<td>'+allSplits[k].splits[j+1].points+' | '+IntToStr(totpoints)+'</td>');
       totdist:=totdist+Round(distanceKP(allSplits[k].splits[j].kp_from,allSplits[k].splits[j].kp_to)/10)/100;
       Form3.Memo1.Lines.Add('<td>'+FloatToStr(Round(distanceKP(allSplits[k].splits[j].kp_from,allSplits[k].splits[j].kp_to)/10)/100)+' | '+FloatToStr(totdist)+'</td>');
-      Form3.Memo1.Lines.Add('<td>'+FormatDateTime('hh:nn:ss',(allSplits[k].splits[j].time/(distanceKP(allSplits[k].splits[j].kp_from,allSplits[k].splits[j].kp_to)/1000)))+'</td>');
-      if StrToInt(allSplits[k].splits[j].points)>0 then
-        Form3.Memo1.Lines.Add('<td>'+FormatDateTime('hh:nn:ss',(allSplits[k].splits[j].time/StrToInt(allSplits[k].splits[j].points)))+' | '+
-        FloatToStr(Round(distanceKP(allSplits[k].splits[j].kp_from,allSplits[k].splits[j].kp_to)/(10*StrToInt(allSplits[k].splits[j].points)))/100)+'</td>')
+      if allSplits[k].splits[j+1].kp_from <> 'F' then Form3.Memo1.Lines.Add('<td>'+FormatDateTime('hh:nn:ss',(allSplits[k].splits[j+1].time/(distanceKP(allSplits[k].splits[j+1].kp_from,allSplits[k].splits[j+1].kp_to)/1000)))+'</td>');
+      if (StrToInt(allSplits[k].splits[j].points)>0) then
+//           Form3.Memo1.Lines.Add('<td>'+FormatDateTime('hh:nn:ss',(allSplits[k].splits[j].time/StrToInt(allSplits[k].splits[j].points)))+' | '+
+//           FloatToStr(Round(distanceKP(allSplits[k].splits[j].kp_from,allSplits[k].splits[j].kp_to)/(10*StrToInt(allSplits[k].splits[j].points)))/100)+'</td>')
       else
-        Form3.Memo1.Lines.Add('<td></td>');
+        //Form3.Memo1.Lines.Add('<td> - | - </td>');
+      Form3.Memo1.Lines.Add('<td></td>');
     end;
-    Form3.Memo1.Lines.Add('<tr class="r2"><td>'+IntToStr(Length(allSplits[k].splits)-1)+'</td><td></td><td>'+FormatDateTime('hh:nn:ss',tottime)+
-    '('+FormatDateTime('hh:nn:ss',totbest)+')</td><td>'+IntToStr(totpoints)+'</td><td>'+FloatToStr(totdist)+'</td><td>'+
-    FormatDateTime('hh:nn:ss',tottime/totdist)+'</td><td>'+FormatDateTime('hh:nn:ss',tottime/totpoints)+'/'+FloatToStr(Round(totdist*100/totpoints)/100)+'</td></tr>');
+    if (totdist<>0) and (totpoints<>0) then
+       Form3.Memo1.Lines.Add('<tr class="r2"><td>'+IntToStr(Length(allSplits[k].splits)-2)+'</td><td></td><td>'+FormatDateTime('hh:nn:ss',tottime)+FormatDateTime('hh:nn:ss',totbest)+')</td><td>'+IntToStr(totpoints)+'</td><td>'+FloatToStr(totdist)+'</td><td>'+FormatDateTime('hh:nn:ss',tottime/totdist)+'</td></tr>'; //<td>'+FormatDateTime('hh:nn:ss',tottime/totpoints)+'/'+FloatToStr(Round(totdist*100/totpoints)/100)+'</td></tr>');
     Form3.Memo1.Lines.Add('</table><br />');
     rt:=StringGrid1.Values['routetype'];
     if rt='' then rt:='png';
@@ -3839,6 +3846,7 @@ begin
        if(fieldlist[3]='FIN') then p_p.Add('F='+dd);
        if(fieldlist[3]=' CN') then p_p.Add(fieldlist[2]+'='+dd);
      end;
+     CloseFile(cf);
 
      AssignFile(pf,'punches_9999/'+line+'_9999');
      Rewrite(pf);
@@ -3853,7 +3861,6 @@ begin
          writeln(pf,p_p[j]);
      end;
      CloseFile(pf);
-
     end
     else
       MessageDlg(mscC18,mstT18a,mtConfirmation,[mbOK],0);
@@ -3974,9 +3981,9 @@ begin
          begin
            StringGrid2.Objects[5,StringGrid2.RowCount-1]:=TStringList.Create;
            (StringGrid2.Objects[5,StringGrid2.RowCount-1] as TStringList).AddStrings(tm1);
-           tm1.Clear;
+           //tm1.Clear;
          end;
-         StringGrid2.InsertRowWithValues(StringGrid2.RowCount,[tm1[0],tm1[1],'','','','',' R']);
+         StringGrid2.InsertRowWithValues(StringGrid2.RowCount,[tm1[0],tm1[2],'','','OK','',' R']);
          line:=tm1[0];
        end;
        StringGrid4.InsertRowWithValues(StringGrid4.RowCount,[IntToStr(tn),tm1[3]+' '+tm1[4],tm1[0],
@@ -3985,7 +3992,7 @@ begin
        tm1.Add(tm1[10]);
        tm1.Add('');
        tn:=tn+1;
-     until not EOF(fin);
+     until EOF(fin);
      tm1.Free;
      CloseFile(fin);
      Button1m.Color:=clRed;
@@ -4060,6 +4067,26 @@ begin
   StringGrid6.RowCount:=1;
   StringGrid7.RowCount:=1;
   MenuItem9Click(Sender);
+end;
+
+//komandu skaits, etc.
+procedure TForm1.MenuItem11Click(Sender: TObject);
+var
+   ss:string;
+   i,j,k:integer;
+begin
+  ss:='Total teams: '+IntToStr(StringGrid2.RowCount-1)+#10#13;
+  for i:=1 to StringGrid5.RowCount-1 do
+  begin
+       k:=0;
+       for j:=1 to StringGrid2.RowCount-1 do
+       begin
+            if Pos(StringGrid5.Cells[1,i],StringGrid2.Cells[3,j])>0 then k:=k+1;
+       end;
+       ss:=ss+StringGrid5.Cells[1,i]+': '+IntToStr(k)+#10#13;
+  end;
+  MessageDlg('Event Statistics',ss,mtConfirmation,[mbOK],0);
+
 end;
 
 //eventa kopija

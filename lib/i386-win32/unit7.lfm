@@ -1,13 +1,14 @@
 object Form6: TForm6
-  Left = 213
-  Height = 742
-  Top = 11
-  Width = 1120
+  Left = 391
+  Height = 573
+  Top = 117
+  Width = 860
   Caption = 'Form6'
-  ClientHeight = 742
-  ClientWidth = 1120
+  ClientHeight = 573
+  ClientWidth = 860
+  OnResize = AdjustCols
   LCLVersion = '1.8.4.0'
-  object StringGrid7: TStringGrid
+  object ScrollBox1: TScrollBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
@@ -15,110 +16,156 @@ object Form6: TForm6
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 0
-    Height = 742
-    Top = 0
-    Width = 1070
+    Height = 541
+    Top = 32
+    Width = 860
+    HorzScrollBar.Increment = 4
+    HorzScrollBar.Page = 4
+    HorzScrollBar.Range = 5000
+    HorzScrollBar.Visible = False
+    VertScrollBar.Increment = 1
+    VertScrollBar.Page = 4
+    VertScrollBar.Smooth = True
+    VertScrollBar.Range = 5000
+    VertScrollBar.Visible = False
     Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Right = 50
+    AutoSize = True
+    AutoScroll = False
+    BorderSpacing.Top = 32
+    ClientHeight = 537
+    ClientWidth = 856
+    TabOrder = 0
+    object StringGrid7: TStringGrid
+      AnchorSideLeft.Control = ScrollBox1
+      AnchorSideTop.Control = ScrollBox1
+      AnchorSideRight.Control = ScrollBox1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = ScrollBox1
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 5000
+      Top = 0
+      Width = 856
+      AlternateColor = clSilver
+      Anchors = [akTop, akLeft, akRight]
+      ColCount = 9
+      Columns = <      
+        item
+          MinSize = 0
+          MaxSize = 0
+          Title.Font.CharSet = BALTIC_CHARSET
+          Title.Font.Height = -19
+          Title.Font.Name = 'Verdana'
+          Title.Font.Pitch = fpVariable
+          Title.Font.Quality = fqDraft
+          Title.Caption = 'ID'
+          Width = 64
+        end      
+        item
+          MinSize = 0
+          MaxSize = 0
+          Title.Caption = 'Team'
+          Width = 268
+        end      
+        item
+          MinSize = 0
+          MaxSize = 0
+          Title.Caption = 'Time'
+          Width = 91
+        end      
+        item
+          MinSize = 0
+          MaxSize = 0
+          Title.Caption = 'Points'
+          Width = 64
+        end      
+        item
+          MinSize = 0
+          MaxSize = 0
+          Title.Caption = 'Penalty'
+          Width = 64
+        end      
+        item
+          MinSize = 0
+          MaxSize = 0
+          Title.Caption = 'Result'
+          Width = 64
+        end      
+        item
+          MinSize = 0
+          MaxSize = 0
+          Title.Caption = 'Place(s)'
+          Width = 213
+        end      
+        item
+          Title.Caption = 'Sort'
+          Width = 0
+          Visible = False
+        end      
+        item
+          Title.Caption = 'HTML'
+        end>
+      DefaultRowHeight = 32
+      FixedCols = 0
+      FixedRows = 0
+      Font.Height = -19
+      MouseWheelOption = mwGrid
+      ParentFont = False
+      ScrollBars = ssNone
+      TabOrder = 0
+      TitleFont.Height = -19
+      OnDrawCell = StringGrid7DrawCell
+    end
+  end
+  object StringGrid1: TStringGrid
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 860
+    Anchors = [akTop, akLeft, akRight]
     ColCount = 9
     Columns = <    
       item
-        MinSize = 0
-        MaxSize = 0
+        Font.Height = -19
+        Font.Style = [fsBold]
         Title.Caption = 'ID'
       end    
       item
-        MinSize = 0
-        MaxSize = 0
         Title.Caption = 'Team'
-        Width = 268
       end    
       item
-        MinSize = 0
-        MaxSize = 0
         Title.Caption = 'Time'
-        Width = 91
       end    
       item
-        MinSize = 0
-        MaxSize = 0
         Title.Caption = 'Points'
-        Width = 64
       end    
       item
-        MinSize = 0
-        MaxSize = 0
         Title.Caption = 'Penalty'
-        Width = 64
       end    
       item
-        MinSize = 0
-        MaxSize = 0
         Title.Caption = 'Result'
-        Width = 64
       end    
       item
-        MinSize = 0
-        MaxSize = 0
         Title.Caption = 'Place(s)'
-        Width = 213
       end    
       item
         Title.Caption = 'Sort'
-        Width = 0
         Visible = False
       end    
       item
         Title.Caption = 'HTML'
         Visible = False
       end>
+    DefaultRowHeight = 32
     FixedCols = 0
-    Font.Height = -19
-    MouseWheelOption = mwGrid
-    ParentFont = False
-    RowCount = 1
-    TabOrder = 0
-    TitleFont.Height = -19
-    OnDrawCell = StringGrid7DrawCell
-    ColWidths = (
-      64
-      268
-      91
-      64
-      64
-      64
-      213
-      0
-      0
-    )
-    Cells = (
-      1
-      0
-      0
-      'ID'
-    )
-  end
-  object Button1: TButton
-    Left = 1064
-    Height = 44
-    Top = 8
-    Width = 46
-    Caption = '+'
-    Font.Height = -27
-    OnClick = Button1Click
-    ParentFont = False
+    ScrollBars = ssNone
     TabOrder = 1
-  end
-  object Button2: TButton
-    Left = 1064
-    Height = 43
-    Top = 72
-    Width = 46
-    Caption = '-'
-    Font.Height = -27
-    OnClick = Button2Click
-    ParentFont = False
-    TabOrder = 2
+    TitleFont.Height = -21
+    TitleFont.Style = [fsBold]
   end
   object Timer1: TTimer
     Interval = 0

@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lv\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: tform1.button1.caption
@@ -174,10 +174,27 @@ msgid "sunrisetime"
 msgstr ""
 
 #: tform1.button34.caption
-#, fuzzy
 msgctxt "tform1.button34.caption"
 msgid "Change team ID"
 msgstr "Mainīt komandas ID"
+
+#: tform1.button35.caption
+msgctxt "tform1.button35.caption"
+msgid "+"
+msgstr ""
+
+#: tform1.button36.caption
+msgctxt "tform1.button36.caption"
+msgid "-"
+msgstr ""
+
+#: tform1.button37.caption
+msgid "Refresh Results"
+msgstr ""
+
+#: tform1.button38.caption
+msgid "Check for duplicate SI"
+msgstr ""
 
 #: tform1.button3g.caption
 msgid "Fill from event data"
@@ -271,8 +288,6 @@ msgid "Event"
 msgstr "Pasākums"
 
 #: tform1.menuitem10.caption
-#, fuzzy
-#| msgid "New Event"
 msgctxt "tform1.menuitem10.caption"
 msgid "New event"
 msgstr "Jauns pasākums"
@@ -282,9 +297,11 @@ msgctxt "tform1.menuitem11.caption"
 msgid "Stats"
 msgstr ""
 
+#: tform1.menuitem12.caption
+msgid "Import from lof.lv L19"
+msgstr ""
+
 #: tform1.menuitem13.caption
-#, fuzzy
-#| msgid "Teams' results"
 msgid "Team splits"
 msgstr "Komandu rezultāti"
 
@@ -298,52 +315,40 @@ msgid "Stats"
 msgstr ""
 
 #: tform1.menuitem2.caption
-#, fuzzy
-#| msgid "Import data"
 msgctxt "tform1.menuitem2.caption"
 msgid "Data import"
 msgstr "Datu imports"
 
 #: tform1.menuitem23.caption
-msgid "Datu eksport"
-msgstr ""
+msgid "Data eksport"
+msgstr "Datu eksports"
 
 #: tform1.menuitem3.caption
-#, fuzzy
-#| msgid "Read SIReader data"
 msgctxt "tform1.menuitem3.caption"
 msgid "Import from SIReader"
 msgstr "Ielasīt SIReader datus"
 
 #: tform1.menuitem4.caption
-#, fuzzy
-#| msgid "Read SIME data"
 msgctxt "tform1.menuitem4.caption"
 msgid "Import from SIME"
 msgstr "Ielasīt SIME datus"
 
 #: tform1.menuitem5.caption
-#, fuzzy
-#| msgid "Read rogaining.lv data"
 msgid "Import from rogaining.lv"
 msgstr "Ielasīt rogaining.lv datus"
 
 #: tform1.menuitem6.caption
-#, fuzzy
-#| msgid "Export data"
 msgid "Event data"
-msgstr "Eksportēt datus"
+msgstr "Pasākuma dati"
 
 #: tform1.menuitem8.caption
 msgid "Startlist"
 msgstr "Starta saraksts"
 
 #: tform1.menuitem9.caption
-#, fuzzy
-#| msgid "New event"
 msgctxt "tform1.menuitem9.caption"
 msgid "Copy event"
-msgstr "Jauns pasākums"
+msgstr "Kopēt pasākumu"
 
 #: tform1.radiogroup2.caption
 msgid "SI Reader Mode"
@@ -521,6 +526,7 @@ msgid "Event"
 msgstr "Pasākums"
 
 #: tform1.tabsheet2.caption
+msgctxt "tform1.tabsheet2.caption"
 msgid "Teams"
 msgstr "Komandas"
 
@@ -563,8 +569,40 @@ msgctxt "tform1.togglebox2.caption"
 msgid "Reading SI cards..."
 msgstr "Lasa SI kartes..."
 
-#: tform1.togglebox3.caption
-msgid "Print split receipts"
+#: tform10.caption
+msgid "Form10"
+msgstr ""
+
+#: tform10.stringgrid1.columns[0].title.caption
+#, fuzzy
+msgctxt "tform10.stringgrid1.columns[0].title.caption"
+msgid "Group"
+msgstr "Grupa"
+
+#: tform10.stringgrid1.columns[1].title.caption
+#, fuzzy
+msgctxt "tform10.stringgrid1.columns[1].title.caption"
+msgid "Teams"
+msgstr "Komandas"
+
+#: tform10.stringgrid1.columns[2].title.caption
+msgid "of 1"
+msgstr ""
+
+#: tform10.stringgrid1.columns[3].title.caption
+msgid "of 2"
+msgstr ""
+
+#: tform10.stringgrid1.columns[4].title.caption
+msgid "of 3"
+msgstr ""
+
+#: tform10.stringgrid1.columns[5].title.caption
+msgid "of 4"
+msgstr ""
+
+#: tform10.stringgrid1.columns[6].title.caption
+msgid "of 5"
 msgstr ""
 
 #: tform2.button1.caption
@@ -625,13 +663,11 @@ msgid "MapY"
 msgstr "KartesY"
 
 #: tform3.button1.caption
-#, fuzzy
 msgctxt "tform3.button1.caption"
 msgid "Save"
 msgstr "Saglabāt"
 
 #: tform3.button2.caption
-#, fuzzy
 msgctxt "tform3.button2.caption"
 msgid "Close"
 msgstr "Aizvērt"
@@ -671,16 +707,53 @@ msgctxt "tform5.label4.caption"
 msgid "Label4"
 msgstr ""
 
-#: tform6.button1.caption
-msgid "+"
-msgstr ""
-
-#: tform6.button2.caption
-msgid "-"
-msgstr ""
-
 #: tform6.caption
 msgid "Form6"
+msgstr ""
+
+#: tform6.stringgrid1.columns[0].title.caption
+msgctxt "tform6.stringgrid1.columns[0].title.caption"
+msgid "ID"
+msgstr ""
+
+#: tform6.stringgrid1.columns[1].title.caption
+msgctxt "tform6.stringgrid1.columns[1].title.caption"
+msgid "Team"
+msgstr "Komanda"
+
+#: tform6.stringgrid1.columns[2].title.caption
+msgctxt "tform6.stringgrid1.columns[2].title.caption"
+msgid "Time"
+msgstr "Laiks"
+
+#: tform6.stringgrid1.columns[3].title.caption
+msgctxt "tform6.stringgrid1.columns[3].title.caption"
+msgid "Points"
+msgstr "Punkti"
+
+#: tform6.stringgrid1.columns[4].title.caption
+msgctxt "tform6.stringgrid1.columns[4].title.caption"
+msgid "Penalty"
+msgstr "Sods"
+
+#: tform6.stringgrid1.columns[5].title.caption
+msgctxt "tform6.stringgrid1.columns[5].title.caption"
+msgid "Result"
+msgstr "Rezultāts"
+
+#: tform6.stringgrid1.columns[6].title.caption
+msgctxt "tform6.stringgrid1.columns[6].title.caption"
+msgid "Place(s)"
+msgstr "Vieta(s)"
+
+#: tform6.stringgrid1.columns[7].title.caption
+msgctxt "tform6.stringgrid1.columns[7].title.caption"
+msgid "Sort"
+msgstr ""
+
+#: tform6.stringgrid1.columns[8].title.caption
+msgctxt "tform6.stringgrid1.columns[8].title.caption"
+msgid "HTML"
 msgstr ""
 
 #: tform6.stringgrid7.columns[0].title.caption
@@ -826,7 +899,7 @@ msgstr "Pamatdatne ierakstīta!"
 
 #: unit1.capc8
 msgid "SI card "
-msgstr "SI karte"
+msgstr "SI karte "
 
 #: unit1.capc8a
 msgid " inserted"
@@ -1006,15 +1079,23 @@ msgstr ""
 msgid "There is no data.csv in event directory"
 msgstr "Pasākuma mapē neeksistē datne data.csv"
 
+#: unit1.mstt18f
+msgid ""
+"Do you want to import event data?\n"
+"(from lof.lv csv file data_lof.csv)\n"
+msgstr ""
+
+#: unit1.mstt18g
+msgid "There is no data_lof.csv in event directory"
+msgstr ""
+
 #: unit1.mstt19
 msgid "Event already exists!"
 msgstr "Pasākums jau eksistē!"
 
 #: unit1.mstt19a
-#, fuzzy
-#| msgid "eventID field must contain event folder name and eventtype must be selected"
 msgid "eventID field must contain event folder name(use \"a-z,0-9\"), eventtype must be selected, eventname must be filled"
-msgstr "eventID laukā jābūt pasākuma mapes nosaukumam un jāizvēlas evnettype "
+msgstr "eventID laukā jābūt pasākuma mapes nosaukumam un jāizvēlas eventtype"
 
 #: unit1.mstt19b
 msgid ""
@@ -1069,6 +1150,26 @@ msgstr "Vai vēlies dzēst distanci?"
 #: unit1.mstt9
 msgid "Found Team ID duplicate: "
 msgstr "Atrasts komandas ID dublikāts: "
+
+#: unit1.tick1
+msgid "TIME: "
+msgstr "LAIKS: "
+
+#: unit1.tick2
+msgid "POINTS: "
+msgstr "PUNKTI: "
+
+#: unit1.tick3
+msgid "Penalty: "
+msgstr "Sods: "
+
+#: unit1.tick4
+msgid "RESULT: "
+msgstr "REZULTATS: "
+
+#: unit1.tick5
+msgid "Raw points: "
+msgstr "Max punkti: "
 
 #: unit2.cap2c1
 msgctxt "unit2.cap2c1"

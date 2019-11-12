@@ -25,6 +25,8 @@ type
     { private declarations }
   public
     fname: string;
+    fnamet2: string;
+    fnamet1: string;
   end;
 
 var
@@ -46,12 +48,12 @@ begin
        Process1.Parameters.Clear;
        {$IFDEF Windows}
        Process1.Executable:='notepad';
-       Process1.Parameters:='/p';
+       Process1.Parameters.Add('/p');
        {$ENDIF}
        {$IFDEF UNIX}
        Process1.Executable:='lp';
        {$ENDIF}
-       Process1.Parameters.Add(fname);
+       Process1.Parameters.Add(fnamet2);
        Process1.Active:=true;
        Process1.Execute;
        Process1.Active:=false;

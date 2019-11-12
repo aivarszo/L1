@@ -180,6 +180,24 @@ msgctxt "tform1.button34.caption"
 msgid "Change team ID"
 msgstr ""
 
+#: tform1.button35.caption
+msgctxt "tform1.button35.caption"
+msgid "+"
+msgstr ""
+
+#: tform1.button36.caption
+msgctxt "tform1.button36.caption"
+msgid "-"
+msgstr ""
+
+#: tform1.button37.caption
+msgid "Refresh Results"
+msgstr ""
+
+#: tform1.button38.caption
+msgid "Check for duplicate SI"
+msgstr ""
+
 #: tform1.button3g.caption
 msgid "Fill from event data"
 msgstr "Заполнить из данных соревнований"
@@ -283,6 +301,10 @@ msgctxt "tform1.menuitem11.caption"
 msgid "Stats"
 msgstr ""
 
+#: tform1.menuitem12.caption
+msgid "Import from lof.lv L19"
+msgstr ""
+
 #: tform1.menuitem13.caption
 #, fuzzy
 #| msgid "Teams' results"
@@ -306,7 +328,7 @@ msgid "Data import"
 msgstr "Импорт данных"
 
 #: tform1.menuitem23.caption
-msgid "Datu eksport"
+msgid "Data eksport"
 msgstr ""
 
 #: tform1.menuitem3.caption
@@ -522,6 +544,7 @@ msgid "Event"
 msgstr "Соревнования"
 
 #: tform1.tabsheet2.caption
+msgctxt "tform1.tabsheet2.caption"
 msgid "Teams"
 msgstr "Команды"
 
@@ -564,8 +587,40 @@ msgctxt "tform1.togglebox2.caption"
 msgid "Reading SI cards..."
 msgstr "Считывает СИ карты..."
 
-#: tform1.togglebox3.caption
-msgid "Print split receipts"
+#: tform10.caption
+msgid "Form10"
+msgstr ""
+
+#: tform10.stringgrid1.columns[0].title.caption
+#, fuzzy
+msgctxt "tform10.stringgrid1.columns[0].title.caption"
+msgid "Group"
+msgstr "Группа"
+
+#: tform10.stringgrid1.columns[1].title.caption
+#, fuzzy
+msgctxt "tform10.stringgrid1.columns[1].title.caption"
+msgid "Teams"
+msgstr "Команды"
+
+#: tform10.stringgrid1.columns[2].title.caption
+msgid "of 1"
+msgstr ""
+
+#: tform10.stringgrid1.columns[3].title.caption
+msgid "of 2"
+msgstr ""
+
+#: tform10.stringgrid1.columns[4].title.caption
+msgid "of 3"
+msgstr ""
+
+#: tform10.stringgrid1.columns[5].title.caption
+msgid "of 4"
+msgstr ""
+
+#: tform10.stringgrid1.columns[6].title.caption
+msgid "of 5"
 msgstr ""
 
 #: tform2.button1.caption
@@ -672,16 +727,59 @@ msgctxt "tform5.label4.caption"
 msgid "Label4"
 msgstr ""
 
-#: tform6.button1.caption
-msgid "+"
-msgstr ""
-
-#: tform6.button2.caption
-msgid "-"
-msgstr ""
-
 #: tform6.caption
 msgid "Form6"
+msgstr ""
+
+#: tform6.stringgrid1.columns[0].title.caption
+msgctxt "tform6.stringgrid1.columns[0].title.caption"
+msgid "ID"
+msgstr ""
+
+#: tform6.stringgrid1.columns[1].title.caption
+#, fuzzy
+msgctxt "tform6.stringgrid1.columns[1].title.caption"
+msgid "Team"
+msgstr "Команда"
+
+#: tform6.stringgrid1.columns[2].title.caption
+#, fuzzy
+msgctxt "tform6.stringgrid1.columns[2].title.caption"
+msgid "Time"
+msgstr "Время"
+
+#: tform6.stringgrid1.columns[3].title.caption
+#, fuzzy
+msgctxt "tform6.stringgrid1.columns[3].title.caption"
+msgid "Points"
+msgstr "Очки"
+
+#: tform6.stringgrid1.columns[4].title.caption
+#, fuzzy
+msgctxt "tform6.stringgrid1.columns[4].title.caption"
+msgid "Penalty"
+msgstr "Пенальти"
+
+#: tform6.stringgrid1.columns[5].title.caption
+#, fuzzy
+msgctxt "tform6.stringgrid1.columns[5].title.caption"
+msgid "Result"
+msgstr "Результат"
+
+#: tform6.stringgrid1.columns[6].title.caption
+#, fuzzy
+msgctxt "tform6.stringgrid1.columns[6].title.caption"
+msgid "Place(s)"
+msgstr "Место(а)"
+
+#: tform6.stringgrid1.columns[7].title.caption
+msgctxt "tform6.stringgrid1.columns[7].title.caption"
+msgid "Sort"
+msgstr ""
+
+#: tform6.stringgrid1.columns[8].title.caption
+msgctxt "tform6.stringgrid1.columns[8].title.caption"
+msgid "HTML"
 msgstr ""
 
 #: tform6.stringgrid7.columns[0].title.caption
@@ -1001,6 +1099,16 @@ msgstr ""
 msgid "There is no data.csv in event directory"
 msgstr ""
 
+#: unit1.mstt18f
+msgid ""
+"Do you want to import event data?\n"
+"(from lof.lv csv file data_lof.csv)\n"
+msgstr ""
+
+#: unit1.mstt18g
+msgid "There is no data_lof.csv in event directory"
+msgstr ""
+
 #: unit1.mstt19
 msgid "Event already exists!"
 msgstr "Такие соревнования уже существуют!"
@@ -1061,6 +1169,26 @@ msgstr ""
 
 #: unit1.mstt9
 msgid "Found Team ID duplicate: "
+msgstr ""
+
+#: unit1.tick1
+msgid "TIME: "
+msgstr ""
+
+#: unit1.tick2
+msgid "POINTS: "
+msgstr ""
+
+#: unit1.tick3
+msgid "Penalty: "
+msgstr ""
+
+#: unit1.tick4
+msgid "RESULT: "
+msgstr ""
+
+#: unit1.tick5
+msgid "Raw points: "
 msgstr ""
 
 #: unit2.cap2c1

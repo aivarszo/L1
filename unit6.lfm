@@ -1,18 +1,19 @@
 object Form5: TForm5
-  Left = 964
-  Height = 726
-  Top = 74
-  Width = 631
+  Left = 452
+  Height = 507
+  Top = 165
+  Width = 547
+  Anchors = []
   Caption = 'Form5'
-  ClientHeight = 726
-  ClientWidth = 631
+  ClientHeight = 507
+  ClientWidth = 547
   OnCreate = FormCreate
-  LCLVersion = '1.8.2.0'
+  LCLVersion = '1.8.4.0'
   object StringGrid1: TStringGrid
     Left = 8
-    Height = 603
+    Height = 384
     Top = 64
-    Width = 616
+    Width = 532
     Anchors = [akTop, akLeft, akRight, akBottom]
     ColCount = 9
     FixedCols = 0
@@ -24,9 +25,9 @@ object Form5: TForm5
   end
   object Label1: TLabel
     Left = 11
-    Height = 23
+    Height = 20
     Top = 17
-    Width = 59
+    Width = 44
     Caption = 'Label1'
     Font.Height = 20
     ParentColor = False
@@ -34,9 +35,9 @@ object Form5: TForm5
   end
   object Label2: TLabel
     Left = 202
-    Height = 23
+    Height = 20
     Top = 17
-    Width = 59
+    Width = 44
     Caption = 'Label2'
     Font.Height = 20
     ParentColor = False
@@ -44,9 +45,9 @@ object Form5: TForm5
   end
   object Label3: TLabel
     Left = 336
-    Height = 23
+    Height = 20
     Top = 17
-    Width = 59
+    Width = 44
     Caption = 'Label3'
     Font.Color = clRed
     Font.Height = 20
@@ -55,9 +56,9 @@ object Form5: TForm5
   end
   object Label4: TLabel
     Left = 470
-    Height = 23
+    Height = 28
     Top = 17
-    Width = 63
+    Width = 62
     Caption = 'Label4'
     Font.Height = -20
     Font.Style = [fsBold]
@@ -65,10 +66,15 @@ object Form5: TForm5
     ParentFont = False
   end
   object Button2: TButton
-    Left = 480
+    AnchorSideTop.Control = StringGrid1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = StringGrid1
+    AnchorSideRight.Side = asrBottom
+    Left = 393
     Height = 37
-    Top = 680
+    Top = 448
     Width = 147
+    Anchors = [akTop, akRight]
     Caption = 'Close'
     OnClick = Button2Click
     TabOrder = 1

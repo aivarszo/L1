@@ -1,7 +1,7 @@
 object Form2: TForm2
-  Left = 111
+  Left = 263
   Height = 669
-  Top = 0
+  Top = 311
   Width = 1129
   Caption = 'Form2'
   ClientHeight = 669

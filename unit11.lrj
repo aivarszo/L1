@@ -1,0 +1,10 @@
+{"version":1,"strings":[
+{"hash":81170496,"name":"tform10.caption","sourcebytes":[70,111,114,109,49,48],"value":"Form10"},
+{"hash":5150400,"name":"tform10.stringgrid1.columns[0].title.caption","sourcebytes":[71,114,111,117,112],"value":"Group"},
+{"hash":5945411,"name":"tform10.stringgrid1.columns[1].title.caption","sourcebytes":[84,101,97,109,115],"value":"Teams"},
+{"hash":481329,"name":"tform10.stringgrid1.columns[2].title.caption","sourcebytes":[111,102,32,49],"value":"of 1"},
+{"hash":481330,"name":"tform10.stringgrid1.columns[3].title.caption","sourcebytes":[111,102,32,50],"value":"of 2"},
+{"hash":481331,"name":"tform10.stringgrid1.columns[4].title.caption","sourcebytes":[111,102,32,51],"value":"of 3"},
+{"hash":481332,"name":"tform10.stringgrid1.columns[5].title.caption","sourcebytes":[111,102,32,52],"value":"of 4"},
+{"hash":481333,"name":"tform10.stringgrid1.columns[6].title.caption","sourcebytes":[111,102,32,53],"value":"of 5"}
+]}

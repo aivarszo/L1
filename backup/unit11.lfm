@@ -1,0 +1,41 @@
+object Form10: TForm10
+  Left = 347
+  Height = 338
+  Top = 132
+  Width = 535
+  Caption = 'Form10'
+  ClientHeight = 338
+  ClientWidth = 535
+  LCLVersion = '1.8.4.0'
+  object StringGrid1: TStringGrid
+    Left = 6
+    Height = 323
+    Top = 5
+    Width = 514
+    ColCount = 7
+    Columns = <    
+      item
+        Title.Caption = 'Group'
+      end    
+      item
+        Title.Caption = 'Teams'
+      end    
+      item
+        Title.Caption = 'of 1'
+      end    
+      item
+        Title.Caption = 'of 2'
+      end    
+      item
+        Title.Caption = 'of 3'
+      end    
+      item
+        Title.Caption = 'of 4'
+      end    
+      item
+        Title.Caption = 'of 5'
+      end>
+    FixedCols = 0
+    TabOrder = 0
+  end
+end

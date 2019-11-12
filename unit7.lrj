@@ -9,6 +9,13 @@
 {"hash":41515561,"name":"tform6.stringgrid7.columns[6].title.caption","sourcebytes":[80,108,97,99,101,40,115,41],"value":"Place(s)"},
 {"hash":370324,"name":"tform6.stringgrid7.columns[7].title.caption","sourcebytes":[83,111,114,116],"value":"Sort"},
 {"hash":317724,"name":"tform6.stringgrid7.columns[8].title.caption","sourcebytes":[72,84,77,76],"value":"HTML"},
-{"hash":43,"name":"tform6.button1.caption","sourcebytes":[43],"value":"+"},
-{"hash":45,"name":"tform6.button2.caption","sourcebytes":[45],"value":"-"}
+{"hash":1236,"name":"tform6.stringgrid1.columns[0].title.caption","sourcebytes":[73,68],"value":"ID"},
+{"hash":371581,"name":"tform6.stringgrid1.columns[1].title.caption","sourcebytes":[84,101,97,109],"value":"Team"},
+{"hash":372789,"name":"tform6.stringgrid1.columns[2].title.caption","sourcebytes":[84,105,109,101],"value":"Time"},
+{"hash":91620787,"name":"tform6.stringgrid1.columns[3].title.caption","sourcebytes":[80,111,105,110,116,115],"value":"Points"},
+{"hash":113542121,"name":"tform6.stringgrid1.columns[4].title.caption","sourcebytes":[80,101,110,97,108,116,121],"value":"Penalty"},
+{"hash":93105204,"name":"tform6.stringgrid1.columns[5].title.caption","sourcebytes":[82,101,115,117,108,116],"value":"Result"},
+{"hash":41515561,"name":"tform6.stringgrid1.columns[6].title.caption","sourcebytes":[80,108,97,99,101,40,115,41],"value":"Place(s)"},
+{"hash":370324,"name":"tform6.stringgrid1.columns[7].title.caption","sourcebytes":[83,111,114,116],"value":"Sort"},
+{"hash":317724,"name":"tform6.stringgrid1.columns[8].title.caption","sourcebytes":[72,84,77,76],"value":"HTML"}
 ]}
